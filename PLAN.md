@@ -24,10 +24,10 @@ Se cierran en la fase 0, porque son caras de cambiar después.
 Antes de esto no se decide nada más.
 
 - [x] Extraer los archivos del juego, a una carpeta fuera del repo. (`../eternal-ring-esp-local/iso/`, 2026-11-20.)
-- [ ] Ubicar todo el texto. (Ubicado, 2026-11-21: ejecutable, descripciones de `ERDATA.BIN`, guiones de los mapas y los videos `TEXT0`/`TEXT1`; ver TECH.md. Falta la prueba en el juego de los diálogos: letras españolas y mensajes más largos.)
+- [ ] Ubicar todo el texto. (Ubicado, 2026-11-21: ejecutable, descripciones de `ERDATA.BIN`, guiones de los mapas y los videos `TEXT0`/`TEXT1`; ver TECH.md. Letras españolas probadas en los diálogos; falta la prueba de un mensaje más largo.)
 - [ ] Adaptador: exportar el texto al formato común (`source` de `loc.json`) e importarlo de vuelta.
 - [ ] Ida y vuelta idéntica: exportar e importar sin cambios da los mismos archivos.
-- [ ] Caracteres: si la fuente tiene las letras españolas, o cómo se agregan (T-5).
+- [ ] Caracteres: si la fuente tiene las letras españolas, o cómo se agregan (T-5). (Diálogos: no las tiene; `tools/font_es.py` las agrega, probado en PCSX2 el 2026-11-21. Falta ver los menús y las descripciones.)
 - [ ] Límites: bytes, ancho y renglones de cada tipo de texto (T-3, T-4), y sus chequeos en `hooks`.
 - [ ] Pseudolocalización: todo el texto más largo y con letras españolas, en el juego, para ver cortes y glifos que faltan.
 - [ ] Completar TECH.md y `loc.json` (`codes`, `fixed_break`, `excluded`, `sections`).
