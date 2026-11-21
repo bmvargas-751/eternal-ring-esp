@@ -29,7 +29,7 @@ Antes de esto no se decide nada más.
 - [x] Ida y vuelta idéntica: exportar e importar sin cambios da los mismos archivos. (`adapter.py roundtrip`: `ERDATA.BIN`, ejecutable y 55 guiones idénticos.)
 - [ ] Caracteres: si la fuente tiene las letras españolas, o cómo se agregan (T-5). (No las tiene; `tools/font_es.py` agrega 34 signos y los activa en las tres funciones de texto. Diálogos probados en PCSX2 el 2026-11-21; menús, descripciones y los signos nuevos, en la prueba 3.)
 - [ ] Límites: bytes, ancho y renglones de cada tipo de texto (T-3, T-4), y sus chequeos en `hooks`.
-- [ ] Pseudolocalización: todo el texto más largo y con letras españolas, en el juego, para ver cortes y glifos que faltan.
+- [ ] Pseudolocalización: todo el texto más largo y con letras españolas, en el juego, para ver cortes y glifos que faltan. (`tools/pseudo.py` + `adapter.py build`, ISO armada el 2026-11-21; falta recorrerla en PCSX2.)
 - [ ] Completar TECH.md y `loc.json` (`codes`, `fixed_break`, `excluded`, `sections`).
 
 ### Fase 2. Inventario y presupuesto
