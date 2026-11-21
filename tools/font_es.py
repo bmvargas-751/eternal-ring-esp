@@ -81,25 +81,27 @@ def stamp(g, art, top, left):
 
 def clear(g, r0, r1):
     for r in range(r0, r1):
-        g[r] = [0] * W
+        g[r] = [0] * len(g[r])
 
 
 def squash(g, src0, src1, dst0, dst1):
     """Comprime en vertical las filas src0..src1-1 en dst0..dst1-1 (mayúsculas)."""
     rows = [row[:] for row in g]
     n, m = src1 - src0, dst1 - dst0
+    w = len(rows[0])
     out = []
     for j in range(m):
         a, b = src0 + j * n / m, src0 + (j + 1) * n / m
-        acc = [0.0] * W
+        acc = [0.0] * w
         r = a
         while r < b - 1e-9:
             nxt = min(b, int(r) + 1)
-            for c in range(W):
+            for c in range(w):
                 acc[c] += rows[int(r)][c] * (nxt - r)
             r = nxt
         out.append([min(255, round(v * m / n)) for v in acc])
-    clear(g, src0, src1)
+    for r in range(src0, src1):
+        g[r] = [0] * w
     for j in range(m):
         g[dst0 + j] = out[j]
 
@@ -280,6 +282,102 @@ def build(font):
     return {c: visible(g) for c, g in out.items()}
 
 
+# --- fuente chica (modo angosto) -------------------------------------------
+# Celdas de 16×16 a 8 bits guardadas de abajo hacia arriba, con dos signos de
+# 8 columnas cada una (índice par a la izquierda). El signo de índice i está en
+# la celda NARROW + piso(i / 2): el parche de 0x177f8c cambia el redondeo hacia
+# cero por el piso, para que los índices negativos caigan en las celdas de
+# relleno de la fuente japonesa chica que están justo antes.
+NARROW = FONT + 0xba000 + 0x4c2 * 0x100
+NW, NH = 8, 16
+NARROW_PATCH = (0x177f8c, 0x001127c2, 0x0000202d)   # srl a0, s1, 31 → daddu a0, zero, zero
+
+ACUTE_N = ['..6d', '.a8.']
+ACUTE_CAP_N = ['..5d', '.ba.', '6...']
+DIER_N = ['d..d', '5..5']
+DIER_CAP_N = ['c..c']
+TILDE_N = ['.8d8.b', 'b5.8d5']
+TILDE_CAP_N = ['.8d8.b', 'b5.8d5']
+
+
+def nget(small, i):
+    c = small[(i // 2) * 0x100:(i // 2 + 1) * 0x100]
+    x0 = (i % 2) * NW
+    return [list(c[r * 16 + x0:r * 16 + x0 + NW]) for r in range(NH)][::-1]
+
+
+def nvisible(g):
+    for row in g:
+        row[7] = 0
+    return g
+
+
+def shrink(g):
+    """Signo grande (12×24 visibles) → chico (7×16): mayúsculas de las filas
+    3–19 a las 3–13, promediando el área."""
+    sx, sy = 12 / 7, 17 / 11
+    out = [[0] * NW for _ in range(NH)]
+    for y in range(NH):
+        y0, y1 = 3 + (y - 3) * sy, 3 + (y - 2) * sy
+        for x in range(7):
+            x0, x1 = x * sx, (x + 1) * sx
+            acc = 0.0
+            for by in range(max(0, int(y0)), min(H, int(y1) + 1)):
+                wy = min(y1, by + 1) - max(y0, by)
+                if wy <= 0: continue
+                for bx in range(int(x0), min(12, int(x1) + 1)):
+                    wx = min(x1, bx + 1) - max(x0, bx)
+                    if wx > 0: acc += g[by][bx] * wx * wy
+            out[y][x] = min(255, round(acc / (sx * sy) * 1.15))
+    return out
+
+
+def build_narrow(small, big):
+    nidx = lambda c: ORIGINAL[ord(c)]
+    out = {}
+    for low, up, art in (('a', 'A', 'acute'), ('e', 'E', 'acute'), ('i', 'I', 'acute'),
+                         ('o', 'O', 'acute'), ('u', 'U', 'acute'), ('u', 'U', 'dier'),
+                         ('n', 'N', 'tilde')):
+        g = nget(small, nidx(low))
+        if low == 'i':
+            clear(g, 2, 6)
+        {'acute': lambda: stamp(g, ACUTE_N, 3, 2 if low != 'i' else 1), 'dier': lambda: stamp(g, DIER_N, 3, 2),
+         'tilde': lambda: stamp(g, TILDE_N, 3, 1)}[art]()
+        G = nget(small, nidx(up))
+        squash(G, 3, 15, 5, 15)
+        {'acute': lambda: stamp(G, ACUTE_CAP_N, 2, 2), 'dier': lambda: stamp(G, DIER_CAP_N, 3, 2),
+         'tilde': lambda: stamp(G, TILDE_CAP_N, 2, 1)}[art]()
+        if art == 'acute':
+            out['áéíóú'['aeiou'.index(low)]] = g
+            out['ÁÉÍÓÚ'['AEIOU'.index(up)]] = G
+        else:
+            out[{'dier': 'ü', 'tilde': 'ñ'}[art]] = g
+            out[{'dier': 'Ü', 'tilde': 'Ñ'}[art]] = G
+    for src, dst in (('?', '¿'), ('!', '¡')):
+        g = nvisible(nget(small, nidx(src)))
+        out[dst] = [[g[NH - 1 - y][6 - x] if x < 7 else 0 for x in range(NW)] for y in range(NH)]
+    for c in NEW:
+        if c not in out:
+            out[c] = shrink(big[c])
+    return {c: nvisible(g) for c, g in out.items()}
+
+
+def narrow_cells(glyphs, cells):
+    """Escribe los signos chicos (índices -1, -2, ...) en una copia de las celdas."""
+    cells = bytearray(cells)
+    lo = -((len(NEW) + 1) // 2)          # primera celda (relativa a NARROW)
+    for k, c in enumerate(NEW):
+        i = -1 - k
+        ci = (i // 2) - lo
+        x0 = (i % 2) * NW
+        rows = glyphs[c][::-1]
+        for r in range(NH):
+            assert len(rows[r]) == NW, c
+            cells[ci * 0x100 + r * 16 + x0:ci * 0x100 + r * 16 + x0 + NW] = bytes(rows[r])
+    assert len(cells) == (len(NEW) + 1) // 2 * 0x100
+    return bytes(cells)
+
+
 def code(c):
     return c.encode(ENCODING)[0]
 
@@ -327,6 +425,10 @@ def patch_exe(exe, exe_off):
         assert word(start) in (orig, struct.unpack('<I', blob[:4])[0]), hex(start)
         exe.seek(exe_off + start - EXE_BASE)
         exe.write(blob)
+    addr, orig, new = NARROW_PATCH
+    assert word(addr) in (orig, new), hex(addr)
+    exe.seek(exe_off + addr - EXE_BASE)
+    exe.write(struct.pack('<I', new))
     for addr, orig in SJIS:
         assert word(addr) in (orig, orig & ~0x03e00000), hex(addr)
         exe.seek(exe_off + addr - EXE_BASE)
@@ -346,9 +448,26 @@ def apply(er, er_off, exe, exe_off):
     j0 = (lowest - 0x800) // 0x240
     fresh = all(font_all[0x800 + j * 0x240:0x800 + (j + 1) * 0x240] == filler for j in range(j0, 1260))
     assert fresh or mine, 'la zona de los signos nuevos no es relleno'
+    # Fuente chica: las celdas que se pisan tienen que ser relleno (cajas de
+    # dos variantes: la de la celda anterior y la de la última) o tener ya
+    # estos signos.
+    n = (len(NEW) + 1) // 2
+    er.seek(er_off + NARROW - (n + 1) * 0x100)
+    before = er.read((n + 1) * 0x100)
+    er.seek(er_off + NARROW)
+    small = er.read(39 * 0x100)
+    nglyphs = build_narrow(small, glyphs)
+    cells = before[0x100:]
+    new_cells = narrow_cells(nglyphs, cells)
+    boxes = {before[:0x100], before[-0x100:]}
+    fresh = all(cells[k * 0x100:(k + 1) * 0x100] in boxes for k in range(n))
+    assert fresh or cells == new_cells, 'la zona de los signos chicos no es relleno'
+    # Recién ahora se escribe.
     for k, c in enumerate(NEW):
         er.seek(er_off + ASCII - (k + 1) * GLYPH)
         er.write(bytes(sum(glyphs[c], [])))
+    er.seek(er_off + NARROW - n * 0x100)
+    er.write(new_cells)
     patch_exe(exe, exe_off)
     return font, glyphs
 
@@ -386,6 +505,20 @@ def preview(font, glyphs, path):
 
 if __name__ == '__main__':
     args = sys.argv[1:]
+    if args[0] == '--preview-narrow':
+        f = open(args[1], 'rb')
+        f.seek(ASCII); font = f.read(77 * GLYPH)
+        f.seek(NARROW); small = f.read(39 * 0x100)
+        ng = build_narrow(small, build(font))
+        from PIL import Image
+        img = Image.new('L', (len(NEW) * 10 + 2, 2 * 18 + 2), 50)
+        base = 'aeiouunAEIOUUN?!' + '"' * 18
+        for k, c in enumerate(NEW):
+            for g, y in ((nget(small, ORIGINAL[ord(base[k])]), 1), (ng[c], 19)):
+                t = Image.frombytes('L', (NW, NH), bytes(sum(g, []))).crop((0, 0, 7, NH))
+                img.paste(t, (2 + k * 10, y))
+        img.resize((img.width * 6, img.height * 6), Image.NEAREST).save(args[2])
+        sys.exit()
     if args[0] == '--preview':
         f = open(args[1], 'rb')
         off = ER_LBA * 2048 if args[1].lower().endswith('.iso') else 0
