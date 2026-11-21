@@ -35,14 +35,18 @@ Antes de esto no se decide nada más.
 
 ### Fase 2. Inventario y presupuesto
 
-- [ ] Volumen por sección (`loc.py progress`).
-- [ ] Costo estimado por sección, antes de empezarla.
+- [x] Volumen por sección (`loc.py progress`). (2026-11-21: 1.183 textos, 7.483 palabras. Diálogos 505 líneas / 5.378 palabras; Magias, armas y objetos 324 / 1.380; Menús 354 / 725.)
+- [x] Costo estimado por sección, antes de empezarla. (2026-11-21, con la referencia de METHOD.md: unos 43.000 tokens cada 250 líneas por agente; traductor, revisor y corrector pasan por todo, más editor y delicadas.)
+  - Diálogos: unos 300.000 tokens (2 lotes; líneas largas, puede subir).
+  - Magias, armas y objetos: unos 200.000 (2 lotes).
+  - Menús: unos 150.000 (2 lotes; líneas de 2 palabras de media, probablemente menos).
+  - Total: unos 650.000, sin contar glosario, fichas ni set de oro.
 
 ### Fase 3. Documentos
 
-- [ ] Glosario: el terminólogo propone las filas.
-- [ ] Fichas de personajes: el perfilador, antes de cada sección.
-- [ ] DECISIONS.md y PENDING.md al día.
+- [x] Glosario: el terminólogo propone las filas. (2026-11-21: 296 términos decididos por el usuario, bloque por bloque; no hay fuente oficial, todo es G-2.)
+- [x] Fichas de personajes: el perfilador, antes de cada sección. (2026-11-21, Diálogos: 22 fichas, 2 voces y `characters/_mapa.md`. Género sin marcar en 8 voces: se puede confirmar con los clips de `VOICEALL.ADX`. Las otras dos secciones no tienen personajes.)
+- [x] DECISIONS.md y PENDING.md al día. (2026-11-21.)
 
 ### Fase 4. Set de oro
 
