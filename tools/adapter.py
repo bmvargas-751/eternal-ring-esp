@@ -18,8 +18,8 @@ Qué texto hay (TECH.md):
   menus/exe#<desplazamiento> textos del ejecutable
 
 Códigos (T-1): en los diálogos, cada palabra que no es una letra va como
-{hex} (por ejemplo {108f8}, un color); en el ejecutable, _NNN (color) y los
-formatos %s, %3d...
+{hex} (por ejemplo {108f8}, un color); en el ejecutable, _NNN (color), ~
+(fuente grande) y los formatos %s, %3d...
 """
 import json, os, re, shutil, struct, sys
 
@@ -89,10 +89,11 @@ WEAPON_FILES = 801          # el arma k de la tabla está también en la entrada
 WEAPON_NAME, WEAPON_DESC = (0x3c, 0x10), (0x50, 0x40)
 
 # Textos del ejecutable: zonas (desplazamientos del archivo) y lo que no se traduce.
-EXE_RANGES = [(0x243ce0, 0x24a780), (0x255100, 0x255470), (0x256280, 0x256d60), (0x257540, 0x257c60)]
+EXE_RANGES = [(0x243ce0, 0x24a780), (0x255100, 0x255470), (0x256280, 0x256d60), (0x257540, 0x257c60),
+              (0x25d558, 0x25d740)]
 EXE_SKIP = re.compile(r'cdrom0|host0|\\|\.(PSS|ADX|BIN|ICO|IRX)|icon\.sys|BESLES|0123456789|'
-                      r'^(MRing|ARing|Aring) Name$|^WeaponName$')
-EXE_CODE = re.compile(r'_[0-9]{3}|%[-+0-9.]*[sdifxXu]')
+                      r'^(MRing|ARing|Aring) Name$|^WeaponName$|^(PS2D|abcd)$')
+EXE_CODE = re.compile(r'_[0-9]{3}|%[-+0-9.]*[sdifxXu]|~')
 EXE_MAX = 79
 
 

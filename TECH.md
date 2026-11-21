@@ -56,8 +56,10 @@ Lo que mostró la fase 1 (2026-11-20 y 21). Lo que dice *por confirmar* todavía
 
 - **T-3** La caja: ningún renglón puede pasar del ancho que permite el juego. Si el límite medido es el del original y no el de la pantalla, el aviso no obliga a recortar: se permiten abreviaturas reconocibles, pero nunca se quitan palabras ni se acorta de forma que se pierda el sentido. Si la forma completa no cabe, va completa y con su aviso, y se revisa en el juego. [IVA] (chequeo del proyecto, en `hooks`)
   - **Diálogos** (probado en PCSX2 el 2026-11-21): hasta **4 renglones** (el 5.º y los siguientes se dibujan debajo de la caja) y hasta **35 caracteres** por renglón (el 36.º toca el borde; el juego no corta ni avisa). Cuando hay otra caja después, el ícono azul de «siguiente» tapa el 4.º renglón desde el carácter 33: el 4.º renglón, hasta **32**. El original se pasa en 6 renglones (36 a 39 caracteres, por ejemplo «This has never happened to me before...»), y usa 4 renglones pocas veces. El largo total no importa (el búfer admite 256 caracteres; 140 se ven bien).
-  - **Descripciones de objetos** (modo angosto): hasta **32 caracteres** por renglón (el 33.º se corta en el borde del panel). El original llega a 31. *Por ver:* cuántos renglones entran.
-  - Menús: el largo fijo de cada campo del ejecutable (por ejemplo, 10 caracteres con espacios en el menú de pausa).
+  - **Descripciones de magias, armas y objetos** (modo angosto): hasta **30 caracteres** por renglón (en una prueba entraron 32 y en otra se cortó el 31.º: se usa el seguro). El original llega a 31. *Por ver:* cuántos renglones entran (la pseudolocalización agrega un 3.º donde cabe; hace falta verlo con magias u objetos de descripción corta).
+  - **Lugares** (lista de 0x249940, cada 0x18): en la pantalla de estado van centrados y entran unos **18** caracteres (el original llega a 17).
+  - **Títulos y menús del ejecutable:** cada barra tiene su ancho («(R) Attr Ring equipped», 22, entra; «Weapons equipped» con 20 se sale de la suya). `hooks.py` avisa si un texto crece más de un 25 % y se revisa en el juego.
+  - Menús: el largo fijo de cada campo del ejecutable (por ejemplo, 10 caracteres con espacios en el menú de pausa). En 0x25d558–0x25d740 los campos son de **8 bytes** (7 letras): «Items», «Rings», «Weapons», «Options», «Yes», «No», «Load?», «Save?»… («Opciones» no entra). Para más largo habría que mover la cadena y corregir sus referencias en el código (*pendiente*, si hace falta).
 - **T-4** Los textos con largo máximo en bytes (`max` en el lote) no pueden pasarlo: es un límite duro. (`bytes`)
   - Diálogos: cada letra o código ocupa una palabra; el búfer del mensaje admite 256 (`max` 256). No hay otro límite de largo: el guion crece al final del escenario.
   - Magias, armas, objetos y ejecutable: un byte por letra (Windows-1252; el salto de línea, `\r\n`, ocupa 2). `max` es el campo sin el `\0` (ver **Magias, armas y objetos**).
@@ -69,9 +71,11 @@ Lo que mostró la fase 1 (2026-11-20 y 21). Lo que dice *por confirmar* todavía
   - `tools/font_es.py` le agrega **á é í ó ú ü ñ Á É Í Ó Ú Ü Ñ ¿ ¡ « » “ ” ‘ ’ — … º ª °** y **`; + = * < > #`**, en Windows-1252 (á = `0xE1`, … = `0x85`, — = `0x97`). Los 18 primeros se probaron en los diálogos en PCSX2 el 2026-11-21; los demás y los menús, *por confirmar* (prueba 3).
   - Comillas: « » como primer nivel, “ ” dentro de ellas y ‘ ’ en el tercer nivel, como pide la RAE (E-58). Puntos suspensivos con `…`; raya con `—`.
   - `@` y `_` son códigos de control en menús y descripciones: no se usan como texto.
+  - **Fuente grande** (los elementos FIRE, EARTH…, STR, y LEVEL, H P, M P, EXP, NEXT; `~` delante la elige): solo tiene `0-9 A-Z ( ) [ ] ! ? + - / *` y el espacio (la tabla está en el ejecutable, 0x243d60); cualquier otro carácter sale como «0» (visto en la pseudolocalización: «FÍRÉ» → «FORO»). En español no hace falta otra cosa (FUEGO, TIERRA, VIENTO, AGUA, LUZ, OSCURIDAD). `hooks.py` lo controla.
 
 ## Qué se traduce
 
 - **T-6** Lo que no se traduce ni cuenta (restos sin localizar, textos de prueba) va en `excluded` de `loc.json`. El adaptador ya deja afuera lo que no se ve: nombres de archivo, textos de depuración, bibliotecas de Sony, textos que el juego reemplaza (`MRing Name`, `WeaponName`) y el arma 806 (en japonés, sin usar). Lo que se encuentre en el juego que tampoco se vea va a `excluded`.
+- **Imágenes con texto:** los botones y etiquetas OK, CANCEL, SELECT, RETURN, USE, SHORTCUT, INFO., CHANGE, ON/OFF, STEREO/MONO, MIN/MAX, «Time of Fire» y parecidos no son texto: son texturas. Traducirlos es editar imágenes (*pendiente*, como los videos `TEXT0`/`TEXT1`).
 - **T-7** Solo se traducen los textos que ve el jugador. Los nombres internos (archivos, etiquetas) no se exportan y no se tocan.
 - **T-8** Toda línea del lote se traduce completa: ninguna queda vacía, igual al original ni con frases del original mezcladas. (`vacia`, `sin_traducir`, `ingles_mezclado`)

@@ -13,13 +13,30 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import adapter
 import font_es
 
-CODES = re.compile(r'\{[0-9a-f]+\}|\{cr\}|_[0-9]{3}|%[-+0-9.]*[sdifxXu]')
+CODES = re.compile(r'\{[0-9a-f]+\}|\{cr\}|_[0-9]{3}|%[-+0-9.]*[sdifxXu]|~')
 FONT = set(chr(c) for c in font_es.ORIGINAL) | set(font_es.NEW) | {' ', '\n'}
 # En menús y descripciones, _ y @ son códigos de control: no se dibujan.
 
 # T-3 (TECH.md): renglones y caracteres por renglón.
 DIALOG_LINES, DIALOG_WIDTH, DIALOG_LAST = 4, 35, 32
-DESC_WIDTH = 32
+DESC_WIDTH = 30             # 32 en una prueba, 30 en otra: el seguro
+PLACE_WIDTH = 18            # nombre del lugar en la pantalla de estado
+PLACES = (0x249940, 0x24a2a0)
+MENU_GROWTH = 1.25          # resto del ejecutable: aviso si crece más (se revisa en el juego)
+
+# Fuente grande (FIRE, EARTH..., LEVEL, H P, EXP, NEXT): solo tiene lo de la
+# tabla del ejecutable en 0x243d60; lo demás sale como «0».
+BIG_FONT = set('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ()[]!?+-/* ')
+BIG = [(0x243ce0, 0x243d50), (0x25d570, 0x25d5c8)]
+
+
+def exe_offset(key):
+    return int(key.split('#')[1], 16) if key.startswith('menus/exe#') else None
+
+
+def big_font(key):
+    o = exe_offset(key)
+    return o is not None and any(a <= o < b for a, b in BIG)
 
 
 def encode(key, es):
@@ -29,7 +46,8 @@ def encode(key, es):
 
 
 def missing_chars(key, es):
-    return sorted({c for c in CODES.sub('', es) if c not in FONT})
+    font = BIG_FONT if big_font(key) else FONT
+    return sorted({c for c in CODES.sub('', es) if c not in font})
 
 
 def check(key, item, es):
@@ -48,7 +66,16 @@ def check(key, item, es):
                 out.append(('caja', 'T-3', 'renglón %d: %d caracteres, el máximo es %d' % (n, len(l), DESC_WIDTH)))
     elif key.startswith('menus/'):
         en = CODES.sub('', item['en'])
-        if en != en.rstrip() and len(lines[0]) > len(en):
-            out.append(('caja', 'T-3', 'campo de ancho fijo: %d caracteres, el original ocupa %d (con espacios)'
+        o = exe_offset(key)
+        if en != en.rstrip():
+            if len(lines[0]) > len(en):
+                out.append(('caja', 'T-3', 'campo de ancho fijo: %d caracteres, el original ocupa %d (con espacios)'
+                            % (len(lines[0]), len(en))))
+        elif PLACES[0] <= o < PLACES[1]:
+            if len(lines[0]) > PLACE_WIDTH:
+                out.append(('caja', 'T-3', 'lugar: %d caracteres, la pantalla de estado muestra %d'
+                            % (len(lines[0]), PLACE_WIDTH)))
+        elif len(lines[0]) > max(len(en) * MENU_GROWTH, len(en) + 2):
+            out.append(('caja', 'T-3', '%d caracteres, el original %d: ver en el juego si entra'
                         % (len(lines[0]), len(en))))
     return out
