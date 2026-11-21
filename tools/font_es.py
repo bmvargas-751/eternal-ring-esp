@@ -1,19 +1,25 @@
-"""Letras españolas para la fuente de los diálogos de Eternal Ring (PAL).
+"""Letras y signos españoles para la fuente de Eternal Ring (PAL).
 
 La fuente de 1 byte (77 signos de 16×24 a 8 bits, se ven las 12 columnas de la
-izquierda) no tiene á é í ó ú ü ñ ¿ ¡ « ». Este script:
-  - arma esos signos a partir de las letras del propio juego;
+izquierda) no tiene letras españolas ni varios signos. Este script:
+  - arma los signos de NEW a partir de las letras del propio juego o dibujados
+    a mano;
   - los guarda en las casillas de relleno del final de la fuente japonesa de
     2 bytes (sin uso en el PAL), que quedan justo antes de los signos ASCII:
     el signo de índice -k está en ASCII - k × 0x180;
-  - cambia en el ejecutable la cadena de comparaciones de la función 0x179e60
-    (0x17a088 a 0x17a1c4) por una tabla de 256 bytes: código Latin-1 → índice
-    del signo (con signo; 0x7f = no se dibuja).
+  - en el ejecutable, cambia la cadena de comparaciones (carácter → índice del
+    signo) de las tres funciones que dibujan texto por una búsqueda en una
+    tabla de 256 bytes (índice con signo; 0x7f = no se dibuja), y en las dos
+    que leen cadenas de bytes apaga el desvío a la fuente japonesa (byte
+    ≥ 0x80 = primer byte de Shift-JIS), que el texto PAL no usa.
+
+Codificación del juego: Windows-1252, un carácter por palabra (diálogos) o por
+byte (menús y descripciones).
 
 Uso: python3 -I font_es.py --preview ERDATA.BIN vista.png   (no cambia nada)
      python3 -I font_es.py ERDATA.BIN SLES_500.51 [vista.png]
      python3 -I font_es.py --iso IMAGEN.iso [vista.png]
-Los dos archivos se cambian en su lugar.
+Los archivos se cambian en su lugar.
 """
 import struct, sys
 
@@ -22,11 +28,21 @@ ASCII = FONT + 0xb1b00     # primer signo de 1 byte
 GLYPH = 0x180              # 16 × 24, 8 bits
 W, H = 16, 24
 EXE_BASE = 0xff000         # dirección = desplazamiento + 0xff000
-PATCH_AT = 0x17a088        # inicio de la cadena de comparaciones
-TABLE_AT = 0x17a0c0        # tabla de 256 bytes (dentro de la cadena, que ya no se usa)
-CHAIN_END = 0x17a1c8       # bne t0, v0 (=1): se dibuja si t0 == 1
+TABLE_AT = 0x17a0c0        # tabla de 256 bytes (dentro de la cadena de los diálogos)
 SKIP = 0x7f
 ER_LBA = 0x6a1
+ENCODING = 'cp1252'
+
+# Las tres cadenas de comparaciones: (inicio, salto final "bne t0, v0(=1)",
+# primera palabra original). Al entrar, v1 = carácter & 0xff; al salir tienen que
+# quedar s1 = índice, t0 = 1 si se dibuja, v0 = 1 y v1 sin tocar.
+CHAINS = [
+    (0x17a088, 0x17a1c8, 0x2465ffd0),   # diálogos, función 0x179e60 (palabras)
+    (0x177d24, 0x177e80, 0x2c42000a),   # cadenas de bytes, función 0x177b20
+    (0x1784e4, 0x178640, 0x2c42000a),   # cadenas de bytes, función 0x1782f0
+]
+# "beq v0, zero" después de "andi v0, byte, 0x80": pasa a "beq zero, zero".
+SJIS = [(0x177be8, 0x10400038), (0x1783b0, 0x10400038)]
 
 # Mapa original del juego (de la cadena de comparaciones).
 ORIGINAL = {}
@@ -37,7 +53,8 @@ for k, c in enumerate(".,()!?'\""):
 ORIGINAL.update({ord('^'): 70, ord('-'): 70, ord(':'): 71, ord('&'): 72, ord('%'): 73,
                  ord('['): 74, ord(']'): 75, ord('/'): 76})
 
-NEW = 'áéíóúüñÁÉÍÓÚÜÑ¿¡«»'      # índices -1, -2, ...
+# Índices -1, -2, ... (no cambiar el orden: los primeros 18 ya se probaron).
+NEW = 'áéíóúüñÁÉÍÓÚÜÑ¿¡«»' + '“”‘’—…ºª°' + ';+=*<>#'
 
 
 def idx(c):
@@ -48,6 +65,10 @@ def get(font, c):
     o = idx(c) * GLYPH
     g = font[o:o + GLYPH]
     return [list(g[r * W:(r + 1) * W]) for r in range(H)]
+
+
+def empty():
+    return [[0] * W for _ in range(H)]
 
 
 def stamp(g, art, top, left):
@@ -90,7 +111,16 @@ def visible(g):
     return g
 
 
-# Dibujos (valores hex de intensidad).
+def rot180(g):
+    g = visible([row[:] for row in g])
+    return [[g[H - 1 - y][11 - x] if x < 12 else 0 for x in range(W)] for y in range(H)]
+
+
+def mirror(g):
+    return [[row[11 - x] if x < 12 else 0 for x in range(W)] for row in g]
+
+
+# Dibujos (valores hex de intensidad). Renglón base: fila 19; mayúsculas desde la 3.
 ACUTE = ['...5fb',
          '..cf8.',
          '.8f8..',
@@ -115,6 +145,71 @@ GUILL_L = ['....5d..5d',
            '..5f8.5f8.',
            '...5f8.5f8',
            '....5d..5d']
+COMMA = ['441',            # la coma del juego (filas 18 a 23)
+         'ff4',
+         'ff4',
+         '3d.',
+         '96.',
+         '3..']
+DOT = ['44',
+       'ff',
+       'ff']
+ORD_O = ['.6dd6.',
+         '5f55f5',
+         'c8..8c',
+         'c8..8c',
+         '5f55f5',
+         '.6dd6.',
+         '......',
+         'ffffff']
+ORD_A = ['.7dd6.',
+         '.4..e8',
+         '.8dde8',
+         'e7..e8',
+         '9fccf9',
+         '......',
+         '......',
+         'ffffff']
+DEGREE = ['.6dd6.',
+          'd6..6d',
+          'd6..6d',
+          '.6dd6.']
+PLUS = ['....f7....'] * 4 + ['ffffffffff', '7777ff7777'] + ['....f7....'] * 4
+EQUALS = ['7777777777',
+          'ffffffffff',
+          '..........',
+          '..........',
+          '7777777777',
+          'ffffffffff']
+STAR = ['....ff....',
+        'e8..ff..8e',
+        '3cfdffdfc3',
+        '...cffc...',
+        '..cf77fc..',
+        '.cf4..4fc.',
+        '.44....44.']
+LESS = ['........4c',
+        '......5ff8',
+        '....5ff8..',
+        '..5ff8....',
+        '5ff8......',
+        '5ff8......',
+        '..5ff8....',
+        '....5ff8..',
+        '......5ff8',
+        '........4c']
+HASH = ['...c6..c6.',
+        '...c6..c6.',
+        '..2f3.2f3.',
+        '..6c..6c..',
+        'cffffffffc',
+        '..b7..b7..',
+        '..d5..d5..',
+        '.1f2.1f2..',
+        'cffffffffc',
+        '.6c..6c...',
+        '.a8..a8...',
+        '.c6..c6...']
 
 
 def build(font):
@@ -145,30 +240,65 @@ def build(font):
         upc = {'acute': 'ÁÉÍÓÚ', 'dier': 'Ü', 'tilde': 'Ñ'}[art]
         out[upc['AEIOU'.index(up)] if art == 'acute' else upc] = G
 
-    for src, dst in (('?', '¿'), ('!', '¡')):
-        g = visible(get(font, src))
-        r = [[g[H - 1 - y][11 - x] if x < 12 else 0 for x in range(W)] for y in range(H)]
-        out[dst] = r
-    gl = [[0] * W for _ in range(H)]
+    out['¿'] = rot180(get(font, '?'))
+    out['¡'] = rot180(get(font, '!'))
+    gl = empty()
     stamp(gl, GUILL_L, 9, 1)
     out['«'] = gl
-    out['»'] = [[row[11 - x] if x < 12 else 0 for x in range(W)] for row in gl]
+    out['»'] = mirror(gl)
+
+    # Comillas curvas: la coma del juego, arriba.
+    g = empty(); stamp(g, COMMA, 2, 2); stamp(g, COMMA, 2, 6); out['”'] = g
+    g = empty(); stamp(g, COMMA, 2, 4); out['’'] = g
+    # Las de apertura son las de cierre giradas, en la misma altura.
+    for close, open_ in (('”', '“'), ('’', '‘')):
+        r = rot180(out[close])                   # quedan abajo: se suben
+        top = min(y for y in range(H) if any(r[y][:12]))
+        top0 = min(y for y in range(H) if any(out[close][y][:12]))
+        r = r[top - top0:] + [[0] * W for _ in range(top - top0)]
+        out[open_] = r
+    g = empty(); stamp(g, ['777777777777', 'ffffffffffff'], 10, 0); out['—'] = g
+    g = empty()
+    for c in (1, 5, 9):
+        stamp(g, DOT, 18, c)
+    out['…'] = g
+    g = empty(); stamp(g, ORD_O, 3, 3); out['º'] = g
+    g = empty(); stamp(g, ORD_A, 3, 3); out['ª'] = g
+    g = empty(); stamp(g, DEGREE, 2, 3); out['°'] = g
+
+    g = visible(get(font, ':'))
+    clear(g, 12, H)
+    stamp(g, COMMA, 16, 5)
+    out[';'] = g
+    g = empty(); stamp(g, PLUS, 8, 1); out['+'] = g
+    g = empty(); stamp(g, EQUALS, 10, 1); out['='] = g
+    g = empty(); stamp(g, STAR, 5, 1); out['*'] = g
+    g = empty(); stamp(g, LESS, 8, 1); out['<'] = g
+    out['>'] = mirror(g)
+    g = empty(); stamp(g, HASH, 5, 1); out['#'] = g
+    assert set(out) == set(NEW), set(NEW) ^ set(out)
     return {c: visible(g) for c, g in out.items()}
+
+
+def code(c):
+    return c.encode(ENCODING)[0]
 
 
 def table():
     t = [SKIP] * 256
-    for code, i in ORIGINAL.items():
-        t[code] = i
+    for k, i in ORIGINAL.items():
+        t[k] = i
     for k, c in enumerate(NEW):
-        t[ord(c.encode('latin-1'))] = (-1 - k) & 0xff
+        assert t[code(c)] == SKIP, c
+        t[code(c)] = (-1 - k) & 0xff
     return bytes(t)
 
 
-def code():
+def lookup(start, end):
+    """La búsqueda en la tabla, del tamaño exacto de la cadena que reemplaza."""
     hi = (TABLE_AT + 0x8000) >> 16
     lo = TABLE_AT & 0xffff
-    br = (CHAIN_END - (PATCH_AT + 0x18 + 4)) // 4
+    br = (end - (start + 0x18 + 4)) // 4
     words = [
         0x3c020000 | hi,           # lui   v0, hi(tabla)
         0x00431021,                # addu  v0, v0, v1      (v1 = carácter & 0xff)
@@ -176,14 +306,31 @@ def code():
         0x2402007f,                # addiu v0, zero, 0x7f
         0x02224026,                # xor   t0, s1, v0
         0x0008402b,                # sltu  t0, zero, t0    (t0 = 1 si se dibuja)
-        0x10000000 | br,           # b     0x17a1c8
+        0x10000000 | br,           # b     end
         0x24020001,                # addiu v0, zero, 1
     ]
-    words += [0] * ((TABLE_AT - PATCH_AT) // 4 - len(words))
-    blob = struct.pack('<%dI' % len(words), *words) + table()
-    blob += bytes(CHAIN_END - PATCH_AT - len(blob))
-    assert len(blob) == CHAIN_END - PATCH_AT
+    blob = struct.pack('<%dI' % len(words), *words)
+    if start < TABLE_AT < end:
+        blob += bytes(TABLE_AT - start - len(blob)) + table()
+    # El resto de la cadena queda como está (código muerto): stage.py usa una
+    # parte para su propio parche.
+    assert len(blob) <= end - start
     return blob
+
+
+def patch_exe(exe, exe_off):
+    def word(addr):
+        exe.seek(exe_off + addr - EXE_BASE)
+        return struct.unpack('<I', exe.read(4))[0]
+    for start, end, orig in CHAINS:
+        blob = lookup(start, end)
+        assert word(start) in (orig, struct.unpack('<I', blob[:4])[0]), hex(start)
+        exe.seek(exe_off + start - EXE_BASE)
+        exe.write(blob)
+    for addr, orig in SJIS:
+        assert word(addr) in (orig, orig & ~0x03e00000), hex(addr)
+        exe.seek(exe_off + addr - EXE_BASE)
+        exe.write(struct.pack('<I', orig & ~0x03e00000))     # rs = zero
 
 
 def apply(er, er_off, exe, exe_off):
@@ -191,22 +338,18 @@ def apply(er, er_off, exe, exe_off):
     font_all = er.read(0xb1b00 + 77 * GLYPH)
     font = font_all[0xb1b00:]
     glyphs = build(font)
-    # La zona que se pisa tiene que ser relleno de la fuente japonesa (o ya
-    # tener estos mismos signos, si el script se corre dos veces).
+    # Cada casilla japonesa que se pisa tiene que ser relleno (todas iguales a
+    # la última) o tener ya estos signos, si el script se corre dos veces.
     lowest = 0xb1b00 - len(NEW) * GLYPH
+    mine = font_all[lowest:0xb1b00] == b''.join(bytes(sum(glyphs[c], [])) for c in reversed(NEW))
     filler = font_all[0x800 + 1259 * 0x240:0x800 + 1260 * 0x240]
     j0 = (lowest - 0x800) // 0x240
     fresh = all(font_all[0x800 + j * 0x240:0x800 + (j + 1) * 0x240] == filler for j in range(j0, 1260))
-    mine = font_all[lowest:0xb1b00] == b''.join(bytes(sum(glyphs[c], [])) for c in reversed(NEW))
     assert fresh or mine, 'la zona de los signos nuevos no es relleno'
     for k, c in enumerate(NEW):
         er.seek(er_off + ASCII - (k + 1) * GLYPH)
         er.write(bytes(sum(glyphs[c], [])))
-    exe.seek(exe_off + PATCH_AT - EXE_BASE)
-    old = exe.read(4)
-    assert old in (b'\xd0\xff\x65\x24', struct.pack('<I', 0x3c020000 | ((TABLE_AT + 0x8000) >> 16))), old.hex()
-    exe.seek(exe_off + PATCH_AT - EXE_BASE)
-    exe.write(code())
+    patch_exe(exe, exe_off)
     return font, glyphs
 
 
@@ -232,20 +375,18 @@ def iso_file(iso, name):
 
 def preview(font, glyphs, path):
     from PIL import Image
-    chars = list(NEW)
-    base = 'aeiouunAEIOUUN?!""'
-    img = Image.new('L', (len(chars) * 14 + 2, 2 * 26 + 2), 50)
-    for k, c in enumerate(chars):
-        src = visible(get(font, base[k]))
-        for g, y in ((src, 1), (glyphs[c], 27)):
-            t = Image.frombytes('L', (W, H), bytes(sum(g, []))).crop((0, 0, 12, H))
-            img.paste(t, (2 + k * 14, y))
+    per = 18
+    rows = (len(NEW) + per - 1) // per
+    img = Image.new('L', (per * 14 + 2, rows * 26 + 2), 50)
+    for k, c in enumerate(NEW):
+        t = Image.frombytes('L', (W, H), bytes(sum(glyphs[c], []))).crop((0, 0, 12, H))
+        img.paste(t, (2 + (k % per) * 14, 1 + (k // per) * 26))
     img.resize((img.width * 5, img.height * 5), Image.NEAREST).save(path)
 
 
 if __name__ == '__main__':
     args = sys.argv[1:]
-    if args[0] == '--preview':           # solo mira: ERDATA.BIN (o la ISO) y la imagen
+    if args[0] == '--preview':
         f = open(args[1], 'rb')
         off = ER_LBA * 2048 if args[1].lower().endswith('.iso') else 0
         f.seek(off + ASCII)
@@ -264,4 +405,4 @@ if __name__ == '__main__':
         rest = args[2:]
     if rest:
         preview(font, glyphs, rest[0])
-    print('listo:', len(NEW), 'signos y la tabla en', hex(TABLE_AT))
+    print('listo:', len(NEW), 'signos; tabla en', hex(TABLE_AT))
