@@ -18,8 +18,9 @@ Lo que mostró la fase 1 (2026-11-20 y 21). Lo que dice *por confirmar* todavía
   `tools/font_es.py` agrega 34 signos (T-5) con índice negativo, en el relleno que queda justo antes de los de 1 byte; cambia las tres cadenas por una búsqueda en una tabla de 256 bytes (en 0x17a0c0) y apaga el desvío a Shift-JIS, que el texto PAL no usa. Con eso, el juego entero usa **Windows-1252**, un carácter por palabra o por byte. También agrega las versiones chicas, en el relleno que queda antes de la fuente chica, y cambia en 0x177f8c el redondeo de i ÷ 2 (hacia cero) por el piso, para que los índices negativos caigan ahí (con el redondeo original, á = −1 dibujaba un «1»).
 - **Guiones (bytecode):** el intérprete es la función 0x1bd638. Tamaño de cada instrucción, en palabras:
   - `0x190 | id` (etiqueta: las entradas del guion se buscan por id, no por posición), `0x191` (fin), `0x194` y `0x195` (abrir y cerrar bloque): 1.
-  - `0x197 | desplazamiento`: 1. Es el **único salto por posición**: `pc = pc + 4 + desplazamiento × 4`, con el desplazamiento de 16 bits con signo. Si un mensaje cambia de tamaño entre el salto y su destino, hay que corregirlo.
-  - `0x192` (condición; salta al bloque `0x194`…`0x195` que corresponde, sin desplazamiento): 2 + 5 × (byte 1 de la palabra).
+  - `0x197 | desplazamiento`: 1. Salto: `pc = pc + 4 + desplazamiento × 4`, con el desplazamiento de 16 bits con signo.
+  - `0x192` (condición): 2 + 5 × (byte 1 de la palabra). La **palabra 1 es un desplazamiento**: si la condición no se cumple, sigue en fin de la condición + palabra 1 × 4 (el bloque `0x194` alternativo o la condición siguiente, como un `else if`).
+  `0x197` y `0x192` son las dos instrucciones con desplazamiento: si un mensaje cambia de tamaño entre una de ellas y su destino, hay que corregirlo (`stage.rebuild`). Sin esa corrección, el guion sigue desde un punto equivocado y se saltan mensajes (prueba 5).
   - `0x196 | n` (expresión terminada en `0xff`): 1 + n.
   - `0x19d | n` (mensaje): 2 + n.
   - El resto (comandos, `opcode | n.º de argumentos`): 1 + 2 × argumentos (cada argumento es `{tipo, valor}`).

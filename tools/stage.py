@@ -115,11 +115,28 @@ def codes(s):
     return out
 
 
+def targets(ins):
+    """Destinos por posición de cada instrucción: {índice: (índice de la palabra, destino)}.
+    0x197: pc + 4 + desplazamiento × 4 (16 bits con signo, en la misma palabra).
+    0x192: fin de la condición + palabra 1 × 4 (bloque alternativo si no se cumple)."""
+    out = {}
+    for i, (o, w) in enumerate(ins):
+        op = w[0] >> 16
+        if op == JUMP:
+            d = w[0] & 0xffff
+            d -= 0x10000 if d & 0x8000 else 0
+            out[i] = (0, o + 4 + 4 * d)
+        elif op == COND:
+            out[i] = (1, o + 4 * len(w) + 4 * w[1])
+    return out
+
+
 def rebuild(ins, new_msgs):
     """Arma el guion con los mensajes cambiados ({índice: códigos}) y corrige
-    los saltos 0x197 (pc = pc + 4 + desplazamiento × 4)."""
+    los desplazamientos de 0x197 y 0x192."""
     words = []
     for i, (o, w) in enumerate(ins):
+        w = list(w)
         if i in new_msgs:
             c = new_msgs[i]
             w = [(MSG << 16) | len(c), w[1]] + list(c)
@@ -128,14 +145,16 @@ def rebuild(ins, new_msgs):
     for (o, _), w in zip(ins, words):
         new_off[o] = pos
         pos += 4 * len(w)
-    for (o, _), w in zip(ins, words):
-        if w[0] >> 16 == JUMP:
-            d = w[0] & 0xffff
-            d -= 0x10000 if d & 0x8000 else 0
-            target = o + 4 + 4 * d
-            nd = (new_off[target] - new_off[o] - 4) // 4
+    new_off[ins[-1][0] + 4 * len(ins[-1][1])] = pos      # fin del guion
+    for i, (k, t) in targets(ins).items():
+        o, w = ins[i][0], words[i]
+        if k == 0:
+            nd = (new_off[t] - new_off[o] - 4) // 4
             assert -0x8000 <= nd < 0x8000
             w[0] = (JUMP << 16) | (nd & 0xffff)
+        else:
+            w[1] = (new_off[t] - new_off[o] - 4 * len(w)) // 4
+            assert 0 <= w[1] < 0x10000
     return b''.join(struct.pack('<%dI' % len(w), *w) for w in words)
 
 
