@@ -10,3 +10,34 @@ Lo que el usuario decidió, con fecha, para no volver a discutirlo. Una regla de
 - **2026-11-20** Pruebas en PCSX2, cargando la imagen parcheada.
 - **2026-11-20** Entrega: parche xdelta sobre la imagen PAL.
 - **2026-11-20** STYLE.md: se deja la base completa.
+- **2026-11-21** Glosario, criterios generales (fase 3):
+  - «Eternal Ring» se traduce «Anillo Eterno» en los textos; «Eternal» pasa a «eterno/a» en los términos que lo comparten. El logo y los videos quedan como están.
+  - Nombres de magias, armas, objetos y gemas: mayúscula solo en la inicial y en los nombres propios («Bola de fuego»). Los lugares, con mayúscula en las palabras principales.
+  - HP, MP y EXP quedan en inglés.
+  - Nombres de personas y de países en inglés y sin tildes agregadas (Cain, Solcia); gentilicios adaptados y en minúscula («solciano», «aldiniano»).
+  - Estados con sustantivos, que no marcan género: «Magia sellada», «Maldición», «Veneno», «Parálisis».
+  - «God's child», «God-child», «the child of God» → «el hijo de Dios» (no «el niño divino», que proponía el terminólogo).
+  - Los siete «Dragon Fang»: se conserva «dragón» y el elemento, abreviando «Colmillo» («Colm. dragón fuego»), porque el campo es de 19 bytes y no se puede agrandar (registro fijo de `ERDATA.BIN`). Se descartó cambiar «dragón» por un adjetivo («Colmillo ígneo»): el original no lo dice.
+  - Lista corta de lugares del ejecutable (0x24a540–0x24a760, campos de 7 a 17 bytes): no se abrevia; se mueven las cadenas y se corrigen sus referencias, para usar siempre la forma completa.
+- **2026-11-21** Glosario, dudas sueltas:
+  - «DARK»/«Dark» → «OSCURIDAD»/«Oscuridad» (no «Sombra»).
+  - Que dos términos distintos compartan palabra no es problema: la magia «Poison» y el estado «Poisoned» → «Veneno».
+  - «Blizzard» (magia) → «Ventisca»; «Snowstorm Plain» (lugar) → «Llano de la Nevada», no «Llano de Ventisca»: «snowstorm» es tormenta de nieve, no ventisca.
+  - «Research Team HQ» → «Base de Invest.».
+  - «[ON]»/«[OFF]» → «[Sí]»/«[No]».
+  - «Options» → «Opciones» y «Settings» → «Ajustes» (el terminólogo proponía al revés). En `menus/exe#25d678` (7 bytes) «Opciones» no entra: se mueve la cadena, como los demás títulos de 7 letras.
+- **2026-11-21** Glosario, bloques 1 y 2 (elementos, atributos, anillos): aprobadas las propuestas del terminólogo, salvo «STR» → «FUE», «NEXT» → «SIG» y «MP used» → «MP usado», que eligió el usuario frente a «FUERZA», «FALTA» y «consumo de MP». «caster» → «el usuario».
+- **2026-11-21** Glosario, bloque 3 (101 magias): aprobadas las propuestas del terminólogo, con estos cambios del usuario: «Ring of Inferno» → «Anillo del infierno» (no «infernal», para seguir «Anillo de X»); las cuatro de espada van con «Espada» delante: «Espada de calor», «Espada de lluvia», «Espada de brisa», «Espada de piedra» (las otras doce de la serie siguen «Calor de viento», «Lluvia de tierra»…); «Imprisonment» → «Encarcelamiento»; «Divine» → «Divinidad». Confirmadas: «Bombardeo», «Agotar», «Antídoto», «Poder de ramificación», «Iluminación», «Sacudida», «Órbita», «Hacha de tierra», «Bloqueo oscuro», «Dragón oscuro», «Anillo de perspicacia», «Anillo de magia».
+- **2026-11-21** Glosario, bloques 4 a 7 (armas, objetos clave, objetos, gemas): aprobadas las propuestas del terminólogo, con estos cambios del usuario: «Small Sword» → «Espada pequeña» (no «Espadín»); «Sahagin's Thorn» → «Espina de Sahagin» (con mayúscula); «Sunbeam Gem» → «Gema de rayo solar». Confirmadas: «Estoque», «Espada Eterna» (con mayúscula, por el Anillo Eterno), «Manopla Kaizer», «Pergamino del rey», «Solicitud de arma», «Campos Dorados», «Gema incandescente», «Gema acuosa», «Gema nubosa» y «Gema dragón de X» para las seis de dragón.
+- **2026-11-21** Glosario, bloques 8 y 9 (lugares y personajes): los lugares van siempre con su forma completa (la lista corta se mueve). Cambios del usuario: «Cliff Forest» → «Bosque Escarpado» (no «Bosque del Risco»); «Water Shrine» → «Santuario del Agua» (no «Templo»), con «shrine» → «santuario» también en los diálogos y los pisos «B1/B2» → «Sant. del Agua S1/S2»; «Forgotten Dais» → «Estrado Olvidado» (no «Altar»). Confirmadas: «Fundición», «Cueva de Caliza», «Costa Norte», «Caverna de Cascada». Personajes: todos los nombres en inglés. El género de Marie Fowler no lo marca el texto (el terminólogo lo había dado por femenino por el nombre): «Chief Medic» espera la ficha.
+- **2026-11-21** Glosario, bloque 10 (pueblos y grupos): aprobadas las propuestas, con «assistant captain» → «subcapitán» (no «segundo al mando»). Confirmadas: «los ancianos», «séquito», «los Guardianes».
+- **2026-11-21** Glosario, bloques 11 y 13 (historia y menús): aprobadas las propuestas, con estos cambios del usuario: «Gravestone» → «Lápida» y «Tombstone» → «Tumba» (dos palabras, como el original); «Controller» → «Mando» (no «Control»; excepción a E-12 para este término). Confirmadas: «la compuerta», «Tienes», «Cargar/Guardar partida», «música»/«efectos», «MEMORY CARD(PS2)», «¡Sube de nivel!», «Salir», «ranura».
+- **2026-11-21** Fichas de personajes (fase 3):
+  - Género decidido por el usuario: Azabar Duhrin, el soldado de Aldine y el agonizante, masculino; Marie Fowler, femenino («Chief Medic» → «jefa médica»). El texto no lo marca: lo decide el usuario (E-40 no permite deducirlo por el nombre).
+  - Sin marcar (E-41, hasta escuchar el doblaje): la guía de los anillos, el pescador, quien escribe el diario de 1911, la conciencia antigua y las cuatro voces del árbol.
+  - Trato: las cuatro voces del árbol (1905) le hablan de *usted* al protagonista, todo el grupo igual. La conciencia antigua (1990), con *thou*, de *tú* solemne (como la Reina-Valera). Los demás, de *tú*; el rey, de superior a súbdito.
+- **2026-11-21** Versión de apoyo: se usa la japonesa (SLPS-25001, `Eternal Ring (Japan).iso`) para género, sujeto omitido y trato (E-1), como pide el kit. Cambia la decisión del 2026-11-20 («sin versión de apoyo»). Sus diálogos están en `../eternal-ring-esp-local/jp/dialogos-ja.jsonl` (ver TECH.md; se extraen con `tools/ja.py`).
+- **2026-11-21** Fichas, con el japonés:
+  - El árbol de 1905 tiene dos voces, no cuatro: una cortés (1905#001-035), de *usted* y masculina; y una ruda (1905#000, #036-060), de *tú* y masculina («俺»). Reemplaza el *usted* para todo el grupo.
+  - La guía de los anillos («お前») y el pescador («わし»): masculino. El diario de 1911 y la conciencia antigua siguen sin marcar: el japonés tampoco marca su género.
+  - 1971: los turnos salen del japonés (pescador #000, #002, #004, #005; protagonista #001, #003).
