@@ -25,7 +25,7 @@ Antes de esto no se decide nada más.
 
 - [x] Extraer los archivos del juego, a una carpeta fuera del repo. (`../eternal-ring-esp-local/iso/`, 2026-11-20.)
 - [x] Ubicar todo el texto. (2026-11-21: ejecutable, descripciones de `ERDATA.BIN`, los 505 mensajes en los guiones de 55 escenarios y los videos `TEXT0`/`TEXT1`; ver TECH.md. Letras españolas y mensajes más largos probados en PCSX2.)
-- [x] Adaptador: exportar el texto al formato común (`source` de `loc.json`) e importarlo de vuelta. (`tools/adapter.py`, 2026-11-21; `build` probado sin el juego, falta verlo en PCSX2.)
+- [x] Adaptador: exportar el texto al formato común (`source` de `loc.json`) e importarlo de vuelta. (`tools/adapter.py`, 2026-11-21; una ISO de `build` probada en PCSX2: menú, día, objeto y arma.)
 - [x] Ida y vuelta idéntica: exportar e importar sin cambios da los mismos archivos. (`adapter.py roundtrip`: `ERDATA.BIN`, ejecutable y 55 guiones idénticos.)
 - [ ] Caracteres: si la fuente tiene las letras españolas, o cómo se agregan (T-5). (No las tiene; `tools/font_es.py` agrega 34 signos y los activa en las tres funciones de texto. Diálogos probados en PCSX2 el 2026-11-21; menús, descripciones y los signos nuevos, en la prueba 3.)
 - [ ] Límites: bytes, ancho y renglones de cada tipo de texto (T-3, T-4), y sus chequeos en `hooks`.
