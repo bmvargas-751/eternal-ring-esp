@@ -31,12 +31,25 @@ Lo que mostró la fase 1 (2026-11-20 y 21). Lo que dice *por confirmar* todavía
 - **Espacio en el disco:** después de `ERDATA.BIN` (que termina en el LBA 0x34031) no hay ningún archivo hasta `CRAVE.PSS` (LBA 0x6bc53): unos 457 MB libres. `ERDATA.BIN` puede crecer en su lugar actualizando su tamaño en el directorio de la ISO (lo hace `tools/stage.py`).
 - **Voces:** `VOICEALL.ADX` no es ADX de CRI: son 472 bloques `SShd`/`SSbd` alineados a sector, PCM de 16 bits, estéreo, a 48 kHz (uno a 44,1 kHz). Unos 40 minutos.
 - **Videos:** `TEXT0.PSS` (1:54) y `TEXT1.PSS` (1:32) son la narración de la introducción y del final, con el texto dibujado en el video (MPEG-2 de 640×448 a 25 fps). Traducirlos obliga a rehacer el video.
-- **Restos:** en `ERDATA.BIN` quedan descripciones de objetos en japonés (Shift-JIS) de la versión japonesa, sin usar.
+- **Restos:** en `ERDATA.BIN` quedan descripciones de objetos en japonés (Shift-JIS) de la versión japonesa, sin usar, a veces detrás del texto inglés dentro del mismo campo. El arma de la entrada 806 (Schiavona) sigue en japonés y no está en la tabla de armas: parece sin usar.
+- **Magias, armas y objetos:** en la entrada 4, tablas de registros con el nombre y la descripción (`\r\n` entre renglones). Campos en bytes, con el `\0`; detrás vienen datos del juego (curación, precios…), que no se pueden pisar:
+
+  | Tabla | Desde (entrada 4) | Registro | Nombre | Descripción | Datos desde |
+  |---|---|---|---|---|---|
+  | Magias (anillos) | +0x1a57d0 | 0x100 | 0x18 | +0x18, 0xa8 | +0xc0 |
+  | Armas | +0x1ad7cc | 0x100 | 0x14 | +0x14, 0xac | +0xc0 |
+  | Objetos clave | +0x1ae714 | 0x80 | 0x14 | +0x14, 0x3e | +0x52 |
+  | Objetos | +0x1b0014 | 0x80 | 0x14 | +0x14, 0x40 | +0x54 |
+  | Gemas | +0x1b2714 | 0x80 | 0x18 | +0x18, 0x64 | +0x7c |
+
+  Las armas tienen además una copia en su archivo (entrada 801 + número de arma): nombre en +0x3c (0x10) y descripción en +0x50 (0x40). El adaptador escribe las dos con el límite más chico.
+- **Adaptador** (`tools/adapter.py`): `export` escribe `source.jsonl` (1157 textos: 505 `dialogo/<entrada>#NNN`, 324 `objetos/<tabla>#NNN.nombre|.desc`, 328 `menus/exe#<desplazamiento>`); `roundtrip` escribe el original sobre sí mismo y comprueba que `ERDATA.BIN`, el ejecutable y los 55 guiones queden idénticos (lo están); `build` copia la ISO original, aplica `font_es.py`, escribe la traducción (lo que falta queda en inglés) y mueve al final de `ERDATA.BIN` solo los escenarios con mensajes cambiados. Siempre parte de la ISO original: para ubicar los campos, el adaptador lee el texto inglés. En el ejecutable, cada campo llega hasta el próximo byte que no es 0, pero no más allá de la cadena anterior ni de la siguiente, y como mucho 79 bytes (los textos están en registros de largo fijo). `tools/hooks.py` hace los chequeos de `loc.py check` propios del juego (T-3, T-4, T-5).
 
 ## Códigos y saltos
 
 - **T-1** Los códigos (variables, etiquetas, colores, nombres insertados) quedan intactos y en el mismo orden que en el original. Los reconoce la lista `codes` de `loc.json`. (`codigos`)
-  - Completar: qué hace cada código de este juego.
+  - Diálogos: `{hex}` es una palabra que no es una letra (los 16 bits altos son el tipo: 1 y 2, color; 6, centrar). Por ejemplo, `{108f8}` o `{10fc0}` al principio de un cartel o una carta. Va en el mismo lugar.
+  - Menús y descripciones: `_NNN` es el color (R, G y B) de lo que sigue; `%s`, `%3d`, `%1d`, `%02d` son valores que pone el juego. `{cr}` es un `\r` suelto del original.
 - **T-2** Saltos de línea: los fijos (`fixed_break` en `loc.json`) van exactamente donde están en el original, ni más ni menos. Los demás, si el adaptador parte los renglones, los pone el adaptador. (`saltos`)
 
 ## Espacio
@@ -45,7 +58,9 @@ Lo que mostró la fase 1 (2026-11-20 y 21). Lo que dice *por confirmar* todavía
   - **Diálogos** (probado en PCSX2 el 2026-11-21): hasta **4 renglones** (el 5.º y los siguientes se dibujan debajo de la caja) y hasta **35 caracteres** por renglón (el 36.º toca el borde; el juego no corta ni avisa). Cuando hay otra caja después, el ícono azul de «siguiente» tapa el 4.º renglón desde el carácter 33: el 4.º renglón, hasta **32**. El original usa como mucho 34 por renglón, y 4 renglones solo 3 veces (con el 4.º de 18 como máximo). El largo total no importa (el búfer admite 256 caracteres; 140 se ven bien).
   - **Descripciones de objetos** (modo angosto): hasta **32 caracteres** por renglón (el 33.º se corta en el borde del panel). El original llega a 31. *Por ver:* cuántos renglones entran.
   - Menús: el largo fijo de cada campo del ejecutable (por ejemplo, 10 caracteres con espacios en el menú de pausa).
-- **T-4** Los textos con largo máximo en bytes (`max` en el lote) no pueden pasarlo: es un límite duro. Completar: cuántos bytes ocupa cada letra en este juego. (`bytes`)
+- **T-4** Los textos con largo máximo en bytes (`max` en el lote) no pueden pasarlo: es un límite duro. (`bytes`)
+  - Diálogos: cada letra o código ocupa una palabra; el búfer del mensaje admite 256 (`max` 256). No hay otro límite de largo: el guion crece al final del escenario.
+  - Magias, armas, objetos y ejecutable: un byte por letra (Windows-1252; el salto de línea, `\r\n`, ocupa 2). `max` es el campo sin el `\0` (ver **Magias, armas y objetos**).
 
 ## Caracteres
 
@@ -57,6 +72,6 @@ Lo que mostró la fase 1 (2026-11-20 y 21). Lo que dice *por confirmar* todavía
 
 ## Qué se traduce
 
-- **T-6** Lo que no se traduce ni cuenta (restos sin localizar, textos de prueba) va en `excluded` de `loc.json`. Completar: qué es en este juego.
+- **T-6** Lo que no se traduce ni cuenta (restos sin localizar, textos de prueba) va en `excluded` de `loc.json`. El adaptador ya deja afuera lo que no se ve: nombres de archivo, textos de depuración, bibliotecas de Sony, textos que el juego reemplaza (`MRing Name`, `WeaponName`) y el arma 806 (en japonés, sin usar). Lo que se encuentre en el juego que tampoco se vea va a `excluded`.
 - **T-7** Solo se traducen los textos que ve el jugador. Los nombres internos (archivos, etiquetas) no se exportan y no se tocan.
 - **T-8** Toda línea del lote se traduce completa: ninguna queda vacía, igual al original ni con frases del original mezcladas. (`vacia`, `sin_traducir`, `ingles_mezclado`)
