@@ -42,6 +42,9 @@ Lo que mostró la fase 1 (2026-11-20 y 21). Lo que dice *por confirmar* todavía
 ## Espacio
 
 - **T-3** La caja: ningún renglón puede pasar del ancho que permite el juego. Si el límite medido es el del original y no el de la pantalla, el aviso no obliga a recortar: se permiten abreviaturas reconocibles, pero nunca se quitan palabras ni se acorta de forma que se pierda el sentido. Si la forma completa no cabe, va completa y con su aviso, y se revisa en el juego. [IVA] (chequeo del proyecto, en `hooks`)
+  - **Diálogos** (probado en PCSX2 el 2026-11-21): hasta **4 renglones** (el 5.º y los siguientes se dibujan debajo de la caja) y hasta **35 caracteres** por renglón (el 36.º toca el borde; el juego no corta ni avisa). Cuando hay otra caja después, el ícono azul de «siguiente» tapa el 4.º renglón desde el carácter 33: el 4.º renglón, hasta **32**. El original usa como mucho 34 por renglón, y 4 renglones solo 3 veces (con el 4.º de 18 como máximo). El largo total no importa (el búfer admite 256 caracteres; 140 se ven bien).
+  - **Descripciones de objetos** (modo angosto): hasta **32 caracteres** por renglón (el 33.º se corta en el borde del panel). El original llega a 31. *Por ver:* cuántos renglones entran.
+  - Menús: el largo fijo de cada campo del ejecutable (por ejemplo, 10 caracteres con espacios en el menú de pausa).
 - **T-4** Los textos con largo máximo en bytes (`max` en el lote) no pueden pasarlo: es un límite duro. Completar: cuántos bytes ocupa cada letra en este juego. (`bytes`)
 
 ## Caracteres
