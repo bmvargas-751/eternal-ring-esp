@@ -2,10 +2,13 @@
 mensajes de otro largo.
 
 Cómo está hecho (TECH.md):
-  - ERDATA.BIN 0x3d40: tabla de 16 escenarios {sector, sectores}; el LBA del
-    disco es 0x6a1 + 0x10 + sector. Se cargan enteros en RAM 0x55ca80.
-  - Cabecera del escenario: +0 tamaño total, +4 tamaño del guion, +8 y +0xc en
-    0 en los 16 (sin uso). En 0x138..0x154, ocho desplazamientos a secciones.
+  - ERDATA.BIN empieza con un índice de 4096 entradas {sector, sectores}
+    (0x8000 bytes); los sectores se cuentan desde el final del índice, así que
+    el archivo de la entrada está en ERDATA (sector + 0x10) × 0x800 y en el LBA
+    0x6a1 + 0x10 + sector.
+  - 51 entradas (1900–1999) son escenarios: se cargan enteros en RAM 0x55ca80.
+    Cabecera: +0 tamaño total, +4 tamaño del guion, +8 y +0xc en 0 (sin uso).
+    En 0x138..0x154, ocho desplazamientos a secciones.
   - El guion no tiene desplazamiento propio: el juego recorre las secciones en
     orden (0x117xxx) y el guion es la que sigue a las de objetos; la siguiente
     empieza en guion + tamaño. Por eso no puede crecer en su lugar.
@@ -21,11 +24,11 @@ Lo que hace este módulo para que un guion crezca sin mover nada:
     de la tabla apunta ahí; el tamaño de ERDATA.BIN en el directorio de la ISO
     se agranda para cubrirlo.
 """
-import struct
+import bisect, struct
 
 ER_LBA = 0x6a1
-STAGE_TABLE = 0x3d40
-STAGES = 16
+INDEX_ENTRIES = 0x1000     # 0x8000 bytes
+DATA = 0x10                # los sectores del índice se cuentan desde aquí
 SECTOR = 0x800
 EXE_BASE = 0xff000
 HOOK = 0x1175fc            # lw v0, 4(a0) ; sw s7, 0x14(v1)
@@ -39,17 +42,42 @@ def u32(b, o):
     return struct.unpack_from('<I', b, o)[0]
 
 
-def table(er, er_off=0):
-    er.seek(er_off + STAGE_TABLE)
-    return [struct.unpack('<II', er.read(8)) for _ in range(STAGES)]
+def index(er, er_off=0):
+    """Las 4096 entradas {sector, sectores} del índice de ERDATA.BIN."""
+    er.seek(er_off)
+    d = er.read(INDEX_ENTRIES * 8)
+    return [struct.unpack_from('<II', d, 8 * i) for i in range(INDEX_ENTRIES)]
+
+
+def entry_offset(er, n, er_off=0):
+    """Desplazamiento en ERDATA.BIN del archivo de la entrada n."""
+    return (index(er, er_off)[n][0] + DATA) * SECTOR
 
 
 def read_stage(er, n, er_off=0):
-    s, c = table(er, er_off)[n]
-    er.seek(er_off + (s + 0x10) * SECTOR)
+    er.seek(er_off + entry_offset(er, n, er_off))
     size = struct.unpack('<I', er.read(4))[0]
-    er.seek(er_off + (s + 0x10) * SECTOR)
+    er.seek(er_off + entry_offset(er, n, er_off))
     return er.read(size)
+
+
+def stages(er, er_off=0):
+    """Entradas del índice que son escenarios con guion: [(n, escenario)]."""
+    out = []
+    for n, (s, c) in enumerate(index(er, er_off)):
+        if c < 0x20:
+            continue
+        er.seek(er_off + (s + DATA) * SECTOR)
+        h = struct.unpack('<4I', er.read(16))
+        if not (0x200 <= h[0] <= c * SECTOR and 0 < h[1] < h[0]):
+            continue
+        st = read_stage(er, n, er_off)
+        try:
+            script(st)
+        except (AssertionError, struct.error):
+            continue
+        out.append((n, st))
+    return out
 
 
 # --- bytecode -------------------------------------------------------------
@@ -95,7 +123,9 @@ def script(stage):
         off, size = u32(stage, 8), u32(stage, 0xc)
     else:
         off, size = find_script(stage), u32(stage, 4)
-    return off, walk(stage, off, size)
+    ins = walk(stage, off, size)
+    assert ins is not None, 'el guion no se recorre entero'
+    return off, ins
 
 
 def messages(ins):
@@ -118,7 +148,8 @@ def codes(s):
 def targets(ins):
     """Destinos por posición de cada instrucción: {índice: (índice de la palabra, destino)}.
     0x197: pc + 4 + desplazamiento × 4 (16 bits con signo, en la misma palabra).
-    0x192: fin de la condición + palabra 1 × 4 (bloque alternativo si no se cumple)."""
+    0x192: fin de la condición + (16 bits bajos de la palabra 1) × 4 (bloque alternativo
+    si no se cumple; la mitad alta se conserva)."""
     out = {}
     for i, (o, w) in enumerate(ins):
         op = w[0] >> 16
@@ -127,7 +158,7 @@ def targets(ins):
             d -= 0x10000 if d & 0x8000 else 0
             out[i] = (0, o + 4 + 4 * d)
         elif op == COND:
-            out[i] = (1, o + 4 * len(w) + 4 * w[1])
+            out[i] = (1, o + 4 * len(w) + 4 * (w[1] & 0xffff))
     return out
 
 
@@ -146,15 +177,28 @@ def rebuild(ins, new_msgs):
         new_off[o] = pos
         pos += 4 * len(w)
     new_off[ins[-1][0] + 4 * len(ins[-1][1])] = pos      # fin del guion
+    starts = sorted(new_off)
+    changed = {ins[i][0] for i in new_msgs}
+
+    def moved(t):
+        # Destino en mitad de una instrucción (hay 3 en el original, en
+        # ramas que no se ejecutan): misma posición relativa dentro de ella.
+        if t in new_off:
+            return new_off[t]
+        o = starts[bisect.bisect_right(starts, t) - 1]
+        assert o not in changed, 'un destino cae dentro de un mensaje cambiado'
+        return new_off[o] + (t - o)
+
     for i, (k, t) in targets(ins).items():
         o, w = ins[i][0], words[i]
         if k == 0:
-            nd = (new_off[t] - new_off[o] - 4) // 4
+            nd = (moved(t) - new_off[o] - 4) // 4
             assert -0x8000 <= nd < 0x8000
             w[0] = (JUMP << 16) | (nd & 0xffff)
         else:
-            w[1] = (new_off[t] - new_off[o] - 4 * len(w)) // 4
-            assert 0 <= w[1] < 0x10000
+            d = (moved(t) - new_off[o] - 4 * len(w)) // 4
+            assert 0 <= d < 0x10000
+            w[1] = (w[1] & 0xffff0000) | d
     return b''.join(struct.pack('<%dI' % len(w), *w) for w in words)
 
 
@@ -172,22 +216,21 @@ def with_script(stage, blob):
 # --- disco y ejecutable ----------------------------------------------------
 
 def place(er, n, stage, er_off=0, er_size=None):
-    """Escribe el escenario al final de ERDATA (o donde ya estaba reubicado, si
-    cabe) y actualiza la tabla. Devuelve el nuevo tamaño de ERDATA."""
-    t = table(er, er_off)
-    s, c = t[n]
+    """Escribe el escenario de la entrada n al final de ERDATA (o donde ya
+    estaba, si ya se había movido al final y sigue siendo lo último) y
+    actualiza el índice. Devuelve el nuevo tamaño de ERDATA."""
+    idx = index(er, er_off)
+    s, c = idx[n]
     need = (len(stage) + SECTOR - 1) // SECTOR
     need += -need % 0x10
-    end_sector = er_size // SECTOR
-    if s + 0x10 + c == end_sector and s + 0x10 >= max(x + 0x10 + y for i, (x, y) in enumerate(t) if i != n):
-        start = s + 0x10                       # ya es el último: se reescribe ahí
-    else:
-        start = end_sector
-    er.seek(er_off + start * SECTOR)
+    end = er_size // SECTOR - DATA                 # primer sector libre (en sectores del índice)
+    others = max(x + y for i, (x, y) in enumerate(idx) if i != n and y)
+    start = s if (s + c == end and s >= others) else end
+    er.seek(er_off + (start + DATA) * SECTOR)
     er.write(stage + bytes(need * SECTOR - len(stage)))
-    er.seek(er_off + STAGE_TABLE + 8 * n)
-    er.write(struct.pack('<II', start - 0x10, need))
-    return max(er_size, (start + need) * SECTOR)
+    er.seek(er_off + 8 * n)
+    er.write(struct.pack('<II', start, need))
+    return max(er_size, (start + DATA + need) * SECTOR)
 
 
 def patch_exe(exe, exe_off):
