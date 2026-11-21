@@ -6,7 +6,7 @@ Se cierran en la fase 0, porque son caras de cambiar después.
 
 - **Variante:** español neutro (*tú*/*ustedes*, sin regionalismos de ningún país).
 - **Original:** versión PAL europea en inglés (SLES-50051), imagen `Eternal Ring.iso`. [DECISIONS 2026-11-20]
-- **Otra versión de apoyo:** ninguna; solo el inglés. [DECISIONS 2026-11-20]
+- **Otra versión de apoyo:** la japonesa (SLPS-25001), solo para género, sujeto omitido y trato (E-1). [DECISIONS 2026-11-21]
 - **Terminología oficial:** no hay traducción oficial al español del juego. *King's Field IV* PAL (`KF4_SPA.DAT`) se consulta solo como muestra de cómo traducía FromSoftware; no es fuente del glosario. [DECISIONS 2026-11-20]
 - **Pruebas:** PCSX2; la traducción se instala con un parche xdelta sobre la imagen PAL. [DECISIONS 2026-11-20]
 - **Sin spoilers:** los documentos, los commits y el chat nombran zonas o archivos, nunca hechos de la historia.
@@ -35,14 +35,18 @@ Antes de esto no se decide nada más.
 
 ### Fase 2. Inventario y presupuesto
 
-- [ ] Volumen por sección (`loc.py progress`).
-- [ ] Costo estimado por sección, antes de empezarla.
+- [x] Volumen por sección (`loc.py progress`). (2026-11-21: 1.183 textos, 7.483 palabras. Diálogos 505 líneas / 5.378 palabras; Magias, armas y objetos 324 / 1.380; Menús 354 / 725.)
+- [x] Costo estimado por sección, antes de empezarla. (2026-11-21, con la referencia de METHOD.md: unos 43.000 tokens cada 250 líneas por agente; traductor, revisor y corrector pasan por todo, más editor y delicadas.)
+  - Diálogos: unos 300.000 tokens (2 lotes; líneas largas, puede subir).
+  - Magias, armas y objetos: unos 200.000 (2 lotes).
+  - Menús: unos 150.000 (2 lotes; líneas de 2 palabras de media, probablemente menos).
+  - Total: unos 650.000, sin contar glosario, fichas ni set de oro.
 
 ### Fase 3. Documentos
 
-- [ ] Glosario: el terminólogo propone las filas.
-- [ ] Fichas de personajes: el perfilador, antes de cada sección.
-- [ ] DECISIONS.md y PENDING.md al día.
+- [x] Glosario: el terminólogo propone las filas. (2026-11-21: 296 términos decididos por el usuario, bloque por bloque; no hay fuente oficial, todo es G-2.)
+- [x] Fichas de personajes: el perfilador, antes de cada sección. (2026-11-21, Diálogos: 20 fichas, 2 voces y `characters/_mapa.md`. Género y turnos revisados con el japonés; sin marcar solo el diario de 1911 y la conciencia antigua. Las otras dos secciones no tienen personajes.)
+- [x] DECISIONS.md y PENDING.md al día. (2026-11-21.)
 
 ### Fase 4. Set de oro
 
