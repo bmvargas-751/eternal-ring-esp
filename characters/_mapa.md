@@ -16,12 +16,9 @@ Los guiones agrupan las líneas por personaje y por situación, no por orden de 
 | 1902 | [voz-sistema.md](voz-sistema.md) | #000-008 | segura |
 | 1903 | [guia-de-los-anillos.md](guia-de-los-anillos.md) | #000-015 | segura (sin nombre) |
 | 1904 | [voz-sistema.md](voz-sistema.md) | #000 | segura |
-| 1905 | sin determinar | #000 | sin determinar |
-| 1905 | [arbol-portavoz.md](arbol-portavoz.md) | #001-026 | probable |
-| 1905 | [arbol-acompanante.md](arbol-acompanante.md) | #027-041 | probable |
-| 1905 | [arbol-comerciante.md](arbol-comerciante.md) | #042-049 | probable |
-| 1905 | [arbol-cuentacuentos.md](arbol-cuentacuentos.md) | #050-058 | probable |
-| 1905 | sin determinar | #059-060 | sin determinar |
+| 1905 | [arbol-rudo.md](arbol-rudo.md) | #000 | segura (japonés) |
+| 1905 | [arbol-cortes.md](arbol-cortes.md) | #001-035 | segura (japonés) |
+| 1905 | [arbol-rudo.md](arbol-rudo.md) | #036-060 | segura (japonés) |
 | 1908 | [mercenario.md](mercenario.md) | #000-019 | segura |
 | 1909 | [madre-de-lyla.md](madre-de-lyla.md) | #000-015 | segura |
 | 1909 | [lyla.md](lyla.md) | #016 | probable |
@@ -61,8 +58,8 @@ Los guiones agrupan las líneas por personaje y por situación, no por orden de 
 | 1970 | [marie-fowler.md](marie-fowler.md) | #082 | probable |
 | 1970 | [evans.md](evans.md) | #083-094 | segura |
 | 1970 | [evans.md](evans.md) | #095-096 | probable |
-| 1971 | [protagonista.md](protagonista.md) | #000-001, #003 | probable |
-| 1971 | [pescador.md](pescador.md) | #002, #004-005 | probable |
+| 1971 | [protagonista.md](protagonista.md) | #001, #003 | segura (japonés) |
+| 1971 | [pescador.md](pescador.md) | #000, #002, #004-005 | segura (japonés) |
 | 1973 | [voz-sistema.md](voz-sistema.md) | #000-003, #008-009, #011 | segura |
 | 1973 | [mercenario.md](mercenario.md) | #004-007 | probable |
 | 1973 | [voz-equipo-de-investigacion.md](voz-equipo-de-investigacion.md) | #010 | probable |
@@ -78,9 +75,6 @@ Los guiones agrupan las líneas por personaje y por situación, no por orden de 
 
 | Clave | Texto | Candidatos |
 |---|---|---|
-| 1905#000 | Hey, don't mess around with that! | alguien del árbol (quizá [arbol-comerciante.md](arbol-comerciante.md)) |
-| 1905#059 | There used to be one more in our group... | cualquiera del árbol |
-| 1905#060 | Take care! | cualquiera del árbol |
 | 1911#009 | You disgust me. / DIE! | [mercenario.md](mercenario.md) o [capitan.md](capitan.md) |
 | 1911#010 | Hurry! / Get the / Eternal Ring... | [mercenario.md](mercenario.md) o [capitan.md](capitan.md) |
 | 1911#011 | You... / Followed me! | [mercenario.md](mercenario.md) o [capitan.md](capitan.md) |
@@ -89,10 +83,10 @@ Los guiones agrupan las líneas por personaje y por situación, no por orden de 
 | 1970#000 | ...... | un miembro del campamento; quizá [capitan.md](capitan.md) (otros dicen que no contesta, 1970#064) |
 
 Otras asignaciones que conviene confirmar en el juego:
-- **1905, el árbol:** las cuatro voces se separaron por tema (agradecimiento por el recuerdo, quejas de estar atrapados, venta a cambio de gemas, preguntas por Lyla). Pueden ser menos personas o repartirse distinto.
+- **1905, el árbol:** el japonés separa dos voces por la forma de hablar: una cortés («です/ます», «騎士さま») y una ruda («あんた», «俺»). Ver [arbol-cortes.md](arbol-cortes.md) y [arbol-rudo.md](arbol-rudo.md). En 1905 el japonés tiene un mensaje más (después de #055), así que desde #056 la clave inglesa es una menos que la japonesa.
 - **1970#018-051:** varios miembros sin nombre; no se sabe cuántos son ni si alguno es Wallace, Marcus o el capitán.
 - **1970#052-069:** atribuidas a Marie Fowler por tema y por estar en su bloque; solo 1970#070-081 son seguras.
-- **1971:** el guion no marca turnos; se reparten entre el protagonista y el pescador por el sentido.
+- **1971:** el japonés marca los turnos: el pescador dice «わし» (#000, #002, #004, #005); el protagonista, #001 y #003.
 
 ## Cómo nombran al jugador
 

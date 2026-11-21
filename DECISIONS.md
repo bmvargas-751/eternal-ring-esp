@@ -36,3 +36,8 @@ Lo que el usuario decidió, con fecha, para no volver a discutirlo. Una regla de
   - Género decidido por el usuario: Azabar Duhrin, el soldado de Aldine y el agonizante, masculino; Marie Fowler, femenino («Chief Medic» → «jefa médica»). El texto no lo marca: lo decide el usuario (E-40 no permite deducirlo por el nombre).
   - Sin marcar (E-41, hasta escuchar el doblaje): la guía de los anillos, el pescador, quien escribe el diario de 1911, la conciencia antigua y las cuatro voces del árbol.
   - Trato: las cuatro voces del árbol (1905) le hablan de *usted* al protagonista, todo el grupo igual. La conciencia antigua (1990), con *thou*, de *tú* solemne (como la Reina-Valera). Los demás, de *tú*; el rey, de superior a súbdito.
+- **2026-11-21** Versión de apoyo: se usa la japonesa (SLPS-25001, `Eternal Ring (Japan).iso`) para género, sujeto omitido y trato (E-1), como pide el kit. Cambia la decisión del 2026-11-20 («sin versión de apoyo»). Sus diálogos están en `../eternal-ring-esp-local/jp/dialogos-ja.jsonl` (ver TECH.md; se extraen con `tools/ja.py`).
+- **2026-11-21** Fichas, con el japonés:
+  - El árbol de 1905 tiene dos voces, no cuatro: una cortés (1905#001-035), de *usted* y masculina; y una ruda (1905#000, #036-060), de *tú* y masculina («俺»). Reemplaza el *usted* para todo el grupo.
+  - La guía de los anillos («お前») y el pescador («わし»): masculino. El diario de 1911 y la conciencia antigua siguen sin marcar: el japonés tampoco marca su género.
+  - 1971: los turnos salen del japonés (pescador #000, #002, #004, #005; protagonista #001, #003).

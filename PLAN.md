@@ -6,7 +6,7 @@ Se cierran en la fase 0, porque son caras de cambiar después.
 
 - **Variante:** español neutro (*tú*/*ustedes*, sin regionalismos de ningún país).
 - **Original:** versión PAL europea en inglés (SLES-50051), imagen `Eternal Ring.iso`. [DECISIONS 2026-11-20]
-- **Otra versión de apoyo:** ninguna; solo el inglés. [DECISIONS 2026-11-20]
+- **Otra versión de apoyo:** la japonesa (SLPS-25001), solo para género, sujeto omitido y trato (E-1). [DECISIONS 2026-11-21]
 - **Terminología oficial:** no hay traducción oficial al español del juego. *King's Field IV* PAL (`KF4_SPA.DAT`) se consulta solo como muestra de cómo traducía FromSoftware; no es fuente del glosario. [DECISIONS 2026-11-20]
 - **Pruebas:** PCSX2; la traducción se instala con un parche xdelta sobre la imagen PAL. [DECISIONS 2026-11-20]
 - **Sin spoilers:** los documentos, los commits y el chat nombran zonas o archivos, nunca hechos de la historia.
@@ -45,7 +45,7 @@ Antes de esto no se decide nada más.
 ### Fase 3. Documentos
 
 - [x] Glosario: el terminólogo propone las filas. (2026-11-21: 296 términos decididos por el usuario, bloque por bloque; no hay fuente oficial, todo es G-2.)
-- [x] Fichas de personajes: el perfilador, antes de cada sección. (2026-11-21, Diálogos: 22 fichas, 2 voces y `characters/_mapa.md`. Género sin marcar en 8 voces: se puede confirmar con los clips de `VOICEALL.ADX`. Las otras dos secciones no tienen personajes.)
+- [x] Fichas de personajes: el perfilador, antes de cada sección. (2026-11-21, Diálogos: 20 fichas, 2 voces y `characters/_mapa.md`. Género y turnos revisados con el japonés; sin marcar solo el diario de 1911 y la conciencia antigua. Las otras dos secciones no tienen personajes.)
 - [x] DECISIONS.md y PENDING.md al día. (2026-11-21.)
 
 ### Fase 4. Set de oro
