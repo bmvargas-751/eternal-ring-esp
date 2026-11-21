@@ -7,17 +7,34 @@
   "work": "build/work/batches",
   "sections": [
     {
-      "name": "Interfaz",
-      "prefixes": []
+      "name": "Diálogos",
+      "prefixes": [
+        "dialogo/"
+      ]
+    },
+    {
+      "name": "Magias, armas y objetos",
+      "prefixes": [
+        "objetos/"
+      ]
+    },
+    {
+      "name": "Menús",
+      "prefixes": [
+        "menus/"
+      ]
     }
   ],
   "excluded": [],
   "codes": [
-    "\\{[^{}]*\\}",
-    "%[-+0-9.]*[sdifxXu]"
+    "\\{[0-9a-f]+\\}",
+    "\\{cr\\}",
+    "_[0-9]{3}",
+    "%[-+0-9.]*[sdifxXu]",
+    "~"
   ],
   "fixed_break": null,
-  "encoding": "utf-8",
+  "encoding": "cp1252",
   "spanish_checks": true,
-  "hooks": null
+  "hooks": "tools/hooks.py"
 }

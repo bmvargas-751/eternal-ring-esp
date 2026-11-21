@@ -24,13 +24,14 @@ Se cierran en la fase 0, porque son caras de cambiar después.
 Antes de esto no se decide nada más.
 
 - [x] Extraer los archivos del juego, a una carpeta fuera del repo. (`../eternal-ring-esp-local/iso/`, 2026-11-20.)
-- [ ] Ubicar todo el texto. (Ubicado, 2026-11-21: ejecutable, descripciones de `ERDATA.BIN`, guiones de los mapas y los videos `TEXT0`/`TEXT1`; ver TECH.md. Falta la prueba en el juego de los diálogos: letras españolas y mensajes más largos.)
-- [ ] Adaptador: exportar el texto al formato común (`source` de `loc.json`) e importarlo de vuelta.
-- [ ] Ida y vuelta idéntica: exportar e importar sin cambios da los mismos archivos.
-- [ ] Caracteres: si la fuente tiene las letras españolas, o cómo se agregan (T-5).
-- [ ] Límites: bytes, ancho y renglones de cada tipo de texto (T-3, T-4), y sus chequeos en `hooks`.
-- [ ] Pseudolocalización: todo el texto más largo y con letras españolas, en el juego, para ver cortes y glifos que faltan.
-- [ ] Completar TECH.md y `loc.json` (`codes`, `fixed_break`, `excluded`, `sections`).
+- [x] Ubicar todo el texto. (2026-11-21: ejecutable, descripciones de `ERDATA.BIN`, los 505 mensajes en los guiones de 55 escenarios y los videos `TEXT0`/`TEXT1`; ver TECH.md. Letras españolas y mensajes más largos probados en PCSX2.)
+- [x] Adaptador: exportar el texto al formato común (`source` de `loc.json`) e importarlo de vuelta. (`tools/adapter.py`, 2026-11-21; una ISO de `build` probada en PCSX2: menú, día, objeto y arma.)
+- [x] Ida y vuelta idéntica: exportar e importar sin cambios da los mismos archivos. (`adapter.py roundtrip`: `ERDATA.BIN`, ejecutable y 55 guiones idénticos.)
+- [x] Caracteres: si la fuente tiene las letras españolas, o cómo se agregan (T-5). (No las tiene; `tools/font_es.py` agrega 34 signos, también en la fuente chica, y los activa en las tres funciones de texto. Probado en PCSX2. La fuente grande no tiene acentos y no le hacen falta.)
+- [x] Límites: bytes, ancho y renglones de cada tipo de texto (T-3, T-4), y sus chequeos en `hooks`. (`tools/hooks.py`; cuántos renglones entran en una descripción, en PENDING.md.)
+- [x] Pseudolocalización: todo el texto más largo y con letras españolas, en el juego, para ver cortes y glifos que faltan. (`tools/pseudo.py` + `adapter.py build`, vista en PCSX2 el 2026-11-21: fuente grande sin acentos, ancho de lugares, títulos y descripciones, una zona más del ejecutable y las imágenes con texto; ver TECH.md.)
+- [x] Imágenes con texto (botones, ON/OFF, «Time of Fire»…): ubicadas; si se traducen, en PENDING.md.
+- [x] Completar TECH.md y `loc.json` (`codes`, `fixed_break`, `excluded`, `sections`). (2026-11-21. Fase 1 cerrada.)
 
 ### Fase 2. Inventario y presupuesto
 
