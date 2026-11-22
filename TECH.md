@@ -70,7 +70,7 @@ Lo que mostró la fase 1 (2026-11-20 y 21). Lo que dice *por confirmar* todavía
 - **T-5** Solo se usan caracteres que tiene la fuente del juego. (`caracteres`, con el módulo `hooks` que se arma junto con el adaptador)
   - La fuente original tiene `0-9`, `A-Z`, `a-z`, el espacio y `. , ( ) ! ? ' " - : & % [ ] /` (`^` se dibuja igual que `-`). Cualquier otro carácter se salta **sin avanzar**: no da error, la palabra sale pegada.
   - `tools/font_es.py` le agrega **á é í ó ú ü ñ Á É Í Ó Ú Ü Ñ ¿ ¡ « » “ ” ‘ ’ — … º ª °** y **`; + = * < > #`**, en Windows-1252 (á = `0xE1`, … = `0x85`, — = `0x97`). Los 18 primeros se probaron en los diálogos en PCSX2 el 2026-11-21; los demás y los menús, *por confirmar* (prueba 3).
-  - Comillas: « » como primer nivel, “ ” dentro de ellas y ‘ ’ en el tercer nivel, como pide la RAE (E-58). Puntos suspensivos con `…`; raya con `—`.
+  - Comillas: « » como primer nivel, “ ” dentro de ellas y ‘ ’ en el tercer nivel, como pide la RAE (E-58). Puntos suspensivos con tres puntos `...`, como el original (E-54) [DECISIONS 2026-11-22]; raya con `—`.
   - `@` y `_` son códigos de control en menús y descripciones: no se usan como texto.
   - **Fuente grande** (los elementos FIRE, EARTH…, STR, y LEVEL, H P, M P, EXP, NEXT; `~` delante la elige): solo tiene `0-9 A-Z ( ) [ ] ! ? + - / *` y el espacio (la tabla está en el ejecutable, 0x243d60); cualquier otro carácter sale como «0» (visto en la pseudolocalización: «FÍRÉ» → «FORO»). En español no hace falta otra cosa (FUEGO, TIERRA, VIENTO, AGUA, LUZ, OSCURIDAD). `hooks.py` lo controla.
 
