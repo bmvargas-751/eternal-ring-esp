@@ -14,7 +14,7 @@ Aquí no se agrega ninguna regla sin fuente.
 
 ## Base
 
-- **E-1** Se traduce desde el original oficial que indica el PLAN, frase por frase y con el mismo sentido. Otra versión del juego (por ejemplo, la japonesa) solo resuelve género, sujeto omitido y trato. [THL] [IVA]
+- **E-1** Se traduce desde el original oficial que indica el PLAN, frase por frase y con el mismo sentido. Otra versión del juego (por ejemplo, la japonesa) solo resuelve género, sujeto omitido y trato, y el sentido de una frase del original que es confusa o está mal traducida (por ejemplo, 1923#011) [DECISIONS 2026-11-21]. [THL] [IVA]
 - **E-2** Naturalidad antes que literalidad. Fidelidad: no se añade ni se quita información. Calidad literaria: ritmo, sin repeticiones y sin sinónimos artificiales. [Encargo §1]
 - **E-3** No se agregan palabras que el original no dice. Si el original no lo dice y el español no lo necesita, no se añade. [THL]
 - **E-4** Se lee el contexto: quién habla, a quién y qué pasó antes. Si algo es ambiguo, se señala; nunca se inventa contexto. [Encargo §7]
