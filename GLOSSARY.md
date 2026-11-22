@@ -61,7 +61,7 @@ Por sección. *Oficial* (G-1) o *decidido* por el usuario (G-2), con fecha. `loc
 | Summon Magic | Magia de invocación | decidido [DECISIONS 2026-11-21] | Categoría de anillos. |
 | Change attrib. | Cambio de atributo | decidido [DECISIONS 2026-11-21] | Categoría de anillos. |
 | Add special ability | Añade hab. especial | decidido [DECISIONS 2026-11-21] | Categoría de anillos; 19/19 bytes. |
-| Gems | gemas | decidido [DECISIONS 2026-11-21] | «Mag Gems» → «Gemas mágicas». |
+| Gems | gemas | decidido [DECISIONS 2026-11-21] | «Mag Gems» → «Gemas mágicas». En la columna del menú principal (10 caracteres, junto a «An. mágico»): «Gemas mág.» [DECISIONS 2026-11-22]. |
 | Combine | Combinar | decidido [DECISIONS 2026-11-21] | «Combination» → «combinación». |
 | MP used | MP usado | decidido [DECISIONS 2026-11-21] | También «MP usage». |
 | Level | Nivel | decidido [DECISIONS 2026-11-21] | «LEVEL» → «NIVEL»; «Lvl.1» → «Nv.1». |
@@ -76,7 +76,14 @@ Por sección. *Oficial* (G-1) o *decidido* por el usuario (G-2), con fecha. `loc
 | Alter Fire | Alterar fuego | decidido [DECISIONS 2026-11-21] | Magia. |
 | Deplete | Agotar | decidido [DECISIONS 2026-11-21] | Magia. |
 | Fiery Avenger | Vengador ígneo | decidido [DECISIONS 2026-11-21] | Magia. |
-| Fire Dragon | Dragón de fuego | decidido [DECISIONS 2026-11-21] | Magia. En los diálogos, como especie, en minúscula: «a Fire Dragon» → «un dragón de fuego» (igual con los demás elementos); «the Great Fire Dragon» → «el Gran Dragón de Fuego». |
+| Fire Dragon | Dragón de fuego | decidido [DECISIONS 2026-11-22] | Nombre de la magia (magia#009). En los diálogos, «a Fire Dragon» es la criatura: ver «fire dragon». |
+| fire dragon | dragón de fuego | decidido [DECISIONS 2026-11-22] | La criatura en que se convirtieron los solcianos (diálogos 1909#007, 1912#039, 1915#016, 1916#008; en japonés «火竜»), en minúscula aunque el inglés la escriba «Fire Dragon». |
+| Great Fire Dragon | Gran Dragón de fuego | decidido [DECISIONS 2026-11-22] | El ser que invoca la magia, solo en su descripción: «Invoca al Gran Dragón de fuego…». |
+| Great Water Dragon | Gran Dragón de agua | decidido [DECISIONS 2026-11-22] | Descripción de la magia «Dragón de agua». |
+| Great Wind Dragon | Gran Dragón de viento | decidido [DECISIONS 2026-11-22] | Descripción de la magia «Dragón de viento». |
+| Great Earth Dragon | Gran Dragón de tierra | decidido [DECISIONS 2026-11-22] | Descripción de la magia «Dragón de tierra». |
+| Great Light Dragon | Gran Dragón de luz | decidido [DECISIONS 2026-11-22] | Descripción de la magia «Dragón de luz». |
+| Great Dark Dragon | Gran Dragón oscuro | decidido [DECISIONS 2026-11-22] | Descripción de la magia «Dragón oscuro». |
 | Ring of Heat | Anillo de calor | decidido [DECISIONS 2026-11-21] | Magia. |
 | Ring of Flame | Anillo de llamas | decidido [DECISIONS 2026-11-21] | Magia. |
 | Ring of Inferno | Anillo del infierno | decidido [DECISIONS 2026-11-21] | Magia. |

@@ -1,0 +1,60 @@
+{"key": "objetos/magia#000.nombre", "es": "Bola de fuego"}
+{"key": "objetos/magia#000.desc", "es": "La magia de fuego más básica.\nInvoca una bolita de fuego.\n"}
+{"key": "objetos/magia#001.nombre", "es": "Muro de fuego"}
+{"key": "objetos/magia#001.desc", "es": "Una forma básica de magia de\nfuego. Invoca columnas de\nfuego.\n"}
+{"key": "objetos/magia#002.nombre", "es": "Bomba flotante"}
+{"key": "objetos/magia#002.desc", "es": "Una gran bola de fuego que\nexplota al contacto.\n"}
+{"key": "objetos/magia#003.nombre", "es": "Bombardeo"}
+{"key": "objetos/magia#003.desc", "es": "Una serie de bolas de fuego\ndensas que abrasan al enemigo.\n"}
+{"key": "objetos/magia#004.nombre", "es": "Silencio"}
+{"key": "objetos/magia#004.desc", "es": "Drena temporalmente el MP de\nlos enemigos y les impide\nlanzar magias.\n"}
+{"key": "objetos/magia#005.nombre", "es": "Debilitar"}
+{"key": "objetos/magia#005.desc", "es": "Debilita la fuerza del\nobjetivo y reduce el daño de\nlos ataques directos.\n"}
+{"key": "objetos/magia#006.nombre", "es": "Alterar fuego"}
+{"key": "objetos/magia#006.desc", "es": "Cambia el tipo de los enemigos\ny baja su resistencia al\nfuego.\n"}
+{"key": "objetos/magia#007.nombre", "es": "Agotar"}
+{"key": "objetos/magia#007.desc", "es": "Invoca espíritus de fuego que\ndrenan el MP del objetivo.\n"}
+{"key": "objetos/magia#008.nombre", "es": "Vengador ígneo"}
+{"key": "objetos/magia#008.desc", "es": "Una forma superior de magia de\nfuego. Lanza un par de espadas\nde fuego.\n"}
+{"key": "objetos/magia#009.nombre", "es": "Dragón de fuego"}
+{"key": "objetos/magia#009.desc", "es": "Invoca al Gran Dragón de fuego\npara destruir enemigos.\n"}
+{"key": "objetos/magia#010.nombre", "es": "Anillo de calor"}
+{"key": "objetos/magia#010.desc", "es": "Aumenta un poco el atributo\nFuego.\n"}
+{"key": "objetos/magia#011.nombre", "es": "Anillo de llamas"}
+{"key": "objetos/magia#011.desc", "es": "Aumenta el atributo Fuego.\n"}
+{"key": "objetos/magia#012.nombre", "es": "Anillo del infierno"}
+{"key": "objetos/magia#012.desc", "es": "Aumenta mucho el atributo\nFuego.\n"}
+{"key": "objetos/magia#013.nombre", "es": "Calor de viento"}
+{"key": "objetos/magia#013.desc", "es": "Aumenta un poco los atributos\nViento y Fuego.\n"}
+{"key": "objetos/magia#014.nombre", "es": "Calor de tierra"}
+{"key": "objetos/magia#014.desc", "es": "Aumenta un poco los atributos\nTierra y Fuego.\n"}
+{"key": "objetos/magia#015.nombre", "es": "Espada de calor"}
+{"key": "objetos/magia#015.desc", "es": "Aumenta un poco los atributos\nfuerza y Fuego.\n"}
+{"key": "objetos/magia#016.nombre", "es": "Calor de agua"}
+{"key": "objetos/magia#016.desc", "es": "Aumenta un poco los atributos\nAgua y Fuego.\n"}
+{"key": "objetos/magia#017.nombre", "es": "Espada animada"}
+{"key": "objetos/magia#017.desc", "es": "Crea una espada ilusoria para\nrealizar varios ataques.\n"}
+{"key": "objetos/magia#018.nombre", "es": "Poder de ramificación"}
+{"key": "objetos/magia#018.desc", "es": "Permite disparar varios\nproyectiles a la vez.\n"}
+{"key": "objetos/magia#019.nombre", "es": "Filo ardiente"}
+{"key": "objetos/magia#019.desc", "es": "Envuelve la espada en fuego\ny aumenta el atributo Fuego.\n"}
+{"key": "objetos/magia#020.nombre", "es": "Aguja de hielo"}
+{"key": "objetos/magia#020.desc", "es": "La magia de agua más básica.\nInvoca un carámbano afilado.\n"}
+{"key": "objetos/magia#021.nombre", "es": "Muro de hielo"}
+{"key": "objetos/magia#021.desc", "es": "Una forma básica de magia de\nagua. Invoca columnas de\nhielo.\n"}
+{"key": "objetos/magia#022.nombre", "es": "Trampa de hielo"}
+{"key": "objetos/magia#022.desc", "es": "Crea una trampa que atraviesa\nal enemigo al contacto.\n"}
+{"key": "objetos/magia#023.nombre", "es": "Ventisca"}
+{"key": "objetos/magia#023.desc", "es": "La nieve rodea al usuario y\ndaña al enemigo.\n"}
+{"key": "objetos/magia#024.nombre", "es": "Agua curativa"}
+{"key": "objetos/magia#024.desc", "es": "Usa el MP del usuario para\nrecuperar un poco de HP.\n"}
+{"key": "objetos/magia#025.nombre", "es": "Agua sanadora"}
+{"key": "objetos/magia#025.desc", "es": "Usa el MP del usuario para\nrecuperar mucho HP.\n"}
+{"key": "objetos/magia#026.nombre", "es": "Antídoto"}
+{"key": "objetos/magia#026.desc", "es": "Usa el MP del usuario para\neliminar el veneno de su\ncuerpo.\n"}
+{"key": "objetos/magia#027.nombre", "es": "Purificar"}
+{"key": "objetos/magia#027.desc", "es": "Usa el MP del usuario para\ncurar varias anomalías\nfísicas.\n"}
+{"key": "objetos/magia#028.nombre", "es": "Proyectil"}
+{"key": "objetos/magia#028.desc", "es": "Una forma superior de magia de\nagua. Dispara flechas de agua.\n"}
+{"key": "objetos/magia#029.nombre", "es": "Dragón de agua"}
+{"key": "objetos/magia#029.desc", "es": "Invoca al Gran Dragón de agua\npara destruir enemigos.\n"}

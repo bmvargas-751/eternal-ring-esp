@@ -49,7 +49,7 @@ Aquí no se agrega ninguna regla sin fuente.
   | joder | maldición, mierda, rayos (según la intensidad del original) |
   | enfadarse | enojarse |
   | pulsar (un botón) | presionar |
-  | mando (de consola) | control |
+  | mando (de consola) | control (excepción en este juego: «Controller» → «Mando», decidido por el usuario [DECISIONS 2026-11-21]; ver el glosario) |
   | ratón (de la computadora) | mouse |
   | vídeo | video |
   | castellano (nombre del idioma) | español |

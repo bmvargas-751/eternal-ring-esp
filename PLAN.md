@@ -58,8 +58,8 @@ Obligatorio: sin él, `loc.py prepare` no arma lotes.
 
 ### Fase 5. Piloto
 
-- [ ] Un primer lote de cada tipo de texto con el equipo completo.
-- [ ] Ajustar documentos y roles con lo que salga (y volver a pasar el set de oro si cambia un prompt).
+- [x] Un primer lote de cada tipo de texto con el equipo completo. (2026-11-22: diálogos 1901-1905, 89 líneas; magias #000-029, 60; menús, 60.)
+- [x] Ajustar documentos y roles con lo que salga (y volver a pasar el set de oro si cambia un prompt). (2026-11-22: descripciones con 3 renglones, «Fire Dragon» separado en tres términos, excepción de «Mando» en E-12, tres arreglos del validador del kit; ningún prompt cambió, la prueba de oro sigue vigente. Fase 5 cerrada.)
 
 ### Fase 6. Traducción
 

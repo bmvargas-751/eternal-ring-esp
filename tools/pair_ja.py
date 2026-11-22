@@ -45,9 +45,12 @@ MANUAL = {
     # 1990: el japonés #007-028 (cómo se forjan los anillos) no está en inglés.
     **{_d(f"1990#{i:03d}"): _d(f"1990#{i:03d}") for i in range(7)},
     **{_d(f"1990#{i:03d}"): _d(f"1990#{i + 22:03d}") for i in range(7, 21)},
+    # 1901: «not much time left» (#007) no está en japonés; «find Lyla» (#008) es el japonés #007;
+    # el japonés #008 («ワガハラカラヨ», «hermanos míos») no está en inglés.
+    _d("1901#007"): None, _d("1901#008"): _d("1901#007"),
     # 1980: repite el texto del agonizante de 1901, que en japonés solo está en 1901.
-    **{_d(f"1980#{i:03d}"): _d(f"1901#{i - 1:03d}") for i in range(1, 9)},
-    _d("1980#009"): _d("1901#008"), _d("1980#010"): _d("1901#008"),
+    **{_d(f"1980#{i:03d}"): _d(f"1901#{i - 1:03d}") for i in range(1, 8)},
+    _d("1980#008"): None, _d("1980#009"): _d("1901#007"), _d("1980#010"): _d("1901#007"),
 }
 
 
