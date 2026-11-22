@@ -267,6 +267,7 @@ Por sección. *Oficial* (G-1) o *decidido* por el usuario (G-2), con fecha. `loc
 | research team | equipo de investigación | decidido [DECISIONS 2026-11-21] | «team leader» → «jefe del equipo». |
 | captain | capitán | decidido [DECISIONS 2026-11-21] | Minúscula: cargo. |
 | assistant captain | subcapitán | decidido [DECISIONS 2026-11-21] |  |
+| sir | caballero | decidido [DECISIONS 2026-11-21] | Trato del árbol cortés al protagonista (en japonés «騎士さま»): «Thank you, sir.» → «Gracias, caballero.» |
 | King of Aldine | rey de Aldine | decidido [DECISIONS 2026-11-21] | «the King» → «el rey»; minúscula: cargo. |
 | magician | mago | decidido [DECISIONS 2026-11-21] | «'Great Magician'» → «“Gran Mago”»; «the ancient magician» → «el mago antiguo». |
 | Eternal Power | Poder Eterno | decidido [DECISIONS 2026-11-21] |  |

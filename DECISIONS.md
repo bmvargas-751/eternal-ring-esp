@@ -41,3 +41,12 @@ Lo que el usuario decidió, con fecha, para no volver a discutirlo. Una regla de
   - El árbol de 1905 tiene dos voces, no cuatro: una cortés (1905#001-035), de *usted* y masculina; y una ruda (1905#000, #036-060), de *tú* y masculina («俺»). Reemplaza el *usted* para todo el grupo.
   - La guía de los anillos («お前») y el pescador («わし»): masculino. El diario de 1911 y la conciencia antigua siguen sin marcar: el japonés tampoco marca su género.
   - 1971: los turnos salen del japonés (pescador #000, #002, #004, #005; protagonista #001, #003).
+- **2026-11-21** Set de oro (fase 4), decisiones del usuario:
+  - «Damn it» → «Mierda» (1973#004, el mercenario): para el usuario tiene la misma intensidad (E-22).
+  - «sir» del árbol cortés → «caballero» (1905#004; en japonés «騎士さま»). Va al glosario; «Damn it» → «Mierda», a la ficha del mercenario, para que los agentes lo vean.
+  - O-19 pasa de 1905#004 (repetía la clave de O-3 y se anulaba) a 1905#008. El kit ahora avisa si dos casos comparten clave.
+  - «the ancient magician» (1990#009) → «el mago antiguo», con «mago» como genérico: el japonés («魔道師») tampoco marca el género. Es la única excepción al «sin marcar» de la conciencia antigua.
+  - 1923#011 (Lyla): «I can tell because you're shaking» se traduce con el sentido del japonés («揺れるからすぐに分かるよ»: si se mueve, ella se da cuenta), que se amplía para eso: el japonés también resuelve el sentido de una frase confusa o mal traducida del inglés.
+  - Los agentes reciben el japonés en cada línea del lote (campo `ja`): `tools/pair_ja.py` empareja las claves inglesas con las japonesas escenario por escenario (con correcciones a mano) y escribe `../eternal-ring-esp-local/jp/pares.jsonl`; `support` en `loc.json` lo pasa al lote. 491 de 505 claves tienen japonés.
+- **2026-11-21** Primera prueba del set de oro (oro-001): 20 de 21. Falló O-2: el traductor neutralizó el género del protagonista («la última persona») porque solo leía la ficha de quien habla. Cambio en el kit, aprobado por el usuario: el traductor y el revisor leen también la ficha de a quién se le habla. O-6 se reparte en otros renglones (medía 37 caracteres; la caja admite 35).
+- **2026-11-21** Segunda prueba del set de oro: el primer cambio (leer la ficha de a quién se le habla) no bastó; se precisó en el traductor que E-41 es solo para quien habla y que lo dicho a otro personaje concuerda con su ficha, y en el revisor que neutralizar ese género es un hallazgo. Resultado: 21 de 21. Fase 4 cerrada.

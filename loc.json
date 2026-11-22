@@ -36,5 +36,9 @@
   "fixed_break": null,
   "encoding": "cp1252",
   "spanish_checks": true,
-  "hooks": "tools/hooks.py"
+  "hooks": "tools/hooks.py",
+  "support": {
+    "file": "../eternal-ring-esp-local/jp/pares.jsonl",
+    "field": "ja"
+  }
 }
