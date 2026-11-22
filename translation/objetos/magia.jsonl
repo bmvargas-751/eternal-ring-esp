@@ -58,3 +58,145 @@
 {"key": "objetos/magia#028.desc", "es": "Una forma superior de magia de\nagua. Dispara flechas de agua.\n"}
 {"key": "objetos/magia#029.nombre", "es": "Dragón de agua"}
 {"key": "objetos/magia#029.desc", "es": "Invoca al Gran Dragón de agua\npara destruir enemigos.\n"}
+{"key": "objetos/magia#030.nombre", "es": "Anillo de lluvia"}
+{"key": "objetos/magia#030.desc", "es": "Aumenta un poco el atributo\nAgua.\n"}
+{"key": "objetos/magia#031.nombre", "es": "Anillo de mar"}
+{"key": "objetos/magia#031.desc", "es": "Aumenta el atributo Agua.\n"}
+{"key": "objetos/magia#032.nombre", "es": "Anillo del abismo"}
+{"key": "objetos/magia#032.desc", "es": "Aumenta mucho el atributo\nAgua.\n"}
+{"key": "objetos/magia#033.nombre", "es": "Lluvia de viento"}
+{"key": "objetos/magia#033.desc", "es": "Aumenta un poco los atributos\nViento y Agua.\n"}
+{"key": "objetos/magia#034.nombre", "es": "Lluvia de tierra"}
+{"key": "objetos/magia#034.desc", "es": "Aumenta un poco los atributos\nTierra y Agua.\n"}
+{"key": "objetos/magia#035.nombre", "es": "Espada de lluvia"}
+{"key": "objetos/magia#035.desc", "es": "Aumenta un poco los atributos\nfuerza y Agua.\n"}
+{"key": "objetos/magia#036.nombre", "es": "Lluvia de fuego"}
+{"key": "objetos/magia#036.desc", "es": "Aumenta un poco los atributos\nFuego y Agua.\n"}
+{"key": "objetos/magia#037.nombre", "es": "Fortuna"}
+{"key": "objetos/magia#037.desc", "es": "Duplica la probabilidad de que\nlos enemigos suelten objetos.\n"}
+{"key": "objetos/magia#038.nombre", "es": "Iluminación"}
+{"key": "objetos/magia#038.desc", "es": "Despeja la mente del usuario y\nreduce el MP usado en magias.\n"}
+{"key": "objetos/magia#039.nombre", "es": "Sacrificio"}
+{"key": "objetos/magia#039.desc", "es": "Se activa cuando el usuario\nmuere para restaurar su vida:\nde un solo uso.\n"}
+{"key": "objetos/magia#040.nombre", "es": "Cuchilla de viento"}
+{"key": "objetos/magia#040.desc", "es": "Magia de viento básica. Una\ncuchilla de viento que corta\nal objetivo.\n"}
+{"key": "objetos/magia#041.nombre", "es": "Sónico"}
+{"key": "objetos/magia#041.desc", "es": "Una forma básica de magia de\nviento. Lanza espadas de\nviento.\n"}
+{"key": "objetos/magia#042.nombre", "es": "Tornado"}
+{"key": "objetos/magia#042.desc", "es": "Distorsiona el aire delante\npara crear un pequeño\ntornado.\n"}
+{"key": "objetos/magia#043.nombre", "es": "Vórtice"}
+{"key": "objetos/magia#043.desc", "es": "Una masa de aire que genera\nun vacío y causa daño.\n"}
+{"key": "objetos/magia#044.nombre", "es": "Turbulencia"}
+{"key": "objetos/magia#044.desc", "es": "Crea corrientes de viento\nalrededor del enemigo para\ndesestabilizarlo.\n"}
+{"key": "objetos/magia#045.nombre", "es": "Confusión"}
+{"key": "objetos/magia#045.desc", "es": "Confunde temporalmente al\nenemigo y afecta su juicio.\n"}
+{"key": "objetos/magia#046.nombre", "es": "Invisible"}
+{"key": "objetos/magia#046.desc", "es": "Un muro mágico rodea al\nusuario y lo vuelve invisible.\n"}
+{"key": "objetos/magia#047.nombre", "es": "Atadura"}
+{"key": "objetos/magia#047.desc", "es": "Ata al enemigo para limitar\nsu movimiento.\n"}
+{"key": "objetos/magia#048.nombre", "es": "Lanza"}
+{"key": "objetos/magia#048.desc", "es": "Una forma superior de magia de\nviento. Dispara una lanza de\nviento.\n"}
+{"key": "objetos/magia#049.nombre", "es": "Dragón de viento"}
+{"key": "objetos/magia#049.desc", "es": "Invoca al Gran Dragón de\nviento para destruir enemigos.\n"}
+{"key": "objetos/magia#050.nombre", "es": "Anillo de brisa"}
+{"key": "objetos/magia#050.desc", "es": "Aumenta un poco el atributo\nViento.\n"}
+{"key": "objetos/magia#051.nombre", "es": "Anillo de ráfaga"}
+{"key": "objetos/magia#051.desc", "es": "Aumenta el atributo Viento.\n"}
+{"key": "objetos/magia#052.nombre", "es": "Anillo de tormenta"}
+{"key": "objetos/magia#052.desc", "es": "Aumenta mucho el atributo\nViento.\n"}
+{"key": "objetos/magia#053.nombre", "es": "Brisa de fuego"}
+{"key": "objetos/magia#053.desc", "es": "Aumenta un poco los atributos\nFuego y Viento.\n"}
+{"key": "objetos/magia#054.nombre", "es": "Brisa de agua"}
+{"key": "objetos/magia#054.desc", "es": "Aumenta un poco los atributos\nAgua y Viento.\n"}
+{"key": "objetos/magia#055.nombre", "es": "Espada de brisa"}
+{"key": "objetos/magia#055.desc", "es": "Aumenta un poco los atributos\nfuerza y Viento.\n"}
+{"key": "objetos/magia#056.nombre", "es": "Brisa de tierra"}
+{"key": "objetos/magia#056.desc", "es": "Aumenta un poco los atributos\nTierra y Viento.\n"}
+{"key": "objetos/magia#057.nombre", "es": "Poder de búsqueda"}
+{"key": "objetos/magia#057.desc", "es": "La magia lanzada localiza y\nsigue a los enemigos.\n"}
+{"key": "objetos/magia#058.nombre", "es": "Claridad"}
+{"key": "objetos/magia#058.desc", "es": "Aumenta la concentración y\nrecupera el MP del usuario\nmás rápido.\n"}
+{"key": "objetos/magia#059.nombre", "es": "Poder del tiempo"}
+{"key": "objetos/magia#059.desc", "es": "Usa una gran magia para\nralentizar el paso del tiempo.\n"}
+{"key": "objetos/magia#060.nombre", "es": "Flecha material"}
+{"key": "objetos/magia#060.desc", "es": "La magia de tierra más básica.\nDispara poder mágico\nmaterializado.\n"}
+{"key": "objetos/magia#061.nombre", "es": "Sacudida"}
+{"key": "objetos/magia#061.desc", "es": "Una forma básica de magia de\ntierra. Dispara poderes\nmágicos de tierra.\n"}
+{"key": "objetos/magia#062.nombre", "es": "Veneno"}
+{"key": "objetos/magia#062.desc", "es": "Extrae veneno de la Tierra y\nse lo da al enemigo.\n"}
+{"key": "objetos/magia#063.nombre", "es": "Niebla"}
+{"key": "objetos/magia#063.desc", "es": "Dispara una bola de veneno.\nCrea una niebla venenosa.\n"}
+{"key": "objetos/magia#064.nombre", "es": "Cura de tierra"}
+{"key": "objetos/magia#064.desc", "es": "Absorbe la vida de la Tierra\ny cura el HP del usuario.\n"}
+{"key": "objetos/magia#065.nombre", "es": "Protección"}
+{"key": "objetos/magia#065.desc", "es": "Crea un muro que protege al\nusuario de las enfermedades.\n"}
+{"key": "objetos/magia#066.nombre", "es": "Encarcelamiento"}
+{"key": "objetos/magia#066.desc", "es": "Materializa magia alrededor\ndel enemigo para limitar su\nmovimiento.\n"}
+{"key": "objetos/magia#067.nombre", "es": "Órbita"}
+{"key": "objetos/magia#067.desc", "es": "Materializa magia alrededor\ndel usuario para crear una\nprotección.\n"}
+{"key": "objetos/magia#068.nombre", "es": "Hacha de tierra"}
+{"key": "objetos/magia#068.desc", "es": "Una forma superior de magia de\ntierra. Lanza hachas dobles\ncontra el enemigo.\n"}
+{"key": "objetos/magia#069.nombre", "es": "Dragón de tierra"}
+{"key": "objetos/magia#069.desc", "es": "Invoca al Gran Dragón de\ntierra para destruir enemigos.\n"}
+{"key": "objetos/magia#070.nombre", "es": "Anillo de piedra"}
+{"key": "objetos/magia#070.desc", "es": "Aumenta un poco el atributo\nTierra.\n"}
+{"key": "objetos/magia#071.nombre", "es": "Anillo de roca"}
+{"key": "objetos/magia#071.desc", "es": "Aumenta el atributo Tierra.\n"}
+{"key": "objetos/magia#072.nombre", "es": "Anillo de la naturaleza"}
+{"key": "objetos/magia#072.desc", "es": "Aumenta mucho el atributo\nTierra.\n"}
+{"key": "objetos/magia#073.nombre", "es": "Piedra de fuego"}
+{"key": "objetos/magia#073.desc", "es": "Aumenta un poco los atributos\nFuego y Tierra.\n"}
+{"key": "objetos/magia#074.nombre", "es": "Piedra de agua"}
+{"key": "objetos/magia#074.desc", "es": "Aumenta un poco los atributos\nAgua y Tierra.\n"}
+{"key": "objetos/magia#075.nombre", "es": "Espada de piedra"}
+{"key": "objetos/magia#075.desc", "es": "Aumenta un poco los atributos\nfuerza y Tierra.\n"}
+{"key": "objetos/magia#076.nombre", "es": "Piedra de viento"}
+{"key": "objetos/magia#076.desc", "es": "Aumenta un poco los atributos\nViento y Tierra.\n"}
+{"key": "objetos/magia#077.nombre", "es": "Anillo de perspicacia"}
+{"key": "objetos/magia#077.desc", "es": "Toma prestado el poder de la\nTierra para aumentar la\nexperiencia obtenida.\n"}
+{"key": "objetos/magia#078.nombre", "es": "Poder de crecimiento"}
+{"key": "objetos/magia#078.desc", "es": "Fortalece constantemente al\nusuario para favorecer su\ncrecimiento.\n"}
+{"key": "objetos/magia#079.nombre", "es": "Visión verdadera"}
+{"key": "objetos/magia#079.desc", "es": "Permite ver los anillos de\nmagia ocultos.\n"}
+{"key": "objetos/magia#080.nombre", "es": "Divinidad"}
+{"key": "objetos/magia#080.desc", "es": "Mata al instante a los\nenemigos sin resistencia a la\nluz.\n"}
+{"key": "objetos/magia#081.nombre", "es": "Trueno"}
+{"key": "objetos/magia#081.desc", "es": "Crea una bola de rayos para\nlanzarla contra los enemigos.\n"}
+{"key": "objetos/magia#082.nombre", "es": "Destello sagrado"}
+{"key": "objetos/magia#082.desc", "es": "Crea una masa de magia que\nenvuelve al enemigo en luz.\n"}
+{"key": "objetos/magia#083.nombre", "es": "Absorción"}
+{"key": "objetos/magia#083.desc", "es": "Crea un escudo mágico que\ndesvía las magias débiles.\n"}
+{"key": "objetos/magia#084.nombre", "es": "Bendición"}
+{"key": "objetos/magia#084.desc", "es": "Destruye todo el mal karma\npara anular el ataque.\n"}
+{"key": "objetos/magia#085.nombre", "es": "Dragón de luz"}
+{"key": "objetos/magia#085.desc", "es": "Invoca al Gran Dragón de luz\npara destruir enemigos.\n"}
+{"key": "objetos/magia#086.nombre", "es": "Anillo de luz"}
+{"key": "objetos/magia#086.desc", "es": "Aumenta un poco el atributo\nLuz.\n"}
+{"key": "objetos/magia#087.nombre", "es": "Anillo de brillo"}
+{"key": "objetos/magia#087.desc", "es": "Aumenta el atributo Luz.\n"}
+{"key": "objetos/magia#088.nombre", "es": "Anillo de fulgor"}
+{"key": "objetos/magia#088.desc", "es": "Aumenta mucho el atributo\nLuz.\n"}
+{"key": "objetos/magia#089.nombre", "es": "Crear vida"}
+{"key": "objetos/magia#089.desc", "es": "Activa el cuerpo del usuario\npara curar HP constantemente.\n"}
+{"key": "objetos/magia#090.nombre", "es": "Destierro"}
+{"key": "objetos/magia#090.desc", "es": "Mata al instante a los\nenemigos sin resistencia a la\noscuridad.\n"}
+{"key": "objetos/magia#091.nombre", "es": "Trueno oscuro"}
+{"key": "objetos/magia#091.desc", "es": "Crea una bola de rayos para\nlanzarla contra los enemigos.\n"}
+{"key": "objetos/magia#092.nombre", "es": "Destello oscuro"}
+{"key": "objetos/magia#092.desc", "es": "Crea una masa de magia que\nenvuelve al enemigo en\noscuridad.\n"}
+{"key": "objetos/magia#093.nombre", "es": "Guardián"}
+{"key": "objetos/magia#093.desc", "es": "Crea un escudo mágico que\nabsorbe las magias débiles.\n"}
+{"key": "objetos/magia#094.nombre", "es": "Bloqueo oscuro"}
+{"key": "objetos/magia#094.desc", "es": "La oscuridad envuelve al\nenemigo para limitar su\nmovimiento.\n"}
+{"key": "objetos/magia#095.nombre", "es": "Dragón oscuro"}
+{"key": "objetos/magia#095.desc", "es": "Invoca al Gran Dragón oscuro\npara destruir enemigos.\n"}
+{"key": "objetos/magia#096.nombre", "es": "Anillo de sombra"}
+{"key": "objetos/magia#096.desc", "es": "Aumenta un poco el atributo\nOscuridad.\n"}
+{"key": "objetos/magia#097.nombre", "es": "Anillo de noche"}
+{"key": "objetos/magia#097.desc", "es": "Aumenta el atributo Oscuridad.\n"}
+{"key": "objetos/magia#098.nombre", "es": "Anillo del caos"}
+{"key": "objetos/magia#098.desc", "es": "Aumenta mucho el atributo\nOscuridad.\n"}
+{"key": "objetos/magia#099.nombre", "es": "Pacto oscuro"}
+{"key": "objetos/magia#099.desc", "es": "Activa el espíritu del usuario\npara recuperar MP\nconstantemente.\n"}
+{"key": "objetos/magia#126.nombre", "es": "Anillo de magia"}
+{"key": "objetos/magia#126.desc", "es": "Anillos usados como base para\nfabricar anillos mágicos.\n"}

@@ -3,12 +3,12 @@
 ## Avance
 
 <!-- loc:progress -->
-**Etapa actual:** Fase 6. Traducción: (una casilla por sección de `loc.json`)
+Etapa: Prueba en el juego · Actualizado el 22 nov 2026
 
 | Sección | Líneas | Traducidas | Avance |
 |---|---:|---:|---:|
 | Diálogos | 505 | 505 | 100,0 % |
-| Magias, armas y objetos | 324 | 60 | 18,5 % |
-| Menús | 354 | 61 | 17,2 % |
-| **Total** | **1.183** | **626** | **52,9 %** |
+| Magias, armas y objetos | 324 | 324 | 100,0 % |
+| Menús | 354 | 354 | 100,0 % |
+| **Total** | **1.183** | **1.183** | **100,0 %** |
 <!-- /loc:progress -->

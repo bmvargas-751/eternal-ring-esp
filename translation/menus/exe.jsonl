@@ -59,3 +59,296 @@
 {"key": "menus/exe#2479d0", "es": "Colección     "}
 {"key": "menus/exe#247a20", "es": "Salir         "}
 {"key": "menus/exe#249840", "es": "Tipo A"}
+{"key": "menus/exe#249880", "es": "Tipo B"}
+{"key": "menus/exe#2498c0", "es": "Tipo C"}
+{"key": "menus/exe#249900", "es": "Tipo D"}
+{"key": "menus/exe#249940", "es": "Bosque Escarpado"}
+{"key": "menus/exe#249958", "es": "Santuario del Agua"}
+{"key": "menus/exe#249970", "es": "Santuario del Agua"}
+{"key": "menus/exe#249988", "es": "Zona de Culto"}
+{"key": "menus/exe#2499a0", "es": "Valle de Desechos"}
+{"key": "menus/exe#2499b8", "es": "Refugio del Árbol"}
+{"key": "menus/exe#2499d0", "es": "Refugio del Árbol"}
+{"key": "menus/exe#2499e8", "es": "Cueva de Caliza"}
+{"key": "menus/exe#249a00", "es": "Cueva de Caliza"}
+{"key": "menus/exe#249a18", "es": "Refugio del Sur"}
+{"key": "menus/exe#249a30", "es": "Ruinas de la Mina"}
+{"key": "menus/exe#249a48", "es": "Fundición"}
+{"key": "menus/exe#249a60", "es": "Río de Lava"}
+{"key": "menus/exe#249a78", "es": "Laboratorio Mágico"}
+{"key": "menus/exe#249a90", "es": "Ruinas"}
+{"key": "menus/exe#249aa8", "es": "Biblioteca"}
+{"key": "menus/exe#249ac0", "es": "Lago Subterráneo"}
+{"key": "menus/exe#249ad8", "es": "Llano de la Nevada"}
+{"key": "menus/exe#249af0", "es": "Torre de Tormentas"}
+{"key": "menus/exe#249b08", "es": "Dimensión Eterna"}
+{"key": "menus/exe#249b20", "es": "Dimensión Eterna"}
+{"key": "menus/exe#249b38", "es": "Dimensión Eterna"}
+{"key": "menus/exe#249b50", "es": "Dimensión Eterna"}
+{"key": "menus/exe#249b68", "es": "Anillo Eterno"}
+{"key": "menus/exe#249b80", "es": "Desconocido"}
+{"key": "menus/exe#249b98", "es": "Desconocido"}
+{"key": "menus/exe#249bb0", "es": "Desconocido"}
+{"key": "menus/exe#249bc8", "es": "Desconocido"}
+{"key": "menus/exe#249be0", "es": "Desconocido"}
+{"key": "menus/exe#249bf8", "es": "Desconocido"}
+{"key": "menus/exe#249c10", "es": "Desconocido"}
+{"key": "menus/exe#249c28", "es": "Desconocido"}
+{"key": "menus/exe#249c40", "es": "Desconocido"}
+{"key": "menus/exe#249c58", "es": "Desconocido"}
+{"key": "menus/exe#249c70", "es": "Desconocido"}
+{"key": "menus/exe#249c88", "es": "Desconocido"}
+{"key": "menus/exe#249ca0", "es": "Desconocido"}
+{"key": "menus/exe#249cb8", "es": "Desconocido"}
+{"key": "menus/exe#249cd0", "es": "Desconocido"}
+{"key": "menus/exe#249ce8", "es": "Desconocido"}
+{"key": "menus/exe#249d00", "es": "Desconocido"}
+{"key": "menus/exe#249d18", "es": "Desconocido"}
+{"key": "menus/exe#249d30", "es": "Desconocido"}
+{"key": "menus/exe#249d48", "es": "Desconocido"}
+{"key": "menus/exe#249d60", "es": "Desconocido"}
+{"key": "menus/exe#249d78", "es": "Desconocido"}
+{"key": "menus/exe#249d90", "es": "Desconocido"}
+{"key": "menus/exe#249da8", "es": "Desconocido"}
+{"key": "menus/exe#249dc0", "es": "Desconocido"}
+{"key": "menus/exe#249dd8", "es": "Desconocido"}
+{"key": "menus/exe#249df0", "es": "Laberinto Sellado"}
+{"key": "menus/exe#249e08", "es": "Laberinto Sellado"}
+{"key": "menus/exe#249e20", "es": "Laberinto Sellado"}
+{"key": "menus/exe#249e38", "es": "Laberinto Sellado"}
+{"key": "menus/exe#249e50", "es": "Laberinto Sellado"}
+{"key": "menus/exe#249e68", "es": "Desconocido"}
+{"key": "menus/exe#249e80", "es": "Desconocido"}
+{"key": "menus/exe#249e98", "es": "Desconocido"}
+{"key": "menus/exe#249eb0", "es": "Desconocido"}
+{"key": "menus/exe#249ec8", "es": "Desconocido"}
+{"key": "menus/exe#249ee0", "es": "Desconocido"}
+{"key": "menus/exe#249ef8", "es": "Desconocido"}
+{"key": "menus/exe#249f10", "es": "Desconocido"}
+{"key": "menus/exe#249f28", "es": "Desconocido"}
+{"key": "menus/exe#249f40", "es": "Desconocido"}
+{"key": "menus/exe#249f58", "es": "Desconocido"}
+{"key": "menus/exe#249f70", "es": "Desconocido"}
+{"key": "menus/exe#249f88", "es": "Desconocido"}
+{"key": "menus/exe#249fa0", "es": "Desconocido"}
+{"key": "menus/exe#249fb8", "es": "Desconocido"}
+{"key": "menus/exe#249fd0", "es": "Base de Invest."}
+{"key": "menus/exe#249fe8", "es": "Costa Norte"}
+{"key": "menus/exe#24a000", "es": "Caverna de Cascada"}
+{"key": "menus/exe#24a018", "es": "Base de Invest."}
+{"key": "menus/exe#24a030", "es": "Base de Invest."}
+{"key": "menus/exe#24a048", "es": "Costa Norte"}
+{"key": "menus/exe#24a060", "es": "Desconocido"}
+{"key": "menus/exe#24a078", "es": "Desconocido"}
+{"key": "menus/exe#24a090", "es": "Desconocido"}
+{"key": "menus/exe#24a0a8", "es": "Desconocido"}
+{"key": "menus/exe#24a0c0", "es": "Desconocido"}
+{"key": "menus/exe#24a0d8", "es": "Desconocido"}
+{"key": "menus/exe#24a0f0", "es": "Desconocido"}
+{"key": "menus/exe#24a108", "es": "Desconocido"}
+{"key": "menus/exe#24a120", "es": "Desconocido"}
+{"key": "menus/exe#24a138", "es": "Desconocido"}
+{"key": "menus/exe#24a150", "es": "Desconocido"}
+{"key": "menus/exe#24a168", "es": "Desconocido"}
+{"key": "menus/exe#24a180", "es": "Desconocido"}
+{"key": "menus/exe#24a198", "es": "Desconocido"}
+{"key": "menus/exe#24a1b0", "es": "Estrado Olvidado"}
+{"key": "menus/exe#24a1c8", "es": "Desconocido"}
+{"key": "menus/exe#24a1e0", "es": "Desconocido"}
+{"key": "menus/exe#24a1f8", "es": "Desconocido"}
+{"key": "menus/exe#24a210", "es": "Desconocido"}
+{"key": "menus/exe#24a228", "es": "Desconocido"}
+{"key": "menus/exe#24a240", "es": "Desconocido"}
+{"key": "menus/exe#24a258", "es": "Desconocido"}
+{"key": "menus/exe#24a270", "es": "Desconocido"}
+{"key": "menus/exe#24a288", "es": "Desconocido"}
+{"key": "menus/exe#24a540", "es": "Desconocido"}
+{"key": "menus/exe#24a560", "es": "Caverna de Cascada"}
+{"key": "menus/exe#24a580", "es": "Base de Invest."}
+{"key": "menus/exe#24a5a0", "es": "Santuario del Agua"}
+{"key": "menus/exe#24a5c0", "es": "Sant. del Agua S1"}
+{"key": "menus/exe#24a5e0", "es": "Sant. del Agua S2"}
+{"key": "menus/exe#24a600", "es": "Bosque Escarpado"}
+{"key": "menus/exe#24a620", "es": "Bosque Escarpado 1"}
+{"key": "menus/exe#24a640", "es": "Valle de Desechos"}
+{"key": "menus/exe#24a660", "es": "Valle de Desechos 1"}
+{"key": "menus/exe#24a680", "es": "Refugio del Árbol"}
+{"key": "menus/exe#24a6a0", "es": "Cueva de Caliza"}
+{"key": "menus/exe#24a6c0", "es": "Ruinas de la Mina"}
+{"key": "menus/exe#24a6e0", "es": "Fundición"}
+{"key": "menus/exe#24a700", "es": "Río de Lava"}
+{"key": "menus/exe#24a720", "es": "Laboratorio Mágico"}
+{"key": "menus/exe#24a740", "es": "Biblioteca"}
+{"key": "menus/exe#24a760", "es": "Torre de Tormentas"}
+{"key": "menus/exe#255100", "es": "   No hay MEMORY CARD(PS2) insertada.  "}
+{"key": "menus/exe#255128", "es": " Se requieren 100KB o más para guardar."}
+{"key": "menus/exe#255150", "es": "           ¿Quieres comenzar?          "}
+{"key": "menus/exe#255178", "es": "Revisar"}
+{"key": "menus/exe#255188", "es": "Espacio insuficiente en MEMORY CARD(PS2)."}
+{"key": "menus/exe#2551b8", "es": "Necesitas al menos 100KB para guardar."}
+{"key": "menus/exe#255370", "es": "   No hay MEMORY CARD(PS2) insertada.  "}
+{"key": "menus/exe#255398", "es": " Se requieren 100KB o más para guardar."}
+{"key": "menus/exe#2553c0", "es": "           ¿Quieres comenzar?          "}
+{"key": "menus/exe#2553e8", "es": "Revisar"}
+{"key": "menus/exe#2553f8", "es": "Espacio insuficiente en MEMORY CARD(PS2)."}
+{"key": "menus/exe#255428", "es": "Necesitas al menos 100KB para guardar."}
+{"key": "menus/exe#256290", "es": "Cain Morgan"}
+{"key": "menus/exe#2562a0", "es": "_855Fuego"}
+{"key": "menus/exe#2562b0", "es": "_763Tierra"}
+{"key": "menus/exe#2562c0", "es": "_585Viento"}
+{"key": "menus/exe#2562d0", "es": "_478Agua"}
+{"key": "menus/exe#2562e0", "es": "_882Luz"}
+{"key": "menus/exe#2562f0", "es": "_527Oscuridad"}
+{"key": "menus/exe#256300", "es": "_666Neutro"}
+{"key": "menus/exe#256320", "es": "_488Atrib. básico"}
+{"key": "menus/exe#256338", "es": "SIN EQUIPO"}
+{"key": "menus/exe#256348", "es": "_885Atrib. total"}
+{"key": "menus/exe#256360", "es": "Día %3d"}
+{"key": "menus/exe#256370", "es": "Día %3d"}
+{"key": "menus/exe#256380", "es": "Día %3d"}
+{"key": "menus/exe#256390", "es": "Día %3d"}
+{"key": "menus/exe#256430", "es": "_665MP usado: %s%s"}
+{"key": "menus/exe#256448", "es": "_665MP usado:--"}
+{"key": "menus/exe#256458", "es": "_665Nivel: %s"}
+{"key": "menus/exe#256468", "es": "_777 Gemas necesarias  Cant_666(Tienes)"}
+{"key": "menus/exe#256490", "es": "_777      Nivel        Cant_666(Tienes)"}
+{"key": "menus/exe#2564b8", "es": "_347-- Sin equipar --"}
+{"key": "menus/exe#2564f8", "es": "_733Vacío"}
+{"key": "menus/exe#256508", "es": "_377(MP us.:  )"}
+{"key": "menus/exe#256520", "es": "Atrib.:"}
+{"key": "menus/exe#256530", "es": "_777Volver"}
+{"key": "menus/exe#256540", "es": "Elige un anillo"}
+{"key": "menus/exe#256550", "es": "_777Cancelar"}
+{"key": "menus/exe#256560", "es": "Elige un lugar."}
+{"key": "menus/exe#256578", "es": "_777Reiniciar"}
+{"key": "menus/exe#256588", "es": "_233Combinar"}
+{"key": "menus/exe#256598", "es": "_777Combinar"}
+{"key": "menus/exe#2565a8", "es": "Elige gema a combinar."}
+{"key": "menus/exe#2565f8", "es": "Cancelar combinación."}
+{"key": "menus/exe#256610", "es": "_333Volver"}
+{"key": "menus/exe#256620", "es": "Al menú principal."}
+{"key": "menus/exe#256638", "es": "_666Volver"}
+{"key": "menus/exe#256648", "es": "Volver a combinar."}
+{"key": "menus/exe#256660", "es": "¿Es este tu deseo?"}
+{"key": "menus/exe#256678", "es": "_666Combinar"}
+{"key": "menus/exe#256688", "es": "Crear an. mágico."}
+{"key": "menus/exe#2566a0", "es": "_333Combinar"}
+{"key": "menus/exe#2566b0", "es": "Volver a combinar."}
+{"key": "menus/exe#2566c8", "es": "Se obtuvo."}
+{"key": "menus/exe#2566d8", "es": "No puedes tener"}
+{"key": "menus/exe#2566f8", "es": "_777Tienes:"}
+{"key": "menus/exe#256708", "es": "_777MP usado  :"}
+{"key": "menus/exe#256718", "es": "_333Tienes:"}
+{"key": "menus/exe#256728", "es": "_777Ver detalle"}
+{"key": "menus/exe#256758", "es": "(L) An. mágico equipado"}
+{"key": "menus/exe#256770", "es": "(R) An. atrib. equipado"}
+{"key": "menus/exe#256788", "es": "Armas equipadas"}
+{"key": "menus/exe#2567a0", "es": "Detalle estado"}
+{"key": "menus/exe#2567b0", "es": "Gemas mágicas"}
+{"key": "menus/exe#2567c0", "es": "_577Efecto paso"}
+{"key": "menus/exe#2567d0", "es": "_577Vibración"}
+{"key": "menus/exe#2567e0", "es": "_577Botón analóg."}
+{"key": "menus/exe#2567f8", "es": "_577           Sensibilidad"}
+{"key": "menus/exe#256818", "es": "_333           Sensibilidad"}
+{"key": "menus/exe#256838", "es": "_577Ventana de anillos"}
+{"key": "menus/exe#256850", "es": "_577Visib. barras estado"}
+{"key": "menus/exe#256870", "es": "_777No siempre"}
+{"key": "menus/exe#256880", "es": "_333Siempre"}
+{"key": "menus/exe#256890", "es": "_333No siempre"}
+{"key": "menus/exe#2568a0", "es": "_777Siempre"}
+{"key": "menus/exe#2568b0", "es": "_883[Sí]"}
+{"key": "menus/exe#2568c0", "es": "Añade movimiento vertical al andar."}
+{"key": "menus/exe#2568e8", "es": "_883[No]"}
+{"key": "menus/exe#2568f8", "es": "Queda nivelado y reduce los mareos."}
+{"key": "menus/exe#256928", "es": "Activa la vibración."}
+{"key": "menus/exe#256948", "es": "Desactiva la vibración."}
+{"key": "menus/exe#256968", "es": "Activa sensib. de botón analógico."}
+{"key": "menus/exe#256990", "es": "Desactiva sensib. de botón analógico."}
+{"key": "menus/exe#2569b8", "es": "Ajusta la sensib. de botón analógico."}
+{"key": "menus/exe#2569e8", "es": "_883[Siempre]"}
+{"key": "menus/exe#2569f8", "es": "Siempre muestra anillos."}
+{"key": "menus/exe#256a18", "es": "_883[No siempre]"}
+{"key": "menus/exe#256a30", "es": "Muestra anillos al presionar el botón."}
+{"key": "menus/exe#256a60", "es": "Ajusta visib. de barras como «HP»."}
+{"key": "menus/exe#256a88", "es": "_883Cuanto mayor es el valor, menos visible."}
+{"key": "menus/exe#256ad8", "es": "Ajustes sonido"}
+{"key": "menus/exe#256ae8", "es": "Ajustes salida"}
+{"key": "menus/exe#256af8", "es": "Vol. de música"}
+{"key": "menus/exe#256b08", "es": "Volumen de efectos"}
+{"key": "menus/exe#256b20", "es": "_883[Estéreo]"}
+{"key": "menus/exe#256b30", "es": "Música y efectos en estéreo."}
+{"key": "menus/exe#256b50", "es": "_883[Mono]"}
+{"key": "menus/exe#256b60", "es": "Música y efectos en mono."}
+{"key": "menus/exe#256b80", "es": "_883[Vol. de música]"}
+{"key": "menus/exe#256b98", "es": "Ajusta vol. de música."}
+{"key": "menus/exe#256bb0", "es": "_883[Volumen de efectos]"}
+{"key": "menus/exe#256bd0", "es": "Ajusta volumen de efectos."}
+{"key": "menus/exe#256bf0", "es": "Configuración del mando"}
+{"key": "menus/exe#256c10", "es": "Cargar partida"}
+{"key": "menus/exe#256c20", "es": "Cargar - "}
+{"key": "menus/exe#256c30", "es": "MEMORY CARD Ran. 1"}
+{"key": "menus/exe#256c48", "es": "MEMORY CARD Ranura 2"}
+{"key": "menus/exe#256c60", "es": "Guardar partida"}
+{"key": "menus/exe#256c70", "es": "Guardar - "}
+{"key": "menus/exe#256c80", "es": "_773Tipo: Obj."}
+{"key": "menus/exe#256c90", "es": "_773Tipo: Arma"}
+{"key": "menus/exe#256ca8", "es": "Tienes gemas  :"}
+{"key": "menus/exe#256cb8", "es": "Gemas necesit.:"}
+{"key": "menus/exe#256cc8", "es": "Gemas elegidas:"}
+{"key": "menus/exe#256cd8", "es": "_883¿Está bien?"}
+{"key": "menus/exe#257540", "es": "¡Sube de nivel!"}
+{"key": "menus/exe#257870", "es": " Error al cargar."}
+{"key": "menus/exe#257888", "es": " Error al guardar."}
+{"key": "menus/exe#2578a0", "es": "Buscando MEMORY CARD(PS2)..."}
+{"key": "menus/exe#2578f0", "es": "Datos dañados."}
+{"key": "menus/exe#257900", "es": "Nº%1d Nv%02d/%s"}
+{"key": "menus/exe#257938", "es": "_444 No "}
+{"key": "menus/exe#257948", "es": "_444 Sí "}
+{"key": "menus/exe#257958", "es": "¿Sobrescribir?"}
+{"key": "menus/exe#257968", "es": "Guardando..."}
+{"key": "menus/exe#257978", "es": "Por favor no retires MEMORY CARD(PS2)."}
+{"key": "menus/exe#257a28", "es": "Cargando..."}
+{"key": "menus/exe#257a58", "es": "MEMORY CARD(PS2) no está formateada."}
+{"key": "menus/exe#257a80", "es": "¿Quieres formatear?"}
+{"key": "menus/exe#257a98", "es": "Formatea MEMORY CARD(PS2) para guardar."}
+{"key": "menus/exe#257ac8", "es": "¿Revisar MEMORY CARD(PS2)?"}
+{"key": "menus/exe#257ae8", "es": "Formateando..."}
+{"key": "menus/exe#257af8", "es": "MEMORY CARD(PS2) cambiada."}
+{"key": "menus/exe#257b18", "es": "Falló la carga."}
+{"key": "menus/exe#257b28", "es": "NO SE GUARDÓ,"}
+{"key": "menus/exe#257b38", "es": "se retiró la memory card(PS2)."}
+{"key": "menus/exe#257b60", "es": "Revisa de nuevo"}
+{"key": "menus/exe#257b70", "es": "Inserta MEMORY CARD(PS2)"}
+{"key": "menus/exe#257b90", "es": "No se detectó MEMORY CARD(PS2)."}
+{"key": "menus/exe#257bb0", "es": "Se retiró MEMORY CARD(PS2)."}
+{"key": "menus/exe#257bd0", "es": "Falló formateo."}
+{"key": "menus/exe#257be0", "es": "Error al cargar."}
+{"key": "menus/exe#257bf8", "es": "No hay datos."}
+{"key": "menus/exe#257c08", "es": "Espacio insuficiente en MEMORY CARD(PS2)."}
+{"key": "menus/exe#257c38", "es": "Necesitas al menos 100KB para guardar."}
+{"key": "menus/exe#25d570", "es": "~NIVEL"}
+{"key": "menus/exe#25d580", "es": " H P"}
+{"key": "menus/exe#25d588", "es": " M P"}
+{"key": "menus/exe#25d590", "es": " EXP"}
+{"key": "menus/exe#25d598", "es": "SIG"}
+{"key": "menus/exe#25d5b8", "es": "NIVEL"}
+{"key": "menus/exe#25d5e8", "es": "Nombre:"}
+{"key": "menus/exe#25d5f0", "es": "Tipo: "}
+{"key": "menus/exe#25d600", "es": "Princ."}
+{"key": "menus/exe#25d608", "es": "Atrib."}
+{"key": "menus/exe#25d610", "es": "Valor:"}
+{"key": "menus/exe#25d620", "es": "_777OK"}
+{"key": "menus/exe#25d630", "es": "_666Sí"}
+{"key": "menus/exe#25d638", "es": "_333Sí"}
+{"key": "menus/exe#25d660", "es": "Objetos"}
+{"key": "menus/exe#25d668", "es": "Anillos"}
+{"key": "menus/exe#25d670", "es": "Armas"}
+{"key": "menus/exe#25d678", "es": "Opciones"}
+{"key": "menus/exe#25d698", "es": "Sí"}
+{"key": "menus/exe#25d6a0", "es": "_444Sí"}
+{"key": "menus/exe#25d6a8", "es": "No"}
+{"key": "menus/exe#25d6b0", "es": "_444No"}
+{"key": "menus/exe#25d718", "es": "Cargar"}
+{"key": "menus/exe#25d720", "es": "Guardar"}
+{"key": "menus/exe#25d728", "es": " Sí "}
+{"key": "menus/exe#25d730", "es": " No "}
