@@ -208,22 +208,22 @@
 {"key": "menus/exe#256380", "es": "Día %3d"}
 {"key": "menus/exe#256390", "es": "Día %3d"}
 {"key": "menus/exe#256430", "es": "_665MP usado: %s%s"}
-{"key": "menus/exe#256448", "es": "_665MP usado:--"}
+{"key": "menus/exe#256448", "es": "_665MP usado: --"}
 {"key": "menus/exe#256458", "es": "_665Nivel: %s"}
 {"key": "menus/exe#256468", "es": "_777 Gemas necesarias  Cant_666(Tienes)"}
 {"key": "menus/exe#256490", "es": "_777      Nivel        Cant_666(Tienes)"}
 {"key": "menus/exe#2564b8", "es": "_347-- Sin equipar --"}
 {"key": "menus/exe#2564f8", "es": "_733Vacío"}
-{"key": "menus/exe#256508", "es": "_377(MP us.:  )"}
+{"key": "menus/exe#256508", "es": "_377(MP usado:  )"}
 {"key": "menus/exe#256520", "es": "Atrib.:"}
 {"key": "menus/exe#256530", "es": "_777Volver"}
-{"key": "menus/exe#256540", "es": "Elige un anillo"}
+{"key": "menus/exe#256540", "es": "Elige un anillo."}
 {"key": "menus/exe#256550", "es": "_777Cancelar"}
 {"key": "menus/exe#256560", "es": "Elige un lugar."}
 {"key": "menus/exe#256578", "es": "_777Reiniciar"}
 {"key": "menus/exe#256588", "es": "_233Combinar"}
 {"key": "menus/exe#256598", "es": "_777Combinar"}
-{"key": "menus/exe#2565a8", "es": "Elige gema a combinar."}
+{"key": "menus/exe#2565a8", "es": "Elige una gema a combinar."}
 {"key": "menus/exe#2565f8", "es": "Cancelar combinación."}
 {"key": "menus/exe#256610", "es": "_333Volver"}
 {"key": "menus/exe#256620", "es": "Al menú principal."}
@@ -231,7 +231,7 @@
 {"key": "menus/exe#256648", "es": "Volver a combinar."}
 {"key": "menus/exe#256660", "es": "¿Es este tu deseo?"}
 {"key": "menus/exe#256678", "es": "_666Combinar"}
-{"key": "menus/exe#256688", "es": "Crear an. mágico."}
+{"key": "menus/exe#256688", "es": "Crear anillo mágico."}
 {"key": "menus/exe#2566a0", "es": "_333Combinar"}
 {"key": "menus/exe#2566b0", "es": "Volver a combinar."}
 {"key": "menus/exe#2566c8", "es": "Se obtuvo."}
@@ -247,7 +247,7 @@
 {"key": "menus/exe#2567b0", "es": "Gemas mágicas"}
 {"key": "menus/exe#2567c0", "es": "_577Efecto paso"}
 {"key": "menus/exe#2567d0", "es": "_577Vibración"}
-{"key": "menus/exe#2567e0", "es": "_577Botón analóg."}
+{"key": "menus/exe#2567e0", "es": "_577Botón analógico"}
 {"key": "menus/exe#2567f8", "es": "_577           Sensibilidad"}
 {"key": "menus/exe#256818", "es": "_333           Sensibilidad"}
 {"key": "menus/exe#256838", "es": "_577Ventana de anillos"}
@@ -286,11 +286,11 @@
 {"key": "menus/exe#256bf0", "es": "Configuración del mando"}
 {"key": "menus/exe#256c10", "es": "Cargar partida"}
 {"key": "menus/exe#256c20", "es": "Cargar - "}
-{"key": "menus/exe#256c30", "es": "MEMORY CARD Ran. 1"}
+{"key": "menus/exe#256c30", "es": "MEMORY CARD Ranura 1"}
 {"key": "menus/exe#256c48", "es": "MEMORY CARD Ranura 2"}
 {"key": "menus/exe#256c60", "es": "Guardar partida"}
 {"key": "menus/exe#256c70", "es": "Guardar - "}
-{"key": "menus/exe#256c80", "es": "_773Tipo: Obj."}
+{"key": "menus/exe#256c80", "es": "_773Tipo: Objeto"}
 {"key": "menus/exe#256c90", "es": "_773Tipo: Arma"}
 {"key": "menus/exe#256ca8", "es": "Tienes gemas  :"}
 {"key": "menus/exe#256cb8", "es": "Gemas necesit.:"}
@@ -311,19 +311,19 @@
 {"key": "menus/exe#257a58", "es": "MEMORY CARD(PS2) no está formateada."}
 {"key": "menus/exe#257a80", "es": "¿Quieres formatear?"}
 {"key": "menus/exe#257a98", "es": "Formatea MEMORY CARD(PS2) para guardar."}
-{"key": "menus/exe#257ac8", "es": "¿Revisar MEMORY CARD(PS2)?"}
+{"key": "menus/exe#257ac8", "es": "¿Revisar MEMORY CARD(PS2) otra vez?"}
 {"key": "menus/exe#257ae8", "es": "Formateando..."}
 {"key": "menus/exe#257af8", "es": "MEMORY CARD(PS2) cambiada."}
 {"key": "menus/exe#257b18", "es": "Falló la carga."}
 {"key": "menus/exe#257b28", "es": "NO SE GUARDÓ,"}
 {"key": "menus/exe#257b38", "es": "se retiró la memory card(PS2)."}
-{"key": "menus/exe#257b60", "es": "Revisa de nuevo"}
+{"key": "menus/exe#257b60", "es": "Revisa de nuevo."}
 {"key": "menus/exe#257b70", "es": "Inserta MEMORY CARD(PS2)"}
 {"key": "menus/exe#257b90", "es": "No se detectó MEMORY CARD(PS2)."}
 {"key": "menus/exe#257bb0", "es": "Se retiró MEMORY CARD(PS2)."}
-{"key": "menus/exe#257bd0", "es": "Falló formateo."}
+{"key": "menus/exe#257bd0", "es": "Error al formatear."}
 {"key": "menus/exe#257be0", "es": "Error al cargar."}
-{"key": "menus/exe#257bf8", "es": "No hay datos."}
+{"key": "menus/exe#257bf8", "es": "No hay datos guardados."}
 {"key": "menus/exe#257c08", "es": "Espacio insuficiente en MEMORY CARD(PS2)."}
 {"key": "menus/exe#257c38", "es": "Necesitas al menos 100KB para guardar."}
 {"key": "menus/exe#25d570", "es": "~NIVEL"}
@@ -348,7 +348,7 @@
 {"key": "menus/exe#25d6a0", "es": "_444Sí"}
 {"key": "menus/exe#25d6a8", "es": "No"}
 {"key": "menus/exe#25d6b0", "es": "_444No"}
-{"key": "menus/exe#25d718", "es": "Cargar"}
-{"key": "menus/exe#25d720", "es": "Guardar"}
+{"key": "menus/exe#25d718", "es": "¿Cargar?"}
+{"key": "menus/exe#25d720", "es": "¿Guardar?"}
 {"key": "menus/exe#25d728", "es": " Sí "}
 {"key": "menus/exe#25d730", "es": " No "}

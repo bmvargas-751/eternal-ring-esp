@@ -63,9 +63,9 @@ Obligatorio: sin él, `loc.py prepare` no arma lotes.
 
 ### Fase 6. Traducción
 
-- [x] Diálogos (505). (2026-11-22: lotes piloto-dialogos, dialogos-1908-1917 y dialogos-1918-1990.)
-- [x] Magias, armas y objetos (324). (2026-11-22: lotes piloto-objetos y objetos-resto.)
-- [x] Menús (354). (2026-11-22: lotes piloto-menus y menus-resto. La ISO no se arma hasta mover la lista corta de lugares y «Opciones»: ver PENDING.)
+- [x] Historia (505 diálogos). (2026-11-22: lotes piloto-dialogos, dialogos-1908-1917 y dialogos-1918-1990.)
+- [x] Objetos y equipo (324: magias, armas, objetos y gemas). (2026-11-22: lotes piloto-objetos y objetos-resto.)
+- [x] Interfaz (354 menús). (2026-11-22: lotes piloto-menus y menus-resto. Los textos que no entraban en su campo se movieron en el ejecutable: TECH, «Textos movidos».)
 
 ### Fase 7. Prueba en el juego
 
