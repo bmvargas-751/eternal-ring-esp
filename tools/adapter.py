@@ -95,12 +95,52 @@ EXE_SKIP = re.compile(r'cdrom0|host0|\\|\.(PSS|ADX|BIN|ICO|IRX)|icon\.sys|BESLES
                       r'^(MRing|ARing|Aring) Name$|^WeaponName$|^(PS2D|abcd)$')
 EXE_CODE = re.compile(r'_[0-9]{3}|%[-+0-9.]*[sdifxXu]|~')
 EXE_MAX = 79
+EXE_VA = 0xff000            # dirección virtual = desplazamiento del archivo + EXE_VA
+
+# Lista corta de lugares (pantalla de cargar y guardar): registros de 32 bytes
+# (texto, \0, espacios y un \0 al final). El juego hace sprintf(«No%1d Lv%02d/%s»,
+# 0x349540 + lugar * 32) en un búfer de 128 bytes (0x1c2be0), así que lee hasta
+# el \0: caben 31 bytes, aunque detrás del inglés haya espacios.
+PLACE_LIST = (0x24a540, 0x24a7a0, 0x20)
+
+# Textos del ejecutable que no entran en su campo en español. Si el texto no
+# cabe, se escribe en el relleno entre secciones del ELF (FREE: bytes en 0 que
+# ninguna sección usa) y se corrigen los pares lui/addiu que lo cargan. Son sus
+# únicas referencias (ni punteros ni usos relativos a gp = 0x360ef0), y el
+# registro de cada lui solo lo lee su addiu, así que cambiar el lui no afecta a
+# nada más. Si el texto cabe en su campo, se escribe en su lugar, como siempre.
+# desplazamiento: (lugar nuevo, campo, [(lui, addiu)] en vaddr)
+FREE = [(0x0f1654, 0x0f1680),   # entre .text y .data
+        (0x2550a0, 0x255100),   # entre .vudata y .rodata
+        (0x259eb8, 0x259f00),   # entre .rodata y .lit4
+        (0x25cb0c, 0x25cb80)]   # entre .lit4 y .sdata
+MOVED = {
+    0x25d678: (0x259eb8, 12, [(0x173d28, 0x173d30)]),                        # Options
+    0x25d718: (0x259ec4, 12, [(0x1c2f4c, 0x1c2f54), (0x1c30cc, 0x1c30d4)]),  # Load?
+    0x25d720: (0x259ed0, 12, [(0x1c2f80, 0x1c2f88)]),                        # Save?
+    0x2565a8: (0x259edc, 28, [(0x16e8b0, 0x16e8b8)]),                        # Choose a Gem to combine.
+    0x256688: (0x0f1654, 24, [(0x16fc6c, 0x16fc74), (0x170bd0, 0x170bd8)]),  # Create Magic Ring.
+    0x256508: (0x0f166c, 20, [(0x16e018, 0x16e01c)]),                        # _377(MP used:  )
+    0x256c30: (0x2550a0, 24, [(0x174e2c, 0x174e34), (0x1750d8, 0x1750e0)]),  # MEMORY CARD Slot 1
+    0x257bf8: (0x2550b8, 24, [(0x1c4880, 0x1c4888)]),                        # No saved data.
+    0x2567e0: (0x2550d0, 20, [(0x173e00, 0x173e08)]),                        # _577Analog button
+    0x256c80: (0x2550e4, 20, [(0x175674, 0x17567c)]),                        # _773Type: Item
+    0x256448: (0x25cb0c, 20, [(0x16c92c, 0x16c930)]),                        # _665MP Used: --
+    0x257bd0: (0x25cb20, 20, [(0x1c47c0, 0x1c47c8)]),                        # Format failed.
+    0x256540: (0x25cb34, 20, [(0x16e74c, 0x16e754)]),                        # Choose a ring.
+    0x257b60: (0x25cb48, 20, [(0x1c460c, 0x1c4614)]),                        # Check again.
+    0x257ac8: (0x25cb5c, 36, [(0x1c4238, 0x1c4240)]),                        # Check MEMORY CARD(PS2) again?
+}
+_slots = sorted((n, n + r) for n, r, _ in MOVED.values())
+assert all(a[1] <= b[0] for a, b in zip(_slots, _slots[1:])), 'MOVED: lugares superpuestos'
+assert all(any(lo <= a and b <= hi for lo, hi in FREE) for a, b in _slots), 'MOVED: fuera del relleno libre'
 
 
 class Field:
     """Un texto que se escribe en su lugar: (archivo, desplazamiento, campo)."""
-    def __init__(self, key, places, note):
+    def __init__(self, key, places, note, move=None):
         self.key, self.places, self.note = key, places, note   # places: [(dónde, desplazamiento, campo)]
+        self.move = move                                        # MOVED[a], si el texto puede mudarse
 
 
 def _cstr(b, off, size):
@@ -171,9 +211,13 @@ def read_sources(er, exe, er_off=0, exe_off=0):
             if k > 0:
                 size = min(size, max(a - hits[k - 1][0], end - a + 1))
             size = min(size, EXE_MAX + 1)
+            if PLACE_LIST[0] <= a < PLACE_LIST[1] and (a - PLACE_LIST[0]) % PLACE_LIST[2] == 0:
+                size = PLACE_LIST[2]
             key = 'menus/exe#%06x' % a
-            fields.append(Field(key, [('exe', a, size)], ''))
-            items.append({'key': key, 'en': s, 'max': size - 1, 'note': 'ejecutable, campo de %d bytes' % (size - 1)})
+            move = MOVED.get(a)
+            fields.append(Field(key, [('exe', a, size)], '', move))
+            room = max(size, move[1]) if move else size
+            items.append({'key': key, 'en': s, 'max': room - 1, 'note': 'ejecutable, campo de %d bytes' % (room - 1)})
     return items, fields, dialogs
 
 
@@ -184,11 +228,33 @@ def write_fields(fields, texts, er, exe, er_off, exe_off, errors):
         es = texts[f.key]
         b = encode_field(es)
         for where, off, size in f.places:
+            if len(b) + 1 > size and f.move and len(b) + 1 <= f.move[1]:
+                move_field(exe, exe_off, f, b, errors)
+                continue
             if len(b) + 1 > size:
                 errors.append('%s: %d bytes, el campo admite %d' % (f.key, len(b), size - 1))
                 continue
             fh, base = (er, er_off) if where == 'er' else (exe, exe_off)
             fh.seek(base + off); fh.write(b + b'\0')
+
+
+def move_field(exe, exe_off, f, b, errors):
+    """Escribe el texto en su nuevo lugar (MOVED) y corrige los lui/addiu que lo cargan."""
+    new, room, refs = f.move
+    exe.seek(exe_off + new)
+    if exe.read(room) != bytes(room):
+        errors.append('%s: el lugar nuevo (%06x) no está libre' % (f.key, new)); return
+    va = new + EXE_VA
+    hi, lo = (va + 0x8000) >> 16, va & 0xffff
+    for lui, addiu in refs:
+        exe.seek(exe_off + lui - EXE_VA); w1 = struct.unpack('<I', exe.read(4))[0]
+        exe.seek(exe_off + addiu - EXE_VA); w2 = struct.unpack('<I', exe.read(4))[0]
+        rt = (w1 >> 16) & 31
+        if w1 >> 26 != 0x0f or w2 >> 26 != 0x09 or (w2 >> 21) & 31 != rt:
+            errors.append('%s: en %x/%x no está el lui/addiu esperado' % (f.key, lui, addiu)); return
+        exe.seek(exe_off + lui - EXE_VA); exe.write(struct.pack('<I', (w1 & 0xffff0000) | hi))
+        exe.seek(exe_off + addiu - EXE_VA); exe.write(struct.pack('<I', (w2 & 0xffff0000) | lo))
+    exe.seek(exe_off + new); exe.write(b + b'\0')
 
 
 def write_dialogs(dialogs, texts, en, er, er_off, er_size, errors):

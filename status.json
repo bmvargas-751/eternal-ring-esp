@@ -2,27 +2,27 @@
  "updated": "2026-11-22",
  "status": "beta",
  "stage": "Prueba en el juego",
- "version": null,
+ "version": "0.9.0",
  "lines": 1183,
  "done": 1183,
  "sections": [
   {
-   "name": "Diálogos",
-   "lines": 505,
-   "done": 505,
-   "common": false
-  },
-  {
-   "name": "Magias, armas y objetos",
-   "lines": 324,
-   "done": 324,
-   "common": false
-  },
-  {
-   "name": "Menús",
+   "name": "Interfaz",
    "lines": 354,
    "done": 354,
-   "common": false
+   "common": true
+  },
+  {
+   "name": "Objetos y equipo",
+   "lines": 324,
+   "done": 324,
+   "common": true
+  },
+  {
+   "name": "Historia",
+   "lines": 505,
+   "done": 505,
+   "common": true
   }
  ],
  "phases": [
@@ -81,5 +81,17 @@
    "note": null
   }
  ],
- "changes": []
+ "changes": [
+  {
+   "version": "0.9.0",
+   "date": "2026-11-22",
+   "title": "Primera versión de prueba.",
+   "items": [
+    "Todo el juego en español: diálogos, carteles y cartas, menús, mensajes de la memory card, magias, armas, objetos, gemas y lugares.",
+    "Todavía sin jugar entero con la traducción: algún texto puede salirse de su recuadro. Si ves uno, avísanos con una captura.",
+    "Quedan en inglés los botones e imágenes con texto (OK, CANCEL, ON/OFF…) y los videos.",
+    "Instalador para Windows (doble clic) y parche xdelta para Linux y macOS."
+   ]
+  }
+ ]
 }

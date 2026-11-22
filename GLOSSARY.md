@@ -49,7 +49,7 @@ Por sección. *Oficial* (G-1) o *decidido* por el usuario (G-2), con fecha. `loc
 | Wind | Viento | decidido [DECISIONS 2026-11-21] | Elemento; «VIENTO» en la fuente grande. |
 | Water | Agua | decidido [DECISIONS 2026-11-21] | Elemento; «AGUA» en la fuente grande. |
 | Light | Luz | decidido [DECISIONS 2026-11-21] | Elemento; «LUZ» en la fuente grande. |
-| STR | FUE | decidido [DECISIONS 2026-11-21] | Atributo de fuerza, en la fuente grande; en las descripciones, «Strength» → «fuerza». |
+| STR | FUE | decidido [DECISIONS 2026-11-21] | Atributo de fuerza, en la fuente grande; en las descripciones, «Strength» → «fuerza», pero «Fuerza» con mayúscula cuando se nombra como atributo junto a un elemento («los atributos Fuerza y Fuego») [DECISIONS 2026-11-22]. |
 | Neutral | Neutro | decidido [DECISIONS 2026-11-21] |  |
 | Attrib. | Atrib. | decidido [DECISIONS 2026-11-21] | «attribute» → «atributo»; «Basic Attrib.» → «Atrib. básico»; «Overall Attrib.» → «Atrib. total». |
 | Fire Magic | magia de fuego | decidido [DECISIONS 2026-11-21] | Igual con agua, viento y tierra; minúscula a media frase. |

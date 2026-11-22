@@ -7,19 +7,19 @@
   "work": "build/work/batches",
   "sections": [
     {
-      "name": "Diálogos",
+      "name": "Historia",
       "prefixes": [
         "dialogo/"
       ]
     },
     {
-      "name": "Magias, armas y objetos",
+      "name": "Objetos y equipo",
       "prefixes": [
         "objetos/"
       ]
     },
     {
-      "name": "Menús",
+      "name": "Interfaz",
       "prefixes": [
         "menus/"
       ]

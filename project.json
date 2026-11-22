@@ -1,0 +1,35 @@
+{
+  "title": "Eternal Ring",
+  "platform": "PS2",
+  "translated_from": "Inglés oficial",
+  "owner": "FromSoftware",
+  "platform_long": "PlayStation 2",
+  "game_version": "PAL europea (SLES-50051)",
+  "untranslated": "Botones e imágenes con texto, videos, logos y pantalla de título",
+  "tagline": "Un RPG de acción en primera persona en el que creas tus propios anillos mágicos combinando gemas.",
+  "requirements": "Necesitas tu propia copia de Eternal Ring para PlayStation 2, versión PAL europea en inglés (SLES-50051), en una imagen .iso.",
+  "install": [
+    {
+      "system": "Windows",
+      "steps": [
+        "Descarga el .zip de la [última versión](https://github.com/bmvargas-751/eternal-ring-esp/releases/latest) y descomprímelo.",
+        "Abre **Instalar Eternal Ring en español.exe**, arrastra tu .iso a la ventana y presiona Enter. Si Windows avisa que protegió tu equipo, elige **Más información** y **Ejecutar de todas formas** (el programa no está firmado).",
+        "Al lado de tu copia aparece otra, traducida: «Eternal Ring (Español).iso». Ábrela en PCSX2. La original no se toca."
+      ]
+    },
+    {
+      "system": "Linux o macOS",
+      "steps": [
+        "Descarga el .zip de la [última versión](https://github.com/bmvargas-751/eternal-ring-esp/releases/latest), descomprímelo y, en su carpeta, con tu ISO al lado:"
+      ],
+      "code": "xdelta3 -d -s \"Eternal Ring.iso\" eternal-ring-esp-*.xdelta \"Eternal Ring (Español).iso\""
+    }
+  ],
+  "downloads": [
+    {
+      "asset": "eternal-ring-esp-*.zip",
+      "label": "Descargar",
+      "primary": true
+    }
+  ]
+}

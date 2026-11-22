@@ -1,0 +1,79 @@
+ETERNAL RING EN ESPAÑOL — versión {VERSION}
+Traducción fan al español neutro de Eternal Ring (PlayStation 2, versión PAL
+europea en inglés, SLES-50051).
+https://github.com/bmvargas-751/eternal-ring-esp
+
+Esta es una versión de prueba: todo el juego está traducido, pero todavía no se
+jugó entero con la traducción. Si algo se ve cortado, se sale de un recuadro o
+quedó en inglés, avísanos en la página del proyecto (con una captura, mejor).
+
+
+QUÉ ESTÁ TRADUCIDO
+------------------
+- Todos los diálogos, carteles y cartas.
+- Menús, opciones y mensajes del sistema (memory card incluida).
+- Nombres y descripciones de magias, armas, objetos y gemas.
+- Nombres de lugares.
+
+Quedan en inglés: los botones e imágenes con texto (OK, CANCEL, ON/OFF...), los
+videos con texto, los logos y la pantalla de título.
+
+
+QUÉ NECESITAS
+-------------
+Tu propia copia de Eternal Ring para PlayStation 2, versión PAL europea en
+inglés (SLES-50051), en una imagen .iso. Este paquete NO trae el juego: solo el
+parche.
+
+La imagen tiene que ser exactamente esta (el instalador lo comprueba solo):
+
+  Tamaño {ORIG_SIZE} bytes
+  CRC32  {ORIG_CRC32}
+  MD5    {ORIG_MD5}
+  SHA-1  {ORIG_SHA1}
+
+Si tu copia está en otro formato (.chd, .cso, .bin/.cue), conviértela primero a
+.iso.
+
+
+CÓMO SE APLICA
+--------------
+Windows:
+  1. Abre {EXE} con doble clic.
+     (Si Windows avisa que protegió tu equipo, elige «Más información» y
+     «Ejecutar de todas formas»: el programa no está firmado.)
+  2. Arrastra tu .iso a la ventana y presiona Enter.
+  3. Al lado de tu copia aparece otra, traducida: «Eternal Ring (Español).iso».
+     Tu ISO original no se toca.
+
+También sirve con Delta Patcher o xdelta UI:
+  Original/Source file: tu .iso. Patch file: {PATCH}.
+  Guarda el resultado como «Eternal Ring (Español).iso».
+
+Linux o macOS:
+  xdelta3 -d -s "Eternal Ring.iso" {PATCH} "Eternal Ring (Español).iso"
+
+Para jugar, abre «Eternal Ring (Español).iso» en PCSX2 (probado ahí).
+
+La imagen traducida tiene que dar:
+
+  Tamaño {NEW_SIZE} bytes
+  CRC32  {NEW_CRC32}
+  MD5    {NEW_MD5}
+  SHA-1  {NEW_SHA1}
+
+
+PARTIDAS GUARDADAS
+------------------
+Las partidas de la versión en inglés deberían servir en la traducción, y al
+revés: el parche cambia solo el texto. En PCSX2, los save states no se pasan de
+una imagen a otra; usa la memory card.
+
+
+CRÉDITOS
+--------
+Traducción y herramientas: bmvargas-751.
+Eternal Ring es una obra de FromSoftware. Esta traducción no es oficial y no
+tiene relación con FromSoftware ni con sus distribuidores.
+
+Los cambios de cada versión están en CHANGELOG.md, en la página del proyecto.
