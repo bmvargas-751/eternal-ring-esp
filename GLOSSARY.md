@@ -24,7 +24,7 @@ Por sección. *Oficial* (G-1) o *decidido* por el usuario (G-2), con fecha. `loc
 | MP | MP | decidido [DECISIONS 2026-11-21] | |
 | EXP | EXP | decidido [DECISIONS 2026-11-21] | |
 | God's child | el hijo de Dios | decidido [DECISIONS 2026-11-21] | También «God-child» y «the child of God». |
-| Sealed | Magia sellada | decidido [DECISIONS 2026-11-21] | Estado. |
+| Sealed | Magia sellada | decidido [DECISIONS 2026-11-21] | Estado. El cartel de 1912#000 («Sealed by magic.») va «Tiene un sello mágico.» [DECISIONS 2026-11-22]; el de 1975#000 («Sealed.»), «Sellado.». |
 | Cursed | Maldición | decidido [DECISIONS 2026-11-21] | Estado. |
 | Poisoned | Veneno | decidido [DECISIONS 2026-11-21] | Estado. |
 | Paralyzed | Parálisis | decidido [DECISIONS 2026-11-21] | Estado. |
@@ -276,7 +276,7 @@ Por sección. *Oficial* (G-1) o *decidido* por el usuario (G-2), con fecha. `loc
 | assistant captain | subcapitán | decidido [DECISIONS 2026-11-21] |  |
 | sir | caballero | decidido [DECISIONS 2026-11-21] | Trato del árbol cortés al protagonista (en japonés «騎士さま»): «Thank you, sir.» → «Gracias, caballero.» |
 | King of Aldine | rey de Aldine | decidido [DECISIONS 2026-11-21] | «the King» → «el rey»; minúscula: cargo. |
-| magician | mago | decidido [DECISIONS 2026-11-21] | «'Great Magician'» → «“Gran Mago”»; «the ancient magician» → «el mago antiguo». |
+| magician | mago | decidido [DECISIONS 2026-11-21] | «'Great Magician'» → «Gran Mago», entre comillas « » (E-58); «the ancient magician» → «el mago antiguo». |
 | Eternal Power | Poder Eterno | decidido [DECISIONS 2026-11-21] |  |
 | the Eternal cage | la jaula eterna | decidido [DECISIONS 2026-11-21] |  |
 | Eternity | la eternidad | decidido [DECISIONS 2026-11-21] |  |

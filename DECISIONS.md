@@ -58,3 +58,11 @@ Lo que el usuario decidió, con fecha, para no volver a discutirlo. Una regla de
   - «Summons a small Fireball.» → «Invoca una bolita de fuego.» («chica» sonaba regional).
   - «Fire Dragon» se separa en el glosario en tres términos: la magia («Dragón de fuego»), el ser que invoca en la descripción («Great Fire Dragon» → «Gran Dragón de fuego», igual con los demás elementos; «Gran Dragón oscuro») y la criatura de los diálogos («dragón de fuego», en minúscula). La nota anterior ponía «el Gran Dragón de Fuego» como regla de los diálogos, donde no aparece.
 - **2026-11-22** Piloto, lote de menús (60 rótulos): «Mag Gems» en la columna del menú principal → «Gemas mág.» (glosario). Se descartó el hallazgo del corrector «Mando» → «Control»: es la excepción del usuario a E-12, que ahora la menciona en su tabla. Kit: el chequeo de espacios (E-54) ya no cuenta el relleno final de un campo de ancho fijo.
+- **2026-11-22** Lote de diálogos 1908-1917, decisiones del usuario:
+  - Comillas: « » para todo lo que el original marca como cita o nombre (`^X^` y `'X'`): «capitán», «Gran Mago», «Lyla». “ ” solo dentro de otras comillas (E-58, glosario).
+  - Puntos suspensivos: tres puntos `...` (E-54), como el original; se corrige TECH, que decía `…`.
+  - 1912#000 «Sealed by magic.» → «Tiene un sello mágico.» (cartel; sin género; el glosario «Sealed → Magia sellada» es el estado).
+  - 1909#041 «two years ago......!!» → «dos años... ¡¡...!!», fiel al inglés. No se agrega el «Ah» del japonés: el doblaje no lo dice. Criterio: el japonés aclara, pero no agrega palabras que no se oyen.
+  - 1917#016: «the mother of the army's leader» → «la madre del capitán de arqueros», por el japonés («弓隊隊長»): la frase inglesa es confusa (E-1).
+- **2026-11-22** 1975#000 «Sealed.» (cartel; japonés «封じられている») → «Sellado.». No es el estado «Magia sellada» del glosario; «Tiene un sello mágico.» queda solo para 1912#000 («Sealed by magic.»).
+- **2026-11-22** Diálogos terminados (505/505). Último lote (1918-1990): 9 hallazgos aplicados (cuatro puntos → tres, dos frases calcadas, una mayúscula) y 1975#000 → «Sellado.». Avisos aceptados: G-3 en 1975#000 y 1912#000 (carteles, no el estado «Magia sellada») y en magia#000.desc («bolita»).

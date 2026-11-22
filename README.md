@@ -7,8 +7,8 @@
 
 | Sección | Líneas | Traducidas | Avance |
 |---|---:|---:|---:|
-| Diálogos | 505 | 106 | 21,0 % |
+| Diálogos | 505 | 505 | 100,0 % |
 | Magias, armas y objetos | 324 | 60 | 18,5 % |
 | Menús | 354 | 61 | 17,2 % |
-| **Total** | **1.183** | **227** | **19,2 %** |
+| **Total** | **1.183** | **626** | **52,9 %** |
 <!-- /loc:progress -->
