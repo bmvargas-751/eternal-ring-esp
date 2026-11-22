@@ -1,0 +1,14 @@
+{"key": "objetos/clave#000.nombre", "es": "Pergamino del rey"}
+{"key": "objetos/clave#000.desc", "es": "Carta del rey dirigida al\ncapitán."}
+{"key": "objetos/clave#001.nombre", "es": "Solicitud de arma"}
+{"key": "objetos/clave#001.desc", "es": "Entregada por Evans. Se cambia\npor «Cuchillo» en el almacén."}
+{"key": "objetos/clave#002.nombre", "es": "Brazalete"}
+{"key": "objetos/clave#002.desc", "es": "Joya encontrada en un cadáver\nen el valle."}
+{"key": "objetos/clave#003.nombre", "es": "Llave de agua"}
+{"key": "objetos/clave#003.desc", "es": "Llave con magia de agua.\nAbre puertas azules."}
+{"key": "objetos/clave#005.nombre", "es": "Llave de fuego"}
+{"key": "objetos/clave#005.desc", "es": "Llave con magia de fuego.\nAbre puertas rojas."}
+{"key": "objetos/clave#006.nombre", "es": "Llave de viento"}
+{"key": "objetos/clave#006.desc", "es": "Llave con magia de viento.\nAbre puertas verdes."}
+{"key": "objetos/clave#007.nombre", "es": "Llave de tierra"}
+{"key": "objetos/clave#007.desc", "es": "Llave con magia de tierra.\nAbre puertas amarillas."}

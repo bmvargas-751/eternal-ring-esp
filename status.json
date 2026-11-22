@@ -1,0 +1,85 @@
+{
+ "updated": "2026-11-22",
+ "status": "beta",
+ "stage": "Prueba en el juego",
+ "version": null,
+ "lines": 1183,
+ "done": 1183,
+ "sections": [
+  {
+   "name": "Diálogos",
+   "lines": 505,
+   "done": 505,
+   "common": false
+  },
+  {
+   "name": "Magias, armas y objetos",
+   "lines": 324,
+   "done": 324,
+   "common": false
+  },
+  {
+   "name": "Menús",
+   "lines": 354,
+   "done": 354,
+   "common": false
+  }
+ ],
+ "phases": [
+  {
+   "n": 0,
+   "name": "Antes de empezar",
+   "state": "done",
+   "note": null
+  },
+  {
+   "n": 1,
+   "name": "Prueba técnica",
+   "state": "done",
+   "note": null
+  },
+  {
+   "n": 2,
+   "name": "Inventario y presupuesto",
+   "state": "done",
+   "note": "1.183 líneas"
+  },
+  {
+   "n": 3,
+   "name": "Documentos",
+   "state": "done",
+   "note": null
+  },
+  {
+   "n": 4,
+   "name": "Set de oro",
+   "state": "done",
+   "note": "20 de 21 (oro-001)"
+  },
+  {
+   "n": 5,
+   "name": "Piloto",
+   "state": "done",
+   "note": null
+  },
+  {
+   "n": 6,
+   "name": "Traducción",
+   "state": "done",
+   "note": "100,0 %"
+  },
+  {
+   "n": 7,
+   "name": "Prueba en el juego",
+   "state": "pending",
+   "note": null
+  },
+  {
+   "n": 8,
+   "name": "Entrega",
+   "state": "pending",
+   "note": null
+  }
+ ],
+ "changes": []
+}

@@ -1,0 +1,40 @@
+{"key": "objetos/objetos#000.nombre", "es": "Hierba dorada"}
+{"key": "objetos/objetos#000.desc", "es": "Hierba de los Campos Dorados.\nRecupera un poco de HP."}
+{"key": "objetos/objetos#001.nombre", "es": "Flor dorada"}
+{"key": "objetos/objetos#001.desc", "es": "Flor de los Árboles Dorados.\nRecupera bastante HP."}
+{"key": "objetos/objetos#002.nombre", "es": "Fruto dorado"}
+{"key": "objetos/objetos#002.desc", "es": "Fruto de los Árboles Dorados.\nRecupera mucho HP."}
+{"key": "objetos/objetos#003.nombre", "es": "Piedra mágica"}
+{"key": "objetos/objetos#003.desc", "es": "Magia sellada en una piedra.\nRecupera un poco de MP."}
+{"key": "objetos/objetos#004.nombre", "es": "Cristal mágico"}
+{"key": "objetos/objetos#004.desc", "es": "Magia sellada en un cristal.\nRecupera bastante MP."}
+{"key": "objetos/objetos#005.nombre", "es": "Joya mágica"}
+{"key": "objetos/objetos#005.desc", "es": "Magia sellada en una joya.\nRecupera mucho MP."}
+{"key": "objetos/objetos#006.nombre", "es": "Escama de dragón"}
+{"key": "objetos/objetos#006.desc", "es": "Escama protectora de dragón.\nRecupera HP y MP."}
+{"key": "objetos/objetos#007.nombre", "es": "Huevo de dragón"}
+{"key": "objetos/objetos#007.desc", "es": "Energía de dragón sellada.\nRecupera por completo HP y MP."}
+{"key": "objetos/objetos#008.nombre", "es": "Cola de rata"}
+{"key": "objetos/objetos#008.desc", "es": "Cura el estado\n«Magia sellada»."}
+{"key": "objetos/objetos#009.nombre", "es": "Semilla dorada"}
+{"key": "objetos/objetos#009.desc", "es": "Semilla de los frutos dorados.\nCura el estado «Maldición»."}
+{"key": "objetos/objetos#010.nombre", "es": "Espina de Sahagin"}
+{"key": "objetos/objetos#010.desc", "es": "Cura el estado «Veneno»."}
+{"key": "objetos/objetos#011.nombre", "es": "Pluma de cocatriz"}
+{"key": "objetos/objetos#011.desc", "es": "Cura el estado «Parálisis»."}
+{"key": "objetos/objetos#012.nombre", "es": "Poción de dragón"}
+{"key": "objetos/objetos#012.desc", "es": "Reduce temporalmente el\nMP usado."}
+{"key": "objetos/objetos#013.nombre", "es": "Colm. dragón fuego"}
+{"key": "objetos/objetos#013.desc", "es": "Aumenta el atributo Fuego."}
+{"key": "objetos/objetos#014.nombre", "es": "Colm. dragón tierra"}
+{"key": "objetos/objetos#014.desc", "es": "Aumenta el atributo Tierra."}
+{"key": "objetos/objetos#015.nombre", "es": "Colm. dragón aire"}
+{"key": "objetos/objetos#015.desc", "es": "Aumenta el atributo Viento."}
+{"key": "objetos/objetos#016.nombre", "es": "Colm. dragón agua"}
+{"key": "objetos/objetos#016.desc", "es": "Aumenta el atributo Agua."}
+{"key": "objetos/objetos#017.nombre", "es": "Colm. dragón oro"}
+{"key": "objetos/objetos#017.desc", "es": "Aumenta el atributo Luz."}
+{"key": "objetos/objetos#018.nombre", "es": "Colm. dragón plata"}
+{"key": "objetos/objetos#018.desc", "es": "Aumenta el atributo Oscuridad."}
+{"key": "objetos/objetos#019.nombre", "es": "Colm. dragón mayor"}
+{"key": "objetos/objetos#019.desc", "es": "Aumenta todos los atributos."}

@@ -5,6 +5,8 @@ Lo que se vio al usar el kit con Eternal Ring y que **no** se cambió: el kit so
 ## Validador (`tools/lockit/checks.py`)
 
 - **Diminutivos y formas derivadas del glosario.** «Fireball → Bola de fuego»: «Invoca una bolita de fuego.» (magia#000.desc, decisión del usuario) da G-3, porque «bola» tiene 4 letras y se busca literal. Propuesta: aceptar diminutivos en *-ita/-ito* de las palabras cortas, o un mecanismo para aceptar un aviso (ver abajo).
+- **Las copias idénticas no respetan el `max` de su destino (casi grave).** `loc.py save` copia una traducción a toda clave con el mismo original, pero no comprueba el límite de bytes de cada copia, y esas claves no pasan por ningún lote ni por `check`. En Eternal Ring, 11 lugares de la lista corta (0x24a540-0x24a760) recibieron la forma de la lista larga y pasan del campo: `adapter.py build` no arma la ISO. Aquí coincide con la decisión del usuario (mover esas cadenas), pero en otro juego rompería el armado sin aviso. Propuesta: `save` corre `encode`/`max` sobre cada copia, y `check` de un lote incluye sus copias.
+- **Términos del glosario que son palabras comunes.** La fila «No → No» (el botón) salta en «No characteristics» (objetos/armas#000.desc, «sin características») y en «Nº» (menus/exe#257900). Propuesta: que una fila del glosario pueda limitarse a ciertas claves o a líneas que sean solo el término.
 - **Avisos aceptados.** Un aviso que el usuario acepta (como el anterior) sigue saliendo en cada `check` y en `checks.jsonl`, y el revisor tiene que adivinar que es decisión. Propuesta: un archivo del proyecto (`accepted.jsonl`, `{key, check, motivo}`) que `check` respete y que se cite en DECISIONS.
 - **Aviso de crecimiento en menús (T-3).** En los rótulos del ejecutable el aviso «N caracteres, el original M: ver en el juego» es informativo, pero cuenta como aviso sin resolver y empuja al traductor a recortar. Propuesta: separar los avisos «a ver en el juego» de los que obligan a corregir.
 
@@ -12,6 +14,7 @@ Lo que se vio al usar el kit con Eternal Ring y que **no** se cambió: el kit so
 
 - **Los casos de revisión no pasan por el validador.** O-6 tenía un renglón de 37 caracteres (la caja admite 35) y nadie lo notó hasta que el revisor lo mencionó como duda. Propuesta: `golden status` corre `check` sobre el `es` de los casos `intacta`, `rara-correcta` (deben pasar limpios).
 - **El contexto de los casos no trae la versión de apoyo.** `make_item` agrega `ja` a la línea, no a las de `context`. Propuesta: agregarlo también al contexto, para que el revisor vea el japonés de la línea anterior.
+- **Los casos del set de oro no siguen a la traducción vigente.** O-16 (1905#036) guardaba un texto que luego cambió en la traducción real para igualar a su línea repetida (1905#039); en la tercera prueba el revisor la señaló con razón y la prueba dio 20/21. Propuesta: `golden status` avisa cuando el `es` de un caso de revisión ya no coincide con la traducción vigente de esa clave (o con sus líneas repetidas), para actualizar el caso antes de probar.
 
 ## Flujo del lote
 
