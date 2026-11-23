@@ -1,7 +1,7 @@
 # Eternal Ring en español
 
-Traducción fan al español neutro de *Eternal Ring*, desde el inglés oficial, para PlayStation 2 (PAL europea, SLES-50051).
-Quedan en inglés: los botones e imágenes con texto, los videos, los logos y la pantalla de título.
+Traducción fan al español neutro de *Eternal Ring*, basada en la versión oficial en inglés, para PlayStation 2 (PAL europea, SLES-50051).
+Los botones e imágenes con texto, los videos, los logos y la pantalla de título permanecen en inglés.
 
 > Proyecto de fans, sin relación con FromSoftware. **No incluye el juego**: necesitas tu propia copia.
 
@@ -19,8 +19,6 @@ Necesitas tu propia copia de Eternal Ring para PlayStation 2, versión PAL europ
 <details>
 <summary>Linux o macOS</summary>
 
-**Linux o macOS:**
-
 1. Descarga el .zip de la [última versión](https://github.com/bmvargas-751/eternal-ring-esp/releases/latest), descomprímelo y, en su carpeta, con tu ISO al lado:
 
 ```sh
@@ -33,7 +31,8 @@ xdelta3 -d -s "Eternal Ring.iso" eternal-ring-esp-*.xdelta "Eternal Ring (Españ
 ## Avance
 
 <!-- loc:progress -->
-Versión 0.9.0 (22 nov 2026) · Etapa: Prueba en el juego · Actualizado el 22 nov 2026 · [Cambios](CHANGELOG.md)
+Versión 0.9.0, publicada el 22 nov 2026 · [Cambios](CHANGELOG.md)\
+Etapa: Prueba en el juego · actualizado el 23 nov 2026
 
 | Sección | Líneas | Traducidas | Avance |
 |---|---:|---:|---:|
@@ -43,6 +42,9 @@ Versión 0.9.0 (22 nov 2026) · Etapa: Prueba en el juego · Actualizado el 22 n
 | **Total** | **1.183** | **1.183** | **100,0 %** |
 <!-- /loc:progress -->
 
-## Para colaborar
+## Documentación
 
-[Plan](PLAN.md) · [Decisiones](DECISIONS.md) · [Estilo](STYLE.md) · [Glosario](GLOSSARY.md) · [Personajes](characters/) · [Técnica](TECH.md) · [Pendientes](PENDING.md) · [Cambios](CHANGELOG.md) · [Herramientas](tools/README.md)
+<!-- loc:docs -->
+Localización: [Glosario](GLOSSARY.md) · [Personajes](characters/) · [Estilo](STYLE.md) · [Decisiones](DECISIONS.md)\
+Desarrollo: [Plan](PLAN.md) · [Técnica](TECH.md) · [Herramientas](tools/README.md) · [Pendientes](PENDING.md)
+<!-- /loc:docs -->
