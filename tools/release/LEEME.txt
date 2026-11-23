@@ -1,7 +1,7 @@
 ETERNAL RING EN ESPAÑOL — versión {VERSION}
 Traducción fan al español neutro de Eternal Ring (PlayStation 2, versión PAL
 europea en inglés, SLES-50051).
-https://github.com/bmvargas-751/eternal-ring-esp
+https://github.com/nox-traducciones/eternal-ring
 
 Esta es una versión de prueba: todo el juego está traducido, pero todavía no se
 jugó entero con la traducción. Si algo se ve cortado, se sale de un recuadro o

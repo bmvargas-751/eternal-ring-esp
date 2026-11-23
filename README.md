@@ -12,14 +12,14 @@ Necesitas tu propia copia de Eternal Ring para PlayStation 2, versión PAL europ
 
 **Windows:**
 
-1. Descarga el .zip de la [última versión](https://github.com/bmvargas-751/eternal-ring-esp/releases/latest) y descomprímelo.
+1. Descarga el .zip de la [última versión](https://github.com/nox-traducciones/eternal-ring/releases/latest) y descomprímelo.
 2. Abre **Instalar Eternal Ring en español.exe**, arrastra tu .iso a la ventana y presiona Enter. Si Windows avisa que protegió tu equipo, elige **Más información** y **Ejecutar de todas formas** (el programa no está firmado).
 3. Al lado de tu copia aparece otra, traducida: «Eternal Ring (Español).iso». Ábrela en PCSX2. La original no se toca.
 
 <details>
 <summary>Linux o macOS</summary>
 
-1. Descarga el .zip de la [última versión](https://github.com/bmvargas-751/eternal-ring-esp/releases/latest), descomprímelo y, en su carpeta, con tu ISO al lado:
+1. Descarga el .zip de la [última versión](https://github.com/nox-traducciones/eternal-ring/releases/latest), descomprímelo y, en su carpeta, con tu ISO al lado:
 
 ```sh
 xdelta3 -d -s "Eternal Ring.iso" eternal-ring-esp-*.xdelta "Eternal Ring (Español).iso"

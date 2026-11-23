@@ -12,7 +12,7 @@
     {
       "system": "Windows",
       "steps": [
-        "Descarga el .zip de la [última versión](https://github.com/bmvargas-751/eternal-ring-esp/releases/latest) y descomprímelo.",
+        "Descarga el .zip de la [última versión](https://github.com/nox-traducciones/eternal-ring/releases/latest) y descomprímelo.",
         "Abre **Instalar Eternal Ring en español.exe**, arrastra tu .iso a la ventana y presiona Enter. Si Windows avisa que protegió tu equipo, elige **Más información** y **Ejecutar de todas formas** (el programa no está firmado).",
         "Al lado de tu copia aparece otra, traducida: «Eternal Ring (Español).iso». Ábrela en PCSX2. La original no se toca."
       ]
@@ -20,7 +20,7 @@
     {
       "system": "Linux o macOS",
       "steps": [
-        "Descarga el .zip de la [última versión](https://github.com/bmvargas-751/eternal-ring-esp/releases/latest), descomprímelo y, en su carpeta, con tu ISO al lado:"
+        "Descarga el .zip de la [última versión](https://github.com/nox-traducciones/eternal-ring/releases/latest), descomprímelo y, en su carpeta, con tu ISO al lado:"
       ],
       "code": "xdelta3 -d -s \"Eternal Ring.iso\" eternal-ring-esp-*.xdelta \"Eternal Ring (Español).iso\""
     }

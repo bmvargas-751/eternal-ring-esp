@@ -3,7 +3,7 @@
 Uso:
   python3 -I tools/release.py VERSIÓN ISO_ORIGINAL [--sin-exe] [--sin-prueba-exe]
 
-1. Arma la ISO traducida con adapter.py (en ../eternal-ring-esp-local/dist/, y la
+1. Arma la ISO traducida con adapter.py (en ../local/eternal-ring/dist/, y la
    borra al final: solo queda el paquete).
 2. Crea el parche con xdelta3 (`-S none` para que el instalador lo lea, y una
    ventana de 2 GB para que los escenarios movidos salgan como copias: ~65 KB) y
@@ -13,7 +13,7 @@ Uso:
    la variable CSC cambia la ruta). Lo prueba con la ISO original: la ISO que
    escribe tiene que ser idéntica.
 4. Empaqueta eternal-ring-esp-VERSIÓN.zip (instalador, parche y LEEME.txt) en
-   ../eternal-ring-esp-local/dist/.
+   ../local/eternal-ring/dist/.
 
 Necesita xdelta3 (la variable XDELTA3 cambia la ruta).
 """
@@ -23,7 +23,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, 'tools'))
 import adapter
 
-LOCAL = os.path.normpath(os.path.join(ROOT, '..', 'eternal-ring-esp-local'))
+LOCAL = os.path.normpath(os.path.join(ROOT, '..', 'local', 'eternal-ring'))
 DIST = os.path.join(LOCAL, 'dist')
 REL = os.path.join(ROOT, 'tools', 'release')
 XDELTA3 = os.environ.get('XDELTA3') or shutil.which('xdelta3') or 'xdelta3'

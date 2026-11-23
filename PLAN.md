@@ -23,7 +23,7 @@ Se cierran en la fase 0, porque son caras de cambiar después.
 
 Antes de esto no se decide nada más.
 
-- [x] Extraer los archivos del juego, a una carpeta fuera del repo. (`../eternal-ring-esp-local/iso/`, 2026-11-20.)
+- [x] Extraer los archivos del juego, a una carpeta fuera del repo. (`../local/eternal-ring/iso/`, 2026-11-20.)
 - [x] Ubicar todo el texto. (2026-11-21: ejecutable, descripciones de `ERDATA.BIN`, los 505 mensajes en los guiones de 55 escenarios y los videos `TEXT0`/`TEXT1`; ver TECH.md. Letras españolas y mensajes más largos probados en PCSX2.)
 - [x] Adaptador: exportar el texto al formato común (`source` de `loc.json`) e importarlo de vuelta. (`tools/adapter.py`, 2026-11-21; una ISO de `build` probada en PCSX2: menú, día, objeto y arma.)
 - [x] Ida y vuelta idéntica: exportar e importar sin cambios da los mismos archivos. (`adapter.py roundtrip`: `ERDATA.BIN`, ejecutable y 55 guiones idénticos.)
