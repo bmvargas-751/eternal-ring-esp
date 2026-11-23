@@ -31,9 +31,6 @@ xdelta3 -d -s "Eternal Ring.iso" eternal-ring-esp-*.xdelta "Eternal Ring (Españ
 ## Avance
 
 <!-- loc:progress -->
-Versión 0.9.0, publicada el 22 nov 2026 · [Cambios](CHANGELOG.md)\
-Etapa: Prueba en el juego · actualizado el 23 nov 2026
-
 | Sección | Líneas | Traducidas | Avance |
 |---|---:|---:|---:|
 | Interfaz | 354 | 354 | 100,0 % |
