@@ -2,7 +2,7 @@
   "name": "Eternal Ring",
   "source_language": "en",
   "target_language": "es",
-  "source": "../eternal-ring-esp-local/source.jsonl",
+  "source": "../local/eternal-ring/source.jsonl",
   "translation": "translation",
   "work": "build/work/batches",
   "sections": [
@@ -38,7 +38,7 @@
   "spanish_checks": true,
   "hooks": "tools/hooks.py",
   "support": {
-    "file": "../eternal-ring-esp-local/jp/pares.jsonl",
+    "file": "../local/eternal-ring/jp/pares.jsonl",
     "field": "ja"
   }
 }
