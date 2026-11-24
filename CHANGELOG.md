@@ -2,6 +2,13 @@
 
 Una entrada por versión, de la más nueva a la más vieja (REPO.md del kit, «Versiones»). La web de las traducciones la muestra en «Cambios»: el título es la primera línea, y cada viñeta, un cambio. Sin spoilers.
 
+## 0.9.2 — 2026-11-24
+
+Corrige un congelamiento.
+
+- El juego se congelaba al empezar algunas escenas: el sonido de la zona quedaba mal colocado en la memoria y no terminaba de cargarse. Afectaba a la 0.9.0 y la 0.9.1.
+- Instala la 0.9.2 sobre la ISO original en inglés. Si un guardado rápido de PCSX2 quedó congelado, carga una partida de la memory card: los guardados rápidos traen el error dentro.
+
 ## 0.9.1 — 2026-11-23
 
 Corrige un cuelgue.

@@ -203,11 +203,17 @@ def rebuild(ins, new_msgs):
 
 
 def with_script(stage, blob):
-    """Escenario con el guion nuevo al final (alineado a 16) y la cabecera al día."""
+    """Escenario con el guion nuevo al final (alineado a 16) y la cabecera al día.
+
+    El tamaño total también queda en múltiplo de 16, como en los 55 escenarios
+    originales: el juego carga el banco de sonido justo detrás del escenario
+    (cabecera + [+0]) y lo sube al IOP por DMA, que trabaja de a 16 bytes. Con
+    el banco desalineado la subida no termina y el juego se congela."""
     base = bytearray(stage[:u32(stage, 8)] if u32(stage, 8) else stage)
     base += bytes(-len(base) % 16)
     off = len(base)
     base += blob
+    base += bytes(-len(base) % 16)
     struct.pack_into('<I', base, 0, len(base))
     struct.pack_into('<II', base, 8, off, len(blob))
     return bytes(base)
