@@ -1,7 +1,7 @@
 {"key": "objetos/gemas#000.nombre", "es": "Gema incandescente"}
 {"key": "objetos/gemas#000.desc", "es": "Representa una llama tenue,\ncon algo de magia de fuego."}
 {"key": "objetos/gemas#001.nombre", "es": "Gema de hoja"}
-{"key": "objetos/gemas#001.desc", "es": "Representa una hoja llena de\nvida, con algo de magia de\ntierra."}
+{"key": "objetos/gemas#001.desc", "es": "Representa una hoja viva, con\nalgo de magia de tierra."}
 {"key": "objetos/gemas#002.nombre", "es": "Gema de pluma"}
 {"key": "objetos/gemas#002.desc", "es": "Desconocido"}
 {"key": "objetos/gemas#003.nombre", "es": "Gema acuosa"}
@@ -38,11 +38,11 @@
 {"key": "objetos/gemas#018.desc", "es": "Desconocido"}
 {"key": "objetos/gemas#019.nombre", "es": "Gema ritual"}
 {"key": "objetos/gemas#019.desc", "es": "Desconocido"}
-{"key": "objetos/gemas#020.nombre", "es": "Gema dragón de fuego"}
+{"key": "objetos/gemas#020.nombre", "es": "Gema drag. de fuego"}
 {"key": "objetos/gemas#020.desc", "es": "Desconocido"}
-{"key": "objetos/gemas#021.nombre", "es": "Gema dragón de tierra"}
+{"key": "objetos/gemas#021.nombre", "es": "Gema drag. tierra"}
 {"key": "objetos/gemas#021.desc", "es": "Desconocido"}
-{"key": "objetos/gemas#022.nombre", "es": "Gema dragón de viento"}
+{"key": "objetos/gemas#022.nombre", "es": "Gema drag. viento"}
 {"key": "objetos/gemas#022.desc", "es": "Desconocido"}
 {"key": "objetos/gemas#023.nombre", "es": "Gema dragón de agua"}
 {"key": "objetos/gemas#023.desc", "es": "Desconocido"}

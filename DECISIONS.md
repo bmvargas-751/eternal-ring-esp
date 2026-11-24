@@ -80,3 +80,11 @@ Lo que el usuario decidió, con fecha, para no volver a discutirlo. Una regla de
   - Contador de días: «Día %3d» («Día   1», «Día  13»), sin ordinales, porque el juego elige la terminación con la regla inglesa.
   - Las imágenes con texto (OK, CANCEL, ON/OFF, «Time of Fire»…) y los videos `TEXT0`/`TEXT1` quedan en inglés en la 0.9.0; se ven para la 1.0.0.
 - **2026-11-23** El repo pasa a la organización de GitHub de las traducciones: `nox-traducciones/eternal-ring` (antes `bmvargas-751/eternal-ring-esp`). Los enlaces viejos redirigen solos; los del repo ya apuntan a la dirección nueva.
+- **2026-11-24** Correcciones del issue #10 (capturas de la 0.9.1 en PCSX2). Decisiones del usuario:
+  - «Ring» en el menú de pausa → «Anillos» (`menus/exe#244fc8`, como «Rings» en #25d668).
+  - «Attribution Ring» en el menú del altar → «Anillo de atrib.» (`menus/exe#247980`): «Anillo de atributo» se salía del botón.
+  - «DARK» en la pantalla de estado → «OSCUR» (`menus/exe#243d30`): «OSCURIDAD» se montaba sobre el número, y la fuente grande no tiene punto. Se descartaron «OSCURO» y «SOMBRA».
+  - «Reset» en el altar → «Quitar» (`menus/exe#256578`): «Reiniciar» se montaba sobre el ícono del cuadrado. Se descartaron «Borrar» y «Vaciar».
+  - Nombres de magias y gemas de 20 caracteres o más (la lista de anillos los mezclaba con la fila siguiente; TECH T-3): se abrevian con punto. «Anillo de perspic.», «Poder de ramific.», «Anillo de natur.», «Poder de crecim.», «Gema drag. de fuego», «Gema drag. tierra», «Gema drag. viento».
+  - Descripciones: hasta 2 renglones (antes 3), como preveía PENDING si el 3.º no entraba: la ventana de objeto obtenido lo dibuja fuera del recuadro. Se reescribieron las 28 que usaban 3, sin quitar información del original.
+  - Avisos aceptados: G-3 en los siete nombres abreviados, «Anillo de atrib.» y «Quitar» (formas cortas anotadas en el glosario).

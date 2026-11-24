@@ -3,7 +3,7 @@
 {"key": "menus/exe#243d00", "es": "VIENTO"}
 {"key": "menus/exe#243d10", "es": "AGUA"}
 {"key": "menus/exe#243d20", "es": "LUZ"}
-{"key": "menus/exe#243d30", "es": "OSCURIDAD"}
+{"key": "menus/exe#243d30", "es": "OSCUR"}
 {"key": "menus/exe#243d40", "es": "FUE"}
 {"key": "menus/exe#243ea0", "es": "Elementos"}
 {"key": "menus/exe#243eb4", "es": "Magia de ataque"}
@@ -42,7 +42,7 @@
 {"key": "menus/exe#244d00", "es": "Sonido    "}
 {"key": "menus/exe#244d50", "es": "Mando"}
 {"key": "menus/exe#244f78", "es": "Objetos   "}
-{"key": "menus/exe#244fc8", "es": "Anillo    "}
+{"key": "menus/exe#244fc8", "es": "Anillos   "}
 {"key": "menus/exe#245018", "es": "Gemas mág."}
 {"key": "menus/exe#245068", "es": "Armas     "}
 {"key": "menus/exe#245240", "es": " MEMORY CARD Ranura 1"}
@@ -55,7 +55,7 @@
 {"key": "menus/exe#246658", "es": "Tipo C    "}
 {"key": "menus/exe#2466a8", "es": "Tipo D    "}
 {"key": "menus/exe#247930", "es": "Anillo mágico "}
-{"key": "menus/exe#247980", "es": "Anillo de atributo"}
+{"key": "menus/exe#247980", "es": "Anillo de atrib."}
 {"key": "menus/exe#2479d0", "es": "Colección     "}
 {"key": "menus/exe#247a20", "es": "Salir         "}
 {"key": "menus/exe#249840", "es": "Tipo A"}
@@ -220,7 +220,7 @@
 {"key": "menus/exe#256540", "es": "Elige un anillo."}
 {"key": "menus/exe#256550", "es": "_777Cancelar"}
 {"key": "menus/exe#256560", "es": "Elige un lugar."}
-{"key": "menus/exe#256578", "es": "_777Reiniciar"}
+{"key": "menus/exe#256578", "es": "_777Quitar"}
 {"key": "menus/exe#256588", "es": "_233Combinar"}
 {"key": "menus/exe#256598", "es": "_777Combinar"}
 {"key": "menus/exe#2565a8", "es": "Elige una gema a combinar."}
