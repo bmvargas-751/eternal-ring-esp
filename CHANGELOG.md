@@ -2,6 +2,15 @@
 
 Una entrada por versión, de la más nueva a la más vieja (REPO.md del kit, «Versiones»). La web de las traducciones la muestra en «Cambios»: el título es la primera línea, y cada viñeta, un cambio. Sin spoilers.
 
+## 0.9.3 — 2026-11-24
+
+Correcciones de lo visto jugando.
+
+- Los nombres largos de anillos y gemas ya no se mezclan con el de la fila siguiente en la lista: se abrevian («Anillo de perspic.», «Gema drag. de fuego»…).
+- Las descripciones de magias, armas y objetos caben en dos renglones y ya no se salen de la ventana al obtener un objeto.
+- Rótulos que se salían de su lugar: «OSCUR» en la pantalla de estado, «Anillo de atrib.» y «Quitar» en el altar, y «Anillos» en el menú de pausa.
+- Instala la 0.9.3 sobre la ISO original en inglés.
+
 ## 0.9.2 — 2026-11-24
 
 Corrige un congelamiento.
