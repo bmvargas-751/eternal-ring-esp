@@ -6,7 +6,7 @@ Uso:
 1. Arma la ISO traducida con adapter.py (en ../local/eternal-ring/dist/, y la
    borra al final: solo queda el paquete).
 2. Crea el parche con xdelta3 (`-S none` para que el instalador lo lea, y una
-   ventana de 2 GB para que los escenarios movidos salgan como copias: ~65 KB) y
+   ventana de 2 GB para que los escenarios movidos salgan en buena parte como copias: ~16 MB) y
    lo comprueba aplicándolo con xdelta3.
 3. Llena tools/release/patcher.cs y LEEME.txt con la versión y las sumas, y
    compila el instalador con el csc.exe de .NET Framework 4 (Windows, desde WSL;

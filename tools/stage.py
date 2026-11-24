@@ -20,9 +20,9 @@ Lo que hace este módulo para que un guion crezca sin mover nada:
   - parche del ejecutable en 0x1175fc: si cabecera+8 no es 0, el puntero al
     guion es cabecera + cabecera[+8] (código en 0x178620, en la cadena de
     comparaciones que font_es.py deja sin uso);
-  - el escenario entero va al final de ERDATA.BIN (sector alineado) y su fila
-    de la tabla apunta ahí; el tamaño de ERDATA.BIN en el directorio de la ISO
-    se agranda para cubrirlo.
+  - el escenario entero va a la zona de relleno DUMMY.OUT (sector alineado) y
+    su fila de la tabla apunta ahí (sectores contados desde ERDATA). ERDATA.BIN
+    no crece: detrás está VOICE/VOICEALL.ADX.
 """
 import bisect, struct
 
@@ -215,22 +215,24 @@ def with_script(stage, blob):
 
 # --- disco y ejecutable ----------------------------------------------------
 
-def place(er, n, stage, er_off=0, er_size=None):
-    """Escribe el escenario de la entrada n al final de ERDATA (o donde ya
-    estaba, si ya se había movido al final y sigue siendo lo último) y
-    actualiza el índice. Devuelve el nuevo tamaño de ERDATA."""
-    idx = index(er, er_off)
-    s, c = idx[n]
+def place(iso, n, stage, er_lba, free):
+    """Escribe el escenario de la entrada n en la zona libre del disco y
+    actualiza el índice de ERDATA. `free` es [primer LBA libre, LBA final]:
+    el primero avanza con cada escenario escrito.
+
+    El juego busca ERDATA.BIN una sola vez y lee cada entrada en su LBA + 0x10
+    + sector, sin compararlo con el tamaño del archivo, así que el escenario
+    puede ir en cualquier LBA posterior. Nunca después de ERDATA.BIN: ahí está
+    VOICE/VOICEALL.ADX. La zona libre es DUMMY.OUT (ver adapter.build)."""
     need = (len(stage) + SECTOR - 1) // SECTOR
     need += -need % 0x10
-    end = er_size // SECTOR - DATA                 # primer sector libre (en sectores del índice)
-    others = max(x + y for i, (x, y) in enumerate(idx) if i != n and y)
-    start = s if (s + c == end and s >= others) else end
-    er.seek(er_off + (start + DATA) * SECTOR)
-    er.write(stage + bytes(need * SECTOR - len(stage)))
-    er.seek(er_off + 8 * n)
-    er.write(struct.pack('<II', start, need))
-    return max(er_size, (start + DATA + need) * SECTOR)
+    lba = free[0]
+    assert lba + need <= free[1], 'no hay más espacio libre en el disco'
+    iso.seek(lba * SECTOR)
+    iso.write(stage + bytes(need * SECTOR - len(stage)))
+    iso.seek(er_lba * SECTOR + 8 * n)
+    iso.write(struct.pack('<II', lba - er_lba - DATA, need))
+    free[0] = lba + need
 
 
 def patch_exe(exe, exe_off):
@@ -273,9 +275,3 @@ def iso_dir_entry(iso, name):
             return lba * SECTOR + i, u32(d, i + 2), u32(d, i + 10)
         i += n
     raise KeyError(name)
-
-
-def set_iso_size(iso, name, size):
-    pos, lba, old = iso_dir_entry(iso, name)
-    iso.seek(pos + 10)
-    iso.write(struct.pack('<I', size) + struct.pack('>I', size))

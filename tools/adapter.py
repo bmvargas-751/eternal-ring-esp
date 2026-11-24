@@ -257,7 +257,7 @@ def move_field(exe, exe_off, f, b, errors):
     exe.seek(exe_off + new); exe.write(b + b'\0')
 
 
-def write_dialogs(dialogs, texts, en, er, er_off, er_size, errors):
+def write_dialogs(dialogs, texts, en, er, er_off, free, errors):
     by_stage = {}
     for key, n, i in dialogs:
         if texts[key] != en[key]:
@@ -275,8 +275,8 @@ def write_dialogs(dialogs, texts, en, er, er_off, er_size, errors):
                 errors.append('%s: %d caracteres, el búfer admite 256' % (key, len(c))); continue
             new[i] = c
         st2 = S.with_script(st, S.rebuild(ins, new))
-        er_size = S.place(er, n, st2, er_off, er_size)
-    return er_size, len(by_stage)
+        S.place(er, n, st2, er_off // S.SECTOR, free)
+    return len(by_stage)
 
 
 def load_translation(path):
@@ -294,8 +294,13 @@ def load_translation(path):
 def build(iso_src, iso_out, tr_dir):
     shutil.copyfile(iso_src, iso_out)
     f = open(iso_out, 'r+b')
-    pos, er_lba, er_size = S.iso_dir_entry(f, 'ERDATA.BIN')
+    _, er_lba, _ = S.iso_dir_entry(f, 'ERDATA.BIN')
     _, exe_lba, _ = S.iso_dir_entry(f, 'SLES_500.51')
+    # Los escenarios cambiados van al relleno de DUMMY.OUT (1 GB de «(C) 2000
+    # From Software», que el juego no lee), no detrás de ERDATA.BIN, donde está
+    # VOICE/VOICEALL.ADX. TECH.md, «Espacio en el disco».
+    _, dummy_lba, dummy_size = S.iso_dir_entry(f, 'DUMMY.OUT')
+    free = [dummy_lba, dummy_lba + dummy_size // S.SECTOR]
     er_off, exe_off = er_lba * S.SECTOR, exe_lba * S.SECTOR
     items, fields, dialogs = read_sources(f, f, er_off, exe_off)
     en = {x['key']: x['en'] for x in items}
@@ -305,15 +310,14 @@ def build(iso_src, iso_out, tr_dir):
     errors = ['clave desconocida: %s' % k for k in unknown]
     font_es.apply(f, er_off, f, exe_off)
     write_fields(fields, texts, f, f, er_off, exe_off, errors)
-    er_size, moved = write_dialogs(dialogs, texts, en, f, er_off, er_size, errors)
-    S.set_iso_size(f, 'ERDATA.BIN', er_size)
+    moved = write_dialogs(dialogs, texts, en, f, er_off, free, errors)
     S.patch_exe(f, exe_off)
     f.close()
     if errors:
         os.remove(iso_out)
         sys.exit('No se armó la ISO:\n  ' + '\n  '.join(errors))
     done = sum(1 for k in en if k in tr)
-    print('%s: %d de %d textos traducidos, %d escenarios movidos al final de ERDATA' % (iso_out, done, len(en), moved))
+    print('%s: %d de %d textos traducidos, %d escenarios movidos a DUMMY.OUT' % (iso_out, done, len(en), moved))
 
 
 def roundtrip(folder):
