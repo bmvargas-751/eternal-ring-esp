@@ -2,7 +2,7 @@
  "updated": "2026-11-23",
  "status": "beta",
  "stage": "Prueba en el juego",
- "version": "0.9.0",
+ "version": "0.9.1",
  "lines": 1183,
  "done": 1183,
  "sections": [
@@ -82,6 +82,15 @@
   }
  ],
  "changes": [
+  {
+   "version": "0.9.1",
+   "date": "2026-11-23",
+   "title": "Corrige un cuelgue.",
+   "items": [
+    "El juego se colgaba en cuanto sonaba la primera voz (en PCSX2, con un error del IOP): el parche 0.9.0 escribía encima de parte de las voces del disco. Ahora las voces quedan intactas.",
+    "Si ya instalaste la 0.9.0, instala la 0.9.1 sobre la ISO original en inglés, no sobre la ya traducida."
+   ]
+  },
   {
    "version": "0.9.0",
    "date": "2026-11-22",

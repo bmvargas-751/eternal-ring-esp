@@ -69,7 +69,7 @@ Obligatorio: sin él, `loc.py prepare` no arma lotes.
 
 ### Fase 7. Prueba en el juego
 
-- [ ] Jugar con la traducción completa y anotar cortes, cajas que se pasan, glifos que faltan y texto que quedó sin traducir.
+- [ ] Jugar con la traducción completa y anotar cortes, cajas que se pasan, glifos que faltan y texto que quedó sin traducir. (2026-11-23: la 0.9.0 se colgaba al sonar la primera voz, porque los escenarios movidos pisaban `VOICEALL.ADX`; la 0.9.1 los pone en `DUMMY.OUT`. TECH, «Espacio en el disco».)
 
 ### Fase 8. Entrega
 
