@@ -35,7 +35,7 @@ Por sección. *Oficial* (G-1) o *decidido* por el usuario (G-2), con fecha. `loc
 | Gold Dragon Fang | Colm. dragón oro | decidido [DECISIONS 2026-11-21] | Objeto. |
 | Silver Dragon Fang | Colm. dragón plata | decidido [DECISIONS 2026-11-21] | Objeto. |
 | Elder Dragon Fang | Colm. dragón mayor | decidido [DECISIONS 2026-11-21] | Objeto. |
-| Dark | Oscuridad | decidido [DECISIONS 2026-11-21] | Elemento; «OSCURIDAD» en la fuente grande. |
+| Dark | Oscuridad | decidido [DECISIONS 2026-11-21] | Elemento. En la pantalla de estado (fuente grande, 6 letras como mucho y sin punto): «OSCUR» [DECISIONS 2026-11-24]. |
 | Blizzard | Ventisca | decidido [DECISIONS 2026-11-21] | Magia. |
 | Snowstorm Plain | Llano de la Nevada | decidido [DECISIONS 2026-11-21] | Lugar; 18 caracteres visibles. |
 | Poison | Veneno | decidido [DECISIONS 2026-11-21] | Magia; el estado «Poisoned» también es «Veneno». |
@@ -54,7 +54,7 @@ Por sección. *Oficial* (G-1) o *decidido* por el usuario (G-2), con fecha. `loc
 | Attrib. | Atrib. | decidido [DECISIONS 2026-11-21] | «attribute» → «atributo»; «Basic Attrib.» → «Atrib. básico»; «Overall Attrib.» → «Atrib. total». |
 | Fire Magic | magia de fuego | decidido [DECISIONS 2026-11-21] | Igual con agua, viento y tierra; minúscula a media frase. |
 | Magic Ring | anillo mágico | decidido [DECISIONS 2026-11-21] | Forma corta «Mag Ring» → «An. mágico». |
-| Attribution Ring | anillo de atributo | decidido [DECISIONS 2026-11-21] | Forma corta «Attr Ring» → «An. atrib.». |
+| Attribution Ring | anillo de atributo | decidido [DECISIONS 2026-11-21] | Forma corta «Attr Ring» → «An. atrib.». En el menú del altar: «Anillo de atrib.» [DECISIONS 2026-11-24]. |
 | Elements | Elementos | decidido [DECISIONS 2026-11-21] | Categoría de anillos. |
 | Attack Magic | Magia de ataque | decidido [DECISIONS 2026-11-21] | Categoría de anillos. |
 | Assist Magic | Magia de apoyo | decidido [DECISIONS 2026-11-21] | Categoría de anillos. |
@@ -92,7 +92,7 @@ Por sección. *Oficial* (G-1) o *decidido* por el usuario (G-2), con fecha. `loc
 | Sword Heat | Espada de calor | decidido [DECISIONS 2026-11-21] | Magia. |
 | Water Heat | Calor de agua | decidido [DECISIONS 2026-11-21] | Magia. |
 | Animated Sword | Espada animada | decidido [DECISIONS 2026-11-21] | Magia. |
-| Power of Branch | Poder de ramificación | decidido [DECISIONS 2026-11-21] | Magia. |
+| Power of Branch | Poder de ramificación | decidido [DECISIONS 2026-11-21] | Magia. Como nombre del anillo (19 caracteres como mucho): «Poder de ramific.» [DECISIONS 2026-11-24]. |
 | Burn Edge | Filo ardiente | decidido [DECISIONS 2026-11-21] | Magia. |
 | Ice Needle | Aguja de hielo | decidido [DECISIONS 2026-11-21] | Magia. |
 | Ice Wall | Muro de hielo | decidido [DECISIONS 2026-11-21] | Magia. |
@@ -144,13 +144,13 @@ Por sección. *Oficial* (G-1) o *decidido* por el usuario (G-2), con fecha. `loc
 | Earth Dragon | Dragón de tierra | decidido [DECISIONS 2026-11-21] | Magia. |
 | Ring of Stone | Anillo de piedra | decidido [DECISIONS 2026-11-21] | Magia. |
 | Ring of Rock | Anillo de roca | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ring of Nature | Anillo de la naturaleza | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ring of Nature | Anillo de la naturaleza | decidido [DECISIONS 2026-11-21] | Magia. Como nombre del anillo: «Anillo de natur.» [DECISIONS 2026-11-24]. |
 | Fire Stone | Piedra de fuego | decidido [DECISIONS 2026-11-21] | Magia. |
 | Water Stone | Piedra de agua | decidido [DECISIONS 2026-11-21] | Magia. |
 | Sword Stone | Espada de piedra | decidido [DECISIONS 2026-11-21] | Magia. |
 | Wind Stone | Piedra de viento | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ring of Insight | Anillo de perspicacia | decidido [DECISIONS 2026-11-21] | Magia. |
-| Power of Growth | Poder de crecimiento | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ring of Insight | Anillo de perspicacia | decidido [DECISIONS 2026-11-21] | Magia. Como nombre del anillo: «Anillo de perspic.» [DECISIONS 2026-11-24]. |
+| Power of Growth | Poder de crecimiento | decidido [DECISIONS 2026-11-21] | Magia. Como nombre del anillo: «Poder de crecim.» [DECISIONS 2026-11-24]. |
 | True Sight | Visión verdadera | decidido [DECISIONS 2026-11-21] | Magia. |
 | Divine | Divinidad | decidido [DECISIONS 2026-11-21] | Magia. |
 | Thunder | Trueno | decidido [DECISIONS 2026-11-21] | Magia. |
@@ -221,9 +221,9 @@ Por sección. *Oficial* (G-1) o *decidido* por el usuario (G-2), con fecha. `loc
 | Iceberg Gem | Gema de iceberg | decidido [DECISIONS 2026-11-21] | Gema. |
 | Divine Gem | Gema divina | decidido [DECISIONS 2026-11-21] | Gema. |
 | Ritual Gem | Gema ritual | decidido [DECISIONS 2026-11-21] | Gema. |
-| Fire Dragon Gem | Gema dragón de fuego | decidido [DECISIONS 2026-11-21] | Gema. |
-| Earth Dragon Gem | Gema dragón de tierra | decidido [DECISIONS 2026-11-21] | Gema. |
-| Wind Dragon Gem | Gema dragón de viento | decidido [DECISIONS 2026-11-21] | Gema. |
+| Fire Dragon Gem | Gema dragón de fuego | decidido [DECISIONS 2026-11-21] | Gema. Como nombre (19 caracteres como mucho): «Gema drag. de fuego» [DECISIONS 2026-11-24]. |
+| Earth Dragon Gem | Gema dragón de tierra | decidido [DECISIONS 2026-11-21] | Gema. Como nombre: «Gema drag. tierra» [DECISIONS 2026-11-24]. |
+| Wind Dragon Gem | Gema dragón de viento | decidido [DECISIONS 2026-11-21] | Gema. Como nombre: «Gema drag. viento» [DECISIONS 2026-11-24]. |
 | Water Dragon Gem | Gema dragón de agua | decidido [DECISIONS 2026-11-21] | Gema. |
 | Light Dragon Gem | Gema dragón de luz | decidido [DECISIONS 2026-11-21] | Gema. |
 | Dark Dragon Gem | Gema dragón oscuro | decidido [DECISIONS 2026-11-21] | Gema. |
@@ -299,7 +299,7 @@ Por sección. *Oficial* (G-1) o *decidido* por el usuario (G-2), con fecha. `loc
 | Use | Usar | decidido [DECISIONS 2026-11-21] |  |
 | Back | Volver | decidido [DECISIONS 2026-11-21] |  |
 | Cancel | Cancelar | decidido [DECISIONS 2026-11-21] |  |
-| Reset | Reiniciar | decidido [DECISIONS 2026-11-21] |  |
+| Reset | Reiniciar | decidido [DECISIONS 2026-11-21] | En el altar (botón △, unas 6 letras antes del ícono siguiente): «Quitar», que saca las gemas puestas [DECISIONS 2026-11-24]. |
 | Yes | Sí | decidido [DECISIONS 2026-11-21] |  |
 | No | No | decidido [DECISIONS 2026-11-21] |  |
 | Load | Cargar | decidido [DECISIONS 2026-11-21] |  |

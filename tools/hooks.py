@@ -20,6 +20,8 @@ FONT = set(chr(c) for c in font_es.ORIGINAL) | set(font_es.NEW) | {' ', '\n'}
 # T-3 (TECH.md): renglones y caracteres por renglón.
 DIALOG_LINES, DIALOG_WIDTH, DIALOG_LAST = 4, 35, 32
 DESC_WIDTH = 30             # 32 en una prueba, 30 en otra: el seguro
+DESC_LINES = 2              # la ventana de objeto obtenido muestra 2 [DECISIONS 2026-11-24]
+NAME_MAX = 19               # la lista de anillos copia el nombre en 20 bytes, con el \0
 PLACE_WIDTH = 18            # nombre del lugar en la pantalla de estado
 PLACES = (0x249940, 0x24a2a0)
 MENU_GROWTH = 1.25          # resto del ejecutable: aviso si crece más (se revisa en el juego)
@@ -60,7 +62,12 @@ def check(key, item, es):
             lim = DIALOG_LAST if n == DIALOG_LINES else DIALOG_WIDTH
             if len(l) > lim:
                 out.append(('caja', 'T-3', 'renglón %d: %d caracteres, el máximo es %d' % (n, len(l), lim)))
+    elif key.startswith('objetos/') and key.endswith('.nombre'):
+        if len(lines[0]) > NAME_MAX:
+            out.append(('caja', 'T-3', 'nombre: %d caracteres, la lista muestra %d' % (len(lines[0]), NAME_MAX)))
     elif key.startswith('objetos/') and key.endswith('.desc'):
+        if len(lines) > DESC_LINES:
+            out.append(('caja', 'T-3', '%d renglones; la ventana de objeto obtenido muestra %d' % (len(lines), DESC_LINES)))
         for n, l in enumerate(lines, 1):
             if len(l) > DESC_WIDTH:
                 out.append(('caja', 'T-3', 'renglón %d: %d caracteres, el máximo es %d' % (n, len(l), DESC_WIDTH)))
