@@ -3,9 +3,9 @@ Traducción fan al español neutro de Eternal Ring (PlayStation 2, versión PAL
 europea en inglés, SLES-50051).
 https://github.com/nox-traducciones/eternal-ring
 
-Esta es una versión de prueba: todo el juego está traducido, pero todavía no se
-jugó entero con la traducción. Si algo se ve cortado, se sale de un recuadro o
-quedó en inglés, avísanos en la página del proyecto (con una captura, mejor).
+Todo el juego está traducido y se jugó entero con la traducción. Si algo se ve
+cortado, se sale de un recuadro o quedó en inglés, avísanos en la página del
+proyecto (con una captura, mejor).
 
 
 QUÉ ESTÁ TRADUCIDO

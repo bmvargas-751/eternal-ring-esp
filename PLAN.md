@@ -73,4 +73,4 @@ Obligatorio: sin él, `loc.py prepare` no arma lotes.
 
 ### Fase 8. Entrega
 
-- [ ] Instalador, registro de cambios y publicación.
+- [x] Instalador, registro de cambios y publicación. (2026-11-27: versión 1.0.0; los botones e imágenes con texto quedan en inglés, DECISIONS 2026-11-27.)

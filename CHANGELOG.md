@@ -2,6 +2,15 @@
 
 Una entrada por versión, de la más nueva a la más vieja (REPO.md del kit, «Versiones»). La web de las traducciones la muestra en «Cambios»: el título es la primera línea, y cada viñeta, un cambio. Sin spoilers.
 
+## 1.0.0 — 2026-11-27
+
+Versión final: el juego se jugó entero con la traducción.
+
+- Nombres de magias y gemas revisados: llevan mayúscula en las palabras principales, como el inglés («Bola de Fuego», «Gema de Cascada»).
+- Los anillos que tenían el nombre cortado ahora lo llevan entero: «Poder de División», «Poder de Desarrollo», «Anillo de Sabiduría».
+- Nombres más claros: «Onda Sónica», «Invisibilidad», «Poder de Rastreo», «Gema Llameante», «Gema Arbórea», «Gema de Muerte».
+- Instala la 1.0.0 sobre la ISO original en inglés, no sobre una ya traducida.
+
 ## 0.9.3 — 2026-11-24
 
 Correcciones de lo visto jugando.

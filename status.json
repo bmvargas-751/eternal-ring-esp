@@ -1,8 +1,8 @@
 {
  "updated": "2026-11-27",
- "status": "beta",
- "stage": "Entrega",
- "version": "0.9.3",
+ "status": "finished",
+ "stage": "Terminada",
+ "version": "1.0.0",
  "lines": 1183,
  "done": 1183,
  "sections": [
@@ -77,11 +77,22 @@
   {
    "n": 8,
    "name": "Entrega",
-   "state": "pending",
+   "state": "done",
    "note": null
   }
  ],
  "changes": [
+  {
+   "version": "1.0.0",
+   "date": "2026-11-27",
+   "title": "Versión final: el juego se jugó entero con la traducción.",
+   "items": [
+    "Nombres de magias y gemas revisados: llevan mayúscula en las palabras principales, como el inglés («Bola de Fuego», «Gema de Cascada»).",
+    "Los anillos que tenían el nombre cortado ahora lo llevan entero: «Poder de División», «Poder de Desarrollo», «Anillo de Sabiduría».",
+    "Nombres más claros: «Onda Sónica», «Invisibilidad», «Poder de Rastreo», «Gema Llameante», «Gema Arbórea», «Gema de Muerte».",
+    "Instala la 1.0.0 sobre la ISO original en inglés, no sobre una ya traducida."
+   ]
+  },
   {
    "version": "0.9.3",
    "date": "2026-11-24",
