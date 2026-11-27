@@ -67,16 +67,16 @@ Por sección. *Oficial* (G-1) o *decidido* por el usuario (G-2), con fecha. `loc
 | Level | Nivel | decidido [DECISIONS 2026-11-21] | «LEVEL» → «NIVEL»; «Lvl.1» → «Nv.1». |
 | NEXT | SIG | decidido [DECISIONS 2026-11-21] | Experiencia para el siguiente nivel; la fuente grande no tiene punto. |
 | caster | el usuario | decidido [DECISIONS 2026-11-21] | Quien lanza la magia, en las descripciones. |
-| Fireball | Bola de fuego | decidido [DECISIONS 2026-11-21] | Magia. |
-| Fire Wall | Muro de fuego | decidido [DECISIONS 2026-11-21] | Magia. |
-| Floating Bomb | Bomba flotante | decidido [DECISIONS 2026-11-21] | Magia. |
+| Fireball | Bola de Fuego | decidido [DECISIONS 2026-11-21] | Magia. |
+| Fire Wall | Muro de Fuego | decidido [DECISIONS 2026-11-21] | Magia. |
+| Floating Bomb | Bomba Flotante | decidido [DECISIONS 2026-11-21] | Magia. |
 | Bomber | Bombardeo | decidido [DECISIONS 2026-11-21] | Magia. |
 | Silence | Silencio | decidido [DECISIONS 2026-11-21] | Magia. |
 | Weaken | Debilitar | decidido [DECISIONS 2026-11-21] | Magia. |
-| Alter Fire | Alterar fuego | decidido [DECISIONS 2026-11-21] | Magia. |
+| Alter Fire | Alterar Fuego | decidido [DECISIONS 2026-11-21] | Magia. |
 | Deplete | Agotar | decidido [DECISIONS 2026-11-21] | Magia. |
-| Fiery Avenger | Vengador ígneo | decidido [DECISIONS 2026-11-21] | Magia. |
-| Fire Dragon | Dragón de fuego | decidido [DECISIONS 2026-11-22] | Nombre de la magia (magia#009). En los diálogos, «a Fire Dragon» es la criatura: ver «fire dragon». |
+| Fiery Avenger | Vengador Ígneo | decidido [DECISIONS 2026-11-21] | Magia. |
+| Fire Dragon | Dragón de Fuego | decidido [DECISIONS 2026-11-22] | Nombre de la magia (magia#009). En los diálogos, «a Fire Dragon» es la criatura: ver «fire dragon». |
 | fire dragon | dragón de fuego | decidido [DECISIONS 2026-11-22] | La criatura en que se convirtieron los solcianos (diálogos 1909#007, 1912#039, 1915#016, 1916#008; en japonés «火竜»), en minúscula aunque el inglés la escriba «Fire Dragon». |
 | Great Fire Dragon | Gran Dragón de fuego | decidido [DECISIONS 2026-11-22] | El ser que invoca la magia, solo en su descripción: «Invoca al Gran Dragón de fuego…». |
 | Great Water Dragon | Gran Dragón de agua | decidido [DECISIONS 2026-11-22] | Descripción de la magia «Dragón de agua». |
@@ -84,95 +84,95 @@ Por sección. *Oficial* (G-1) o *decidido* por el usuario (G-2), con fecha. `loc
 | Great Earth Dragon | Gran Dragón de tierra | decidido [DECISIONS 2026-11-22] | Descripción de la magia «Dragón de tierra». |
 | Great Light Dragon | Gran Dragón de luz | decidido [DECISIONS 2026-11-22] | Descripción de la magia «Dragón de luz». |
 | Great Dark Dragon | Gran Dragón oscuro | decidido [DECISIONS 2026-11-22] | Descripción de la magia «Dragón oscuro». |
-| Ring of Heat | Anillo de calor | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ring of Flame | Anillo de llamas | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ring of Inferno | Anillo del infierno | decidido [DECISIONS 2026-11-21] | Magia. |
-| Wind Heat | Calor de viento | decidido [DECISIONS 2026-11-21] | Magia. |
-| Earth Heat | Calor de tierra | decidido [DECISIONS 2026-11-21] | Magia. |
-| Sword Heat | Espada de calor | decidido [DECISIONS 2026-11-21] | Magia. |
-| Water Heat | Calor de agua | decidido [DECISIONS 2026-11-21] | Magia. |
-| Animated Sword | Espada animada | decidido [DECISIONS 2026-11-21] | Magia. |
-| Power of Branch | Poder de ramificación | decidido [DECISIONS 2026-11-21] | Magia. Como nombre del anillo (19 caracteres como mucho): «Poder de ramific.» [DECISIONS 2026-11-24]. |
-| Burn Edge | Filo ardiente | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ice Needle | Aguja de hielo | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ice Wall | Muro de hielo | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ice Trap | Trampa de hielo | decidido [DECISIONS 2026-11-21] | Magia. |
-| Healing Water | Agua curativa | decidido [DECISIONS 2026-11-21] | Magia. |
-| Curing Water | Agua sanadora | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ring of Heat | Anillo de Calor | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ring of Flame | Anillo de Llamas | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ring of Inferno | Anillo del Infierno | decidido [DECISIONS 2026-11-21] | Magia. |
+| Wind Heat | Calor de Viento | decidido [DECISIONS 2026-11-21] | Magia. |
+| Earth Heat | Calor de Tierra | decidido [DECISIONS 2026-11-21] | Magia. |
+| Sword Heat | Espada de Calor | decidido [DECISIONS 2026-11-21] | Magia. |
+| Water Heat | Calor de Agua | decidido [DECISIONS 2026-11-21] | Magia. |
+| Animated Sword | Espada Animada | decidido [DECISIONS 2026-11-21] | Magia. |
+| Power of Branch | Poder de División | decidido [DECISIONS 2026-11-27] | Magia. Lanza dos magias a la vez; en el menú del altar, «Mag Splitting» → «División de magia». |
+| Burn Edge | Filo Ardiente | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ice Needle | Aguja de Hielo | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ice Wall | Muro de Hielo | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ice Trap | Trampa de Hielo | decidido [DECISIONS 2026-11-21] | Magia. |
+| Healing Water | Agua Curativa | decidido [DECISIONS 2026-11-21] | Magia. |
+| Curing Water | Agua Sanadora | decidido [DECISIONS 2026-11-21] | Magia. |
 | Unpoison | Antídoto | decidido [DECISIONS 2026-11-21] | Magia. |
 | Purify | Purificar | decidido [DECISIONS 2026-11-21] | Magia. |
 | Projectile | Proyectil | decidido [DECISIONS 2026-11-21] | Magia. |
-| Water Dragon | Dragón de agua | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ring of Rain | Anillo de lluvia | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ring of Sea | Anillo de mar | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ring of Abyss | Anillo del abismo | decidido [DECISIONS 2026-11-21] | Magia. |
-| Wind Rain | Lluvia de viento | decidido [DECISIONS 2026-11-21] | Magia. |
-| Earth Rain | Lluvia de tierra | decidido [DECISIONS 2026-11-21] | Magia. |
-| Sword Rain | Espada de lluvia | decidido [DECISIONS 2026-11-21] | Magia. |
-| Fire Rain | Lluvia de fuego | decidido [DECISIONS 2026-11-21] | Magia. |
+| Water Dragon | Dragón de Agua | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ring of Rain | Anillo de Lluvia | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ring of Sea | Anillo de Mar | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ring of Abyss | Anillo del Abismo | decidido [DECISIONS 2026-11-21] | Magia. |
+| Wind Rain | Lluvia de Viento | decidido [DECISIONS 2026-11-21] | Magia. |
+| Earth Rain | Lluvia de Tierra | decidido [DECISIONS 2026-11-21] | Magia. |
+| Sword Rain | Espada de Lluvia | decidido [DECISIONS 2026-11-21] | Magia. |
+| Fire Rain | Lluvia de Fuego | decidido [DECISIONS 2026-11-21] | Magia. |
 | Fortune | Fortuna | decidido [DECISIONS 2026-11-21] | Magia. |
 | Enlightenment | Iluminación | decidido [DECISIONS 2026-11-21] | Magia. |
 | Sacrifice | Sacrificio | decidido [DECISIONS 2026-11-21] | Magia. |
-| Wind Cutter | Cuchilla de viento | decidido [DECISIONS 2026-11-21] | Magia. |
-| Sonic | Sónico | decidido [DECISIONS 2026-11-21] | Magia. |
+| Wind Cutter | Cuchilla de Viento | decidido [DECISIONS 2026-11-21] | Magia. |
+| Sonic | Onda Sónica | decidido [DECISIONS 2026-11-27] | Magia. |
 | Tornado | Tornado | decidido [DECISIONS 2026-11-21] | Magia. |
 | Vortex | Vórtice | decidido [DECISIONS 2026-11-21] | Magia. |
 | Turbulence | Turbulencia | decidido [DECISIONS 2026-11-21] | Magia. |
 | Confusion | Confusión | decidido [DECISIONS 2026-11-21] | Magia. |
-| Invisible | Invisible | decidido [DECISIONS 2026-11-21] | Magia. |
+| Invisible | Invisibilidad | decidido [DECISIONS 2026-11-27] | Magia. |
 | Bind | Atadura | decidido [DECISIONS 2026-11-21] | Magia. |
 | Spear | Lanza | decidido [DECISIONS 2026-11-21] | Magia. |
-| Wind Dragon | Dragón de viento | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ring of Breeze | Anillo de brisa | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ring of Gust | Anillo de ráfaga | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ring of Storm | Anillo de tormenta | decidido [DECISIONS 2026-11-21] | Magia. |
-| Fire Breeze | Brisa de fuego | decidido [DECISIONS 2026-11-21] | Magia. |
-| Water Breeze | Brisa de agua | decidido [DECISIONS 2026-11-21] | Magia. |
-| Sword Breeze | Espada de brisa | decidido [DECISIONS 2026-11-21] | Magia. |
-| Earth Breeze | Brisa de tierra | decidido [DECISIONS 2026-11-21] | Magia. |
-| Power of Seek | Poder de búsqueda | decidido [DECISIONS 2026-11-21] | Magia. |
+| Wind Dragon | Dragón de Viento | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ring of Breeze | Anillo de Brisa | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ring of Gust | Anillo de Ráfaga | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ring of Storm | Anillo de Tormenta | decidido [DECISIONS 2026-11-21] | Magia. |
+| Fire Breeze | Brisa de Fuego | decidido [DECISIONS 2026-11-21] | Magia. |
+| Water Breeze | Brisa de Agua | decidido [DECISIONS 2026-11-21] | Magia. |
+| Sword Breeze | Espada de Brisa | decidido [DECISIONS 2026-11-21] | Magia. |
+| Earth Breeze | Brisa de Tierra | decidido [DECISIONS 2026-11-21] | Magia. |
+| Power of Seek | Poder de Rastreo | decidido [DECISIONS 2026-11-27] | Magia. |
 | Clarity | Claridad | decidido [DECISIONS 2026-11-21] | Magia. |
-| Power of Time | Poder del tiempo | decidido [DECISIONS 2026-11-21] | Magia. |
-| Material Arrow | Flecha material | decidido [DECISIONS 2026-11-21] | Magia. |
+| Power of Time | Poder del Tiempo | decidido [DECISIONS 2026-11-21] | Magia. |
+| Material Arrow | Flecha Material | decidido [DECISIONS 2026-11-21] | Magia. |
 | Upheaval | Sacudida | decidido [DECISIONS 2026-11-21] | Magia. |
 | Mist | Niebla | decidido [DECISIONS 2026-11-21] | Magia. |
-| Earth Heal | Cura de tierra | decidido [DECISIONS 2026-11-21] | Magia. |
+| Earth Heal | Cura de Tierra | decidido [DECISIONS 2026-11-21] | Magia. |
 | Protect | Protección | decidido [DECISIONS 2026-11-21] | Magia. |
 | Imprisonment | Encarcelamiento | decidido [DECISIONS 2026-11-21] | Magia. |
 | Orbiter | Órbita | decidido [DECISIONS 2026-11-21] | Magia. |
-| Earthy Axe | Hacha de tierra | decidido [DECISIONS 2026-11-21] | Magia. |
-| Earth Dragon | Dragón de tierra | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ring of Stone | Anillo de piedra | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ring of Rock | Anillo de roca | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ring of Nature | Anillo de la naturaleza | decidido [DECISIONS 2026-11-21] | Magia. Como nombre del anillo: «Anillo de natur.» [DECISIONS 2026-11-24]. |
-| Fire Stone | Piedra de fuego | decidido [DECISIONS 2026-11-21] | Magia. |
-| Water Stone | Piedra de agua | decidido [DECISIONS 2026-11-21] | Magia. |
-| Sword Stone | Espada de piedra | decidido [DECISIONS 2026-11-21] | Magia. |
-| Wind Stone | Piedra de viento | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ring of Insight | Anillo de perspicacia | decidido [DECISIONS 2026-11-21] | Magia. Como nombre del anillo: «Anillo de perspic.» [DECISIONS 2026-11-24]. |
-| Power of Growth | Poder de crecimiento | decidido [DECISIONS 2026-11-21] | Magia. Como nombre del anillo: «Poder de crecim.» [DECISIONS 2026-11-24]. |
-| True Sight | Visión verdadera | decidido [DECISIONS 2026-11-21] | Magia. |
+| Earthy Axe | Hacha de Tierra | decidido [DECISIONS 2026-11-21] | Magia. |
+| Earth Dragon | Dragón de Tierra | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ring of Stone | Anillo de Piedra | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ring of Rock | Anillo de Roca | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ring of Nature | Anillo de la Naturaleza | decidido [DECISIONS 2026-11-21] | Magia. Como nombre del anillo: «Anillo de Natur.» [DECISIONS 2026-11-24, 2026-11-27]. |
+| Fire Stone | Piedra de Fuego | decidido [DECISIONS 2026-11-21] | Magia. |
+| Water Stone | Piedra de Agua | decidido [DECISIONS 2026-11-21] | Magia. |
+| Sword Stone | Espada de Piedra | decidido [DECISIONS 2026-11-21] | Magia. |
+| Wind Stone | Piedra de Viento | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ring of Insight | Anillo de Sabiduría | decidido [DECISIONS 2026-11-27] | Magia. |
+| Power of Growth | Poder de Desarrollo | decidido [DECISIONS 2026-11-27] | Magia. |
+| True Sight | Visión Verdadera | decidido [DECISIONS 2026-11-21] | Magia. |
 | Divine | Divinidad | decidido [DECISIONS 2026-11-21] | Magia. |
 | Thunder | Trueno | decidido [DECISIONS 2026-11-21] | Magia. |
-| Holy Flash | Destello sagrado | decidido [DECISIONS 2026-11-21] | Magia. |
+| Holy Flash | Destello Sagrado | decidido [DECISIONS 2026-11-21] | Magia. |
 | Absorb | Absorción | decidido [DECISIONS 2026-11-21] | Magia. |
 | Bless | Bendición | decidido [DECISIONS 2026-11-21] | Magia. |
-| Light Dragon | Dragón de luz | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ring of Light | Anillo de luz | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ring of Shine | Anillo de brillo | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ring of Glare | Anillo de fulgor | decidido [DECISIONS 2026-11-21] | Magia. |
-| Create Life | Crear vida | decidido [DECISIONS 2026-11-21] | Magia. |
+| Light Dragon | Dragón de Luz | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ring of Light | Anillo de Luz | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ring of Shine | Anillo de Brillo | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ring of Glare | Anillo de Fulgor | decidido [DECISIONS 2026-11-21] | Magia. |
+| Create Life | Crear Vida | decidido [DECISIONS 2026-11-21] | Magia. |
 | Banishment | Destierro | decidido [DECISIONS 2026-11-21] | Magia. |
-| Dark Thunder | Trueno oscuro | decidido [DECISIONS 2026-11-21] | Magia. |
-| Dark Flash | Destello oscuro | decidido [DECISIONS 2026-11-21] | Magia. |
+| Dark Thunder | Trueno Oscuro | decidido [DECISIONS 2026-11-21] | Magia. |
+| Dark Flash | Destello Oscuro | decidido [DECISIONS 2026-11-21] | Magia. |
 | Guardian | Guardián | decidido [DECISIONS 2026-11-21] | Magia. |
-| Dark Stop | Bloqueo oscuro | decidido [DECISIONS 2026-11-21] | Magia. |
-| Dark Dragon | Dragón oscuro | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ring of Shadow | Anillo de sombra | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ring of Night | Anillo de noche | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ring of Chaos | Anillo del caos | decidido [DECISIONS 2026-11-21] | Magia. |
-| Dark Pact | Pacto oscuro | decidido [DECISIONS 2026-11-21] | Magia. |
-| Ring of Magic | Anillo de magia | decidido [DECISIONS 2026-11-21] | Magia. |
+| Dark Stop | Bloqueo Oscuro | decidido [DECISIONS 2026-11-21] | Magia. |
+| Dark Dragon | Dragón Oscuro | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ring of Shadow | Anillo de Sombra | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ring of Night | Anillo de Noche | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ring of Chaos | Anillo del Caos | decidido [DECISIONS 2026-11-21] | Magia. |
+| Dark Pact | Pacto Oscuro | decidido [DECISIONS 2026-11-21] | Magia. |
+| Ring of Magic | Anillo de Magia | decidido [DECISIONS 2026-11-21] | Magia. |
 | Small Sword | Espada pequeña | decidido [DECISIONS 2026-11-21] | Arma. |
 | Knife | Cuchillo | decidido [DECISIONS 2026-11-21] | Arma. |
 | Cinquedea | Cinquedea | decidido [DECISIONS 2026-11-21] | Arma. |
@@ -201,32 +201,32 @@ Por sección. *Oficial* (G-1) o *decidido* por el usuario (G-2), con fecha. `loc
 | Sahagin's Thorn | Espina de Sahagin | decidido [DECISIONS 2026-11-21] | Objeto. |
 | Cockatrice Feather | Pluma de cocatriz | decidido [DECISIONS 2026-11-21] | Objeto. |
 | Dragon Potion | Poción de dragón | decidido [DECISIONS 2026-11-21] | Objeto. |
-| Glowing Gem | Gema incandescente | decidido [DECISIONS 2026-11-21] | Gema. |
-| Leaf Gem | Gema de hoja | decidido [DECISIONS 2026-11-21] | Gema. |
-| Feather Gem | Gema de pluma | decidido [DECISIONS 2026-11-21] | Gema. |
-| Watery Gem | Gema acuosa | decidido [DECISIONS 2026-11-21] | Gema. |
-| Flame Gem | Gema de llama | decidido [DECISIONS 2026-11-21] | Gema. |
-| Tree Gem | Gema de árbol | decidido [DECISIONS 2026-11-21] | Gema. |
-| Winged Gem | Gema alada | decidido [DECISIONS 2026-11-21] | Gema. |
-| Waterfall Gem | Gema de cascada | decidido [DECISIONS 2026-11-21] | Gema. |
-| Lava Gem | Gema de lava | decidido [DECISIONS 2026-11-21] | Gema. |
-| Forest Gem | Gema de bosque | decidido [DECISIONS 2026-11-21] | Gema. |
-| Cloudy Gem | Gema nubosa | decidido [DECISIONS 2026-11-21] | Gema. |
-| Sea Gem | Gema de mar | decidido [DECISIONS 2026-11-21] | Gema. |
-| Sunbeam Gem | Gema de rayo solar | decidido [DECISIONS 2026-11-21] | Gema. |
-| Dead Gem | Gema muerta | decidido [DECISIONS 2026-11-21] | Gema. |
-| Phoenix Gem | Gema de fénix | decidido [DECISIONS 2026-11-21] | Gema. |
-| Mountain Gem | Gema de montaña | decidido [DECISIONS 2026-11-21] | Gema. |
-| Tornado Gem | Gema de tornado | decidido [DECISIONS 2026-11-21] | Gema. |
-| Iceberg Gem | Gema de iceberg | decidido [DECISIONS 2026-11-21] | Gema. |
-| Divine Gem | Gema divina | decidido [DECISIONS 2026-11-21] | Gema. |
-| Ritual Gem | Gema ritual | decidido [DECISIONS 2026-11-21] | Gema. |
-| Fire Dragon Gem | Gema dragón de fuego | decidido [DECISIONS 2026-11-21] | Gema. Como nombre (19 caracteres como mucho): «Gema drag. de fuego» [DECISIONS 2026-11-24]. |
-| Earth Dragon Gem | Gema dragón de tierra | decidido [DECISIONS 2026-11-21] | Gema. Como nombre: «Gema drag. tierra» [DECISIONS 2026-11-24]. |
-| Wind Dragon Gem | Gema dragón de viento | decidido [DECISIONS 2026-11-21] | Gema. Como nombre: «Gema drag. viento» [DECISIONS 2026-11-24]. |
-| Water Dragon Gem | Gema dragón de agua | decidido [DECISIONS 2026-11-21] | Gema. |
-| Light Dragon Gem | Gema dragón de luz | decidido [DECISIONS 2026-11-21] | Gema. |
-| Dark Dragon Gem | Gema dragón oscuro | decidido [DECISIONS 2026-11-21] | Gema. |
+| Glowing Gem | Gema Incandescente | decidido [DECISIONS 2026-11-21] | Gema. |
+| Leaf Gem | Gema de Hoja | decidido [DECISIONS 2026-11-21] | Gema. |
+| Feather Gem | Gema de Pluma | decidido [DECISIONS 2026-11-21] | Gema. |
+| Watery Gem | Gema Acuosa | decidido [DECISIONS 2026-11-21] | Gema. |
+| Flame Gem | Gema Llameante | decidido [DECISIONS 2026-11-27] | Gema. |
+| Tree Gem | Gema Arbórea | decidido [DECISIONS 2026-11-27] | Gema. |
+| Winged Gem | Gema Alada | decidido [DECISIONS 2026-11-21] | Gema. |
+| Waterfall Gem | Gema de Cascada | decidido [DECISIONS 2026-11-21] | Gema. |
+| Lava Gem | Gema de Lava | decidido [DECISIONS 2026-11-21] | Gema. |
+| Forest Gem | Gema de Bosque | decidido [DECISIONS 2026-11-21] | Gema. |
+| Cloudy Gem | Gema Nubosa | decidido [DECISIONS 2026-11-21] | Gema. |
+| Sea Gem | Gema de Mar | decidido [DECISIONS 2026-11-21] | Gema. |
+| Sunbeam Gem | Gema de Rayo Solar | decidido [DECISIONS 2026-11-21] | Gema. |
+| Dead Gem | Gema de Muerte | decidido [DECISIONS 2026-11-27] | Gema. |
+| Phoenix Gem | Gema de Fénix | decidido [DECISIONS 2026-11-21] | Gema. |
+| Mountain Gem | Gema de Montaña | decidido [DECISIONS 2026-11-21] | Gema. |
+| Tornado Gem | Gema de Tornado | decidido [DECISIONS 2026-11-21] | Gema. |
+| Iceberg Gem | Gema de Iceberg | decidido [DECISIONS 2026-11-21] | Gema. |
+| Divine Gem | Gema Divina | decidido [DECISIONS 2026-11-21] | Gema. |
+| Ritual Gem | Gema Ritual | decidido [DECISIONS 2026-11-21] | Gema. |
+| Fire Dragon Gem | Gema Dragón de Fuego | decidido [DECISIONS 2026-11-21] | Gema. Como nombre (19 caracteres como mucho): «Gema Drag. de Fuego» [DECISIONS 2026-11-24]. |
+| Earth Dragon Gem | Gema Dragón de Tierra | decidido [DECISIONS 2026-11-21] | Gema. Como nombre: «Gema Drag. Tierra» [DECISIONS 2026-11-24]. |
+| Wind Dragon Gem | Gema Dragón de Viento | decidido [DECISIONS 2026-11-21] | Gema. Como nombre: «Gema Drag. Viento» [DECISIONS 2026-11-24]. |
+| Water Dragon Gem | Gema Dragón de Agua | decidido [DECISIONS 2026-11-21] | Gema. |
+| Light Dragon Gem | Gema Dragón de Luz | decidido [DECISIONS 2026-11-21] | Gema. |
+| Dark Dragon Gem | Gema Dragón Oscuro | decidido [DECISIONS 2026-11-21] | Gema. |
 | Red door | Puerta roja | decidido [DECISIONS 2026-11-21] | Cartel; igual «Blue door» → «Puerta azul», «Green door» → «Puerta verde», «Yellow door» → «Puerta amarilla». |
 | Golden Fields | Campos Dorados | decidido [DECISIONS 2026-11-21] |  |
 | Golden Trees | Árboles Dorados | decidido [DECISIONS 2026-11-21] |  |

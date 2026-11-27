@@ -1,7 +1,7 @@
 {
- "updated": "2026-11-24",
+ "updated": "2026-11-27",
  "status": "beta",
- "stage": "Prueba en el juego",
+ "stage": "Entrega",
  "version": "0.9.3",
  "lines": 1183,
  "done": 1183,
@@ -71,7 +71,7 @@
   {
    "n": 7,
    "name": "Prueba en el juego",
-   "state": "pending",
+   "state": "done",
    "note": null
   },
   {
